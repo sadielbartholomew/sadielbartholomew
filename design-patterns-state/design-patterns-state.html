@@ -53,11 +53,47 @@ Freeman <i>et al.</i>
           <li class="next"> Underlying Object-Oriented Design Principles
         </ul>
     <li class="next"> Look at <mark>coded examples</mark> in Python, Java & Fortran
-    <li class="next"> View pseudocode for simplified <mark><i>Cylc task</i> example</mark>
+    <li class="next"> Think conceptually about other examples</mark>
 
     </ul>
 
     <div role="note">Note: also 10 minutes to discuss next session.</div>
+</section>
+
+<section>
+    <h3>Gumball Machine book example</h3>
+    <ul>
+      <li class="next"> Contrived example of a 'Gumball Machine', a machine which ejects gumballs for change
+      <li class="next"> [&larr;] SharePoint Gumball Machine <i>state diagram</i>
+      <li class="next"> Distinguish possible states & actions, e.g. 'Has Quarter' is a state & 'inserts quarter' is an action
+      <li class="next"> Initial implementation:
+        <ul>
+          <li class="next"> for <i>every</i> action, use a set of conditionals over <i>every</i> possible state to outline behaviour it should prompt for each case
+          <li class="next"> more states, actions &rarr; many more code lines
+          <li class="next"> monolithic, inflexible; a State <b>Anti</b>pattern
+        </ul>
+        </ul>
+</section>
+
+<section>
+  <blockquote>
+  The State Pattern enables one to <i>encapsulate state-based
+  behaviour & delegate behaviour to the current state</i>.
+  </blockquote>
+</section>
+
+<section>
+    <h3>Gumball Machine with the State Pattern</h3>
+    <ul>
+      <li class="next"> New 'State Pattern' based implementation:
+        <ul>
+          <li class="next"> <b>abstract 'State' class</b> defines a common interface (<i>all possible actions</i>) to the machine
+          <li class="next"> <i>every</i> 'concrete' state has its own class which outlines its own behaviour for each such action
+          <li class="next"> Gumball Machine behaves according to whatever state it delegates to (<i>current state</i>)
+          <li class="next"> flexible, maintable <b>but</b> need more classes.
+        </ul>
+      <li class="next"> [&larr;] SharePoint Gumball Machine <i>partial UML diagram</i>
+        </ul>
 </section>
 
 <section>
@@ -70,36 +106,55 @@ Freeman <i>et al.</i>
 </section>
 
 <section>
-    <h1>...</h1>
-</section>
-
-<section>
     <h3>Key terminology</h3>
     <ul>
-      <li class="next"><b>State</b>:
-      <li class="next"><b>Action</b>:
-      <li class="next"><b>State transition</b>:
+      <li class="next"><b>State</b>: internal configurations of the Context
+      <li class="next"><b>Action</b>: use of the interface
+      <li class="next"><b>State transition</b>: change current concrete state
     </ul>
 
+    <ul>
+      <li class="next"> exact choices are subjective
+      <li class="next"> how to deal with <i>internal actions</i> e.g. Gumball Machine's dispense()?
+      <li class="next"> compare across group for choices for e.g. self-service checkout machine password manager, task scheduler app
+      <li class="next"> <i>advice</i>: choose choices to allow state diagram to map as closely to logic as possible
+    </ul>
+</section>
+
+
+
+<section>
+    <h3>Key Design Principles</h3>
+    <ol>
+      <li class="next"><b>Encapsulate what varies</b>: the states!
+      <li class="next"><b>Program to interfaces, not implementations</b>: abstract State class (at least) defines interface
+      <li class="next"><b>Open-closed Principle for classes</b>: RE concrete state classes
+    </ol>
+</section>
+
+
+<section>
+    <h3>The Strategy Pattern with a different intent</h3>
+    <ul>
+      <li class="next"> [&larr;] SharePoint <i>UML diagram</i>
+
+      <li class="next"> State: context + discrete, well-defined state transitions
+      <li class="next"> Strategy: algorithms
+    </ul>
+</section>
+
+
+<section>
+    <h3>In code...</h3>
+    <ol>
+      <li class="next"><b> Python
+      <li class="next"><b> Java
+      <li class="next"><b> Fortran 2003
+    </ol>
 </section>
 
 <section>
-    <h1>...</h1>
-</section>
-
-<section>
-  <blockquote>
-  Ultimately the State Pattern enables one to <i>encapsulate state-based
-  behaviour & delegate behaviour to the current state</i>.
-  </blockquote>
-</section>
-
-<section>
-    <h1>...</h1>
-</section>
-
-<section>
-    <h1>Any questions?</h1>
+    <h1>Any questions or discussion points?</h1>
 </section>
 
 <div id="progress-bar"></div>

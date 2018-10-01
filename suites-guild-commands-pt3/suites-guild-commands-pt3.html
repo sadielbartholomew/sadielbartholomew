@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="suites-guild-commands-pt3.css"/>
+<link href='http://fonts.googleapis.com/css?family=Rosario' rel='stylesheet'>
+
+<meta charset="utf-8">
+<title>Useful commands when developing your suite: part 3</title>
+
+<header>
+    <b>&nbsp; Useful Commands</b> &nbsp; &nbsp; ... when developing your suite &nbsp; &#9656; &nbsp; Part 3
+</header>
+
+</head>
+
+<body>
+<!-- one slide per section -->
+<section>
+    <h1>Useful Commands</h1>
+    <h2>... when developing your suite</h2><br>
+    <h2>Part 3</h2>
+    <footer>Sadie Bartholomew &nbsp; &bull; &nbsp; Met Office Suites Guild, November 2018</footer>
+</section>
+
+<section>
+    <h3>Useful Commands: covered so far (by Andy)</h3>
+    <ul>
+      <li class="next"><b>rose suite-run -l</b> --name=<i>&lt;suite name&gt;</i>:<br>install locally (as <i>suite name</i>) without running<br>&zwnj;
+
+      <li class="next"><b>cylc graph-diff</b> <i>&lt;ref ID&gt; &lt;dev ID&gt;</i> -- -u:<br>
+        compare (return a <i>diff</i> for) two scheduling graphs<br>&zwnj;
+
+      <li class="next"><b>cylc get[-suite]-config</b> <i>&lt;options to filter&gt;</i>:<br>
+        view runtime settings expanded out in inheritance&zwnj;
+    </ul>
+</section>
+
+
+<section>
+    <h3>Overview</h3>
+    <ul>
+      <li class="next"> Validate in detail via
+        <mark><b>cylc validate -v -v</b></mark>:
+        <ul>
+          <li class="next"> check suite is recognised as logically sound
+          <li class="next"> ...but also get feedback on non-critical aspects
+        </ul>
+
+<br>&zwnj;
+
+      <li class="next"> View your family inheritance with
+        <mark><b>cylc graph -n</b></mark>:
+        <ul>
+          <li class="next"> <i>good</i>, <i>bad</i> & <i>ugly</i> namespace inheritance
+          <li class="next"> quick tips on how to improve your inheritance
+        </ul>
+    </ul>
+</section>
+
+
+<section>
+    <h3>cylc validate -v -v</h3>
+    <ul>
+      <li class="next"> Plain <b>cylc validate</b> command:
+        <ul>
+          <li class="next"> tells you if your suite will be able to run
+          <li class="next"> ...& if not, why (at least first issue pinpointed)
+        </ul>
+      <li class="next"> Then <b>turn the verbosity up</b> to 11!
+        <ul>
+          <li class="next"> warnings, information, file paths etc. printed
+          <li class="next"> see e.g. deprecated settings, 'unsafe' or
+            experimental usage instances & expansion processing of namespaces &
+            Jinja2
+        </ul>
+      </ul>
+</section>
+
+
+<section>
+    <h3>cylc graph -n</h3>
+<p style="text-align:center;"><img src="example-graph-nopt-output.png" alt="graph-minus-n" width="300" style="transform:rotate(90deg);"></p>
+</section>
+
+
+<section>
+    <h3>cylc graph -n</h3>
+        <ul>
+          <li class="next"> <mark><b>DO</b></mark>:
+        <ul>
+          <li class="next"> refer to (& obey) the <b>Suite Design Guide</b>
+          <li class="next"><b>use <i>root</i> namespace appropriately</b> i.e.
+ to set global defaults for settings used by the vast majority of tasks
+          <li class="next"> create a sensible structure: <b>maximise sharing whilst minimising overriding & namespace coupling & surfeit</b>
+          <li class="next"> give families <b>helpful names</b> e.g. <i>HPC</i>
+        </ul>
+
+          <li class="next"> <mark><b>DON'T</b></mark>:
+        <ul>
+          <li class="next"> ...<b>do the opposite</b> of the above (e.g. overuse
+            <i>root</i> & create defaults not used by most tasks)
+        </ul>
+        <ul>
+</section>
+
+
+<section>
+  <blockquote>
+  <del>Classes</del><i>namespaces</i> higher in the hierarchy should be
+    more general and abstract.<br>
+  <del>Classes</del><i>namespaces</i> lower in the in the hierarchy should be
+    more specific and concrete.
+
+  </blockquote>
+</section>
+
+
+<section>
+    <h1>Any (quick) questions?</h1>
+</section>
+
+
+<div id="progress-bar"></div>
+
+<script type="text/javascript" src="suites-guild-commands-pt3.js"></script>
+</body>
+</html>
