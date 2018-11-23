@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="python-guild-hacktober.css"/>
+<link href='http://fonts.googleapis.com/css?family=Barlow' rel='stylesheet'>
+
+<meta charset="utf-8">
+<title>Lessons from a Python-based Hacktober</title>
+
+<header>
+    <b>&nbsp; | &nbsp; &nbsp; Lessons from a Python-based <i>Hacktober</i></b> &nbsp; &nbsp; |
+</header>
+
+</head>
+
+<body>
+<!-- one slide per section -->
+<section>
+    <h1>Lessons from <br> a Python-based <br> <i>Hacktober</i></h1>
+    <footer> Sadie Bartholomew &nbsp; | &nbsp; Met Office Python Guild &nbsp; | &nbsp; November 2018</footer>
+</section>
+
+<section>
+    <h3>What is Hacktober(fest)?</h3>
+    <ul>
+      <li class="next"> <i>Hacktober(fest)</i> &nbsp; = &nbsp; <b>October</b> as a month-long drive for <b>open-source software contribution</b>
+      <li class="next"> A &#10077;<b>do it in your own time</b>&#10078; hackathon of sorts
+      <li class="next"> In <b>figures</b>:
+        <ul>
+          <li class="next"> 2018 &rarr; <mark>fifth year</mark>
+          <li class="next"> make <mark>5+ PRs</mark> on GitHub (rules apply)
+          <li class="next"> completed by <mark>&gt; 46,000 people</mark>...
+          <li class="next"> ...from <mark>~140 countries</mark>
+          <li class="next"> eligible PRs to <mark>&gt; 100,000 GitHub repos</mark>
+        </ul>
+    </ul>
+
+    <div role="note">Elaborate:
+      * 'much like other positive-influence or charity based month drives,
+       think Go Sober October or Movember, etc'
+      * nothing to do with 'Oktoberfest', though beer may optionaly be consumed while coding
+    </div>
+</section>
+
+<section>
+    <ul>
+      <li class="next"> <b>Freebies</b> up for grabs!<br>
+    <div class="next">
+      <img src="https://pbs.twimg.com/media/DsE9_uOXQAcuuNq.jpg:large" alt="2018_freebies" width="650" align="middle">
+      <h6><i>Image courtesy of Gary dos Santos (via tweet @_GarySantos)</i></h6>
+    </div>
+    </ul>
+
+    <div role="note">Elaborate:
+      * If willing to allow Digital... to access your GitHub account...
+      * ... e.g. had to sign agreement with Facebook, a company I detest.
+      * I completed, so was one of those 46,000. Full disclosure: only got
+        to 5 in October itself due to work PRs!
+      * most common listing under Hacktober & Python language was
+        'our documentation needs updating / polishing / writing'.
+      * my favourite listed issue was 'our project needs a GUI... build us a
+        GUI'
+      * Sadly no freebies to show off as they ship from the USA & have not
+        arrived...
+    </div>
+</section>
+
+
+<section>
+    <h3>What is this talk about?</h3>
+    <ul>
+      <li class="next"> elaborate on my Hacktober(fest) experience
+        &rarr; first-time contributing to some projects
+      <li class="next"> opted for ones with <b>(largely) Python codebases</b>
+        <ul>
+          <li class="next"> can easily filter in GitHub search by tag
+          <img src="example_tags.png" alt="hacktoberfest_gh_tags" align="middle">
+          <div class="codebox">
+            <code>label:hacktoberfest state:open type:issue language:python</code><br>
+          </div>
+        </ul>
+      <li class="next"> <b>covering <i>general</i> lessons learnt</b> from
+        diving into unfamiliar Python software
+        <ul>
+          <li class="next"> potentially-useful tips & tricks to pass on
+          <li class="next"> will not detail specific contributions
+        </ul>
+      </ul>
+
+    <div role="note">Elaborate:
+      * not so much a retrospective as a ...
+    </div>
+</section>
+
+<section>
+  <blockquote>
+  General observations...
+  </blockquote>
+</section>
+
+<section>
+    <h3> #1: Python as a swiss-army knife</h3>
+    <ul>
+      <li> inspiring <b>project diversity</b> in Python Hacktober list
+           ...perhaps
+           expect for a general language, but more so (?) for Python, which
+           is <b>highly versatile</b>:
+        <ul>
+          <li> general-purpose & multi-paradigm
+          <li> extensive & well-supported ecosystem to utilise (sample via PyPI)
+          <li> good (enough) for a lot of applications.
+        </ul>
+      <li> <b>segregate</b> the <b>issue from</b> the <b>project</b>:
+        <ul>
+          <li> don’t be put off by the overall project scope
+          <li> e.g. don’t need to be a qualified glaciologist to improve plot
+               colormaps!
+        </ul>
+    </ul>
+
+    <div role="note">Elaborate:
+       * GENERALLY well-supported ecosystem [libraries, frameworks, tools]
+       * paradigm [OO, structured, functional ...]
+       * [and your Python abilities, 'at hand'] [obviously has its weaknesses,]
+       * [sample via ‘browse projects’ in PyPI]
+       * wide range
+       * [issue to be solved]
+       * glaciology expert
+       * => investment in Python ‘as a tool’ is worthwhile
+       * preaching to the choir, but point is invest in your Python abilities
+         will pay off dividends.
+    </div>
+</section>
+
+<section>
+    <h3> #2: the Python community is diverse</h3>
+    <ul>
+      <li> interacted with only a <b>tiny sample</b>, however they:
+        <ul>
+          <li> were all kind & constructive
+          <li> hailed from all over globe (none UK-based!)
+          <li> had expertise in wide-ranging areas.
+        </ul>
+
+      <li> <b>Have audience in mind when writing code comments & docs:</b>
+        <ul>
+          <li> English skills vary; keep language simple
+          <li> consider your assumptions! Don't assume background
+               knowledge or environment (etc.)
+          <li> don't use e.g. <i>simply</i> or <i>self-explanatory</i>
+        </ul>
+    </ul>
+
+    <div role="note">Elaborate:
+      * PYTHONISTAS, i.e. friendly
+      * Given first point => second.
+      * 'so try to have...' [so they aren't excluded]
+        [English as first language]
+      * [America, Austria, Russia!]
+      * will be frustrating to them & embarrasing to you when there are bugs
+        or typos breaking things.
+      * what's obvious to one person may not be to another
+    </div>
+</section>
+
+<section>
+    <h3> #3: Python projects > Python (& other) scripts</h3>
+    <ul>
+      <li> There's <b>more to a project than</b> a collection of Python plus
+           some config / admin / other language <b>scripts</b>. Consider:
+        <ul>
+          <li> packaging & dependencies
+          <li> code style e.g. PEP 8 or stricter
+          <li> code structure & higher-level 'style'
+          <li> testing: methods, rigour & strictness on coverage
+          <li> documentation
+          <li> contribution guidelines
+          <li> vision & ethos
+        </ul>
+      <li> Code with context!
+    </ul>
+
+    <div role="note">Elaborate:
+      * [consistent, suitable in context]
+      * ...
+    </div>
+</section>
+
+<section>
+  <blockquote>
+  More specific lessons...
+  </blockquote>
+</section>
+
+<section>
+    <ul>
+      <li class="next"> Spoiler towards lesson #1:<br>
+    <div class="next">
+      <img src="time_spent_pie.png" alt="time_spent_pie" width="500" align="right">
+    </div>
+    </ul>
+
+    <div role="note">Emphasise:
+      * ...not because I am a whizz at development
+    </div>
+</section>
+
+<section>
+    <ul>
+      <li class="next"> Overview by webcomic:<br>
+      <h6><i>From xkcd (1987: 'Python Environment')</i></h6>
+    <div class="next">
+      <img src="https://imgs.xkcd.com/comics/python_environment.png" alt="xkcd_python_env" align="right">
+    </div>
+    </ul>
+
+    <div role="note">TODO:
+      * Apologies if this has already been shown at the Guild
+    </div>
+</section>
+
+<section>
+    <h3> #1: Environment set-up can be tricky</h3>
+    <ul>
+      <li> There are <b>a lot of options for packaging & set-up</b> of projects
+      <li> Projects typically have a lot of (often specific-version)
+           <b>dependencies</b> that need to be managed.
+        <ul>
+          <li> specific (& if desired virtual) envs commonly set-up
+               via <b>pip</b>, <b>conda</b> &/or <b>virtualenv</b>
+          <li> advise to follow docs install instructions to the word, but
+               these would often not work due to e.g. bugs or typos.
+        </ul>
+    </ul>
+
+    <div role="note">Elaborate:
+      * whole environment setup, packaging, testing framework & coverage &
+        strictness in use of, & documentation approach.
+    </div>
+</section>
+
+<section>
+    <h3> #2: Python 3 has some great features!</h3>
+    <ul>
+      <li> From the perspective of a version 2 developer, Python 3
+           (varying 3.<i>X</i>) was great to work with. Would like to
+           highlight two features...
+      <li> <b>Function annotations:</b> specifications, not assertions
+        <ul>
+          <li> <i>Type</i> annotations:
+          <div class="codebox">
+            <code>def caps(word: str) -> str:</code><br>
+          </div>
+
+          <li> Custom package annotations e.g. <i>units</i>:
+          <div class="codebox">
+            <code>def energy(mass: u.kg):</code><br>
+          </div>
+
+        </ul>
+      <li> <b>Chained exceptions:</b> no concealed traceback!
+          </div>
+    </ul>
+
+    <div role="note">Elaborate:
+* unfamiliar, but.
+      * as noted by a current Python 2 dev.
+      * e.g. type hints/annotations.
+    </div>
+</section>
+
+<section>
+    <h3>In summary...</h3>
+    <ul>
+      <li class="next"> <b>Making contributions to unfamiliar projects</b>...
+        <ul>
+          <li class="next"> is not just an October pursuit
+          <li class="next"> is a great way to enhance & test Python skills
+          <li class="next"> ...<i>but</i> initial investment needed to set-up &
+                            gain familiarity with each project (& see &#10020;).
+        </ul>
+
+      <li class="next"><b>My key Hacktober '18 Python takeaways</b>:
+        <ul>
+          <li class="next"> <b>#1</b>: leverage that Python is versatile
+          <li class="next"> <b>#4</b>: be mindful of the diverse community
+          <li class="next"> <b>#3</b>: a project is more than its
+                                       functional code
+          <li class="next"> <b>#4</b> &#10020;: set-up can be tricky
+          <li class="next"> <b>#5</b>: Python 3 seems cool!
+        </ul>
+    </ul>
+
+</section>
+
+<section>
+    <h1>Thanks for listening.</h1>
+    <h2>Any questions?</h2>
+</section>
+
+<div id="progress-bar"></div>
+
+<script type="text/javascript" src="python-guild-hacktober.js"></script>
+</body>
+</html>
