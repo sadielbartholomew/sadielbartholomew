@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="suites-guild-commands-pt4.css"/>
+<link href='http://fonts.googleapis.com/css?family=Rosario' rel='stylesheet'>
+
+<meta charset="utf-8">
+<title>Useful commands when developing your suite: part 3</title>
+
+<header>
+    <b>&nbsp; Useful Commands</b> &nbsp; &nbsp; ... when developing your suite &nbsp; &#9656; &nbsp; Part 4
+</header>
+
+</head>
+
+<body>
+<!-- one slide per section -->
+<section>
+    <h1>Useful Commands</h1>
+    <h2>... when developing your suite</h2><br>
+    <h2>Part 4</h2>
+    <footer>Sadie Bartholomew &nbsp; &bull; &nbsp; Met Office Suites Guild, February 2019</footer>
+</section>
+
+<section>
+    <h3>Useful Commands: covered so far</h3>
+    <ul>
+      <li class="next" style="color:Silver"><b>rose suite-run -l</b> --name=<i>&lt;suite name&gt;</i>:<br>install locally (as <i>suite name</i>) without running&zwnj;
+
+      <li class="next" style="color:Silver"><b>cylc graph-diff</b> <i>&lt;ref ID&gt; &lt;dev ID&gt;</i> -- -u:<br>
+        compare (return a <i>diff</i> for) two scheduling graphs<br>&zwnj;
+
+      <li class="next" style="color:Gray"><b>cylc get[-suite]-config</b> <i>&lt;options to filter&gt;</i>:<br>
+        view runtime settings expanded out in inheritance<br>&zwnj;
+
+      <li class="next" style="color:#505050"><b>cylc validate -v -v</b> <i>&lt;suite name&gt;</i>: <br>
+        validate suite integrity as well as runnability &zwnj;
+
+      <li class="next" style="color:#505050"><b>cylc graph -n</b> <i>&lt;suite name&gt;</i>: <br>
+        see the namespace (family) inheritance structure
+
+    </ul>
+</section>
+
+
+<section>
+  <blockquote>
+    rose date
+  </blockquote>
+</section>
+
+
+<section>
+    <h3>Today's command: rose date</h3>
+    <ul>
+      <li class="next">
+        use <mark><b>rose date</b></mark> to manipulate date-times...
+        <ul>
+          <li class="next">
+            <b>return</b> specific date-times: <br>
+            &zwnj; &zwnj; &zwnj; &rarr; &zwnj; &zwnj; &zwnj;
+            current & a task's cycle
+          <li class="next">
+            perform <b>calculations</b> on date-times: <br>
+            &zwnj; &zwnj; &zwnj; &rarr; &zwnj; &zwnj; &zwnj;
+            offsets from & durations between
+          <li class="next">
+            <b>convert</b> datetimes, between: <br>
+            &zwnj; &zwnj; &zwnj; &rarr; &zwnj; &zwnj; &zwnj;
+            formats, time zones & calendar modes
+        </ul>
+      <li class="next">
+        ... not just on the command line, but within a suite
+        definition as well
+    </ul>
+</section>
+
+
+<section>
+  <blockquote>
+    Examples: rose date in action <br><br><br>
+
+    <i>Note</i>: you can mix & match from each operation
+  </blockquote>
+</section>
+
+
+<section>
+    <h3>Examples: return with rose date</h3>
+    <ul>
+      <li class="next"> Return the <b>current date</b>: <br>
+            <div class="codebox">
+              <code>rose date [now]</code>
+            </div>
+            <br>&zwnj;
+      <li class="next"> Return, within a date-time cycling suite, any <b>task's cycle date-time</b>: <br>
+            <div class="codebox">
+              <code>rose date $CYLC_TASK_CYCLE_POINT</code><br>
+            </div>
+            <div class="codebox">
+              <code>rose date -c</code><br>
+            </div>
+      </ul>
+</section>
+
+
+<section>
+    <h3>Examples: calculate with rose date</h3>
+    <ul>
+      <li class="next"> Calculate <b>offset(s)</b>: <br>
+                    <div class="codebox">
+              <code>rose date DATE-TIME --offset1=OFFSET --offset2=ANOTHER-OFFSET</code><br>
+            </div>
+            <br>&zwnj;
+      <li class="next"> Calculate a <b>duration</b> between two datetimes: <br>
+            <div class="codebox">
+              <code>rose date DATE-TIME-1 DATE-TIME-2</code><br>
+            </div>
+            <div class="codebox">
+              <code>rose date DATE-TIME-1 DATE-TIME-2 --as-total=h</code><br>
+            </div>
+      </ul>
+</section>
+
+
+<section>
+    <h3>Examples: convert with rose date</h3>
+    <ul>
+      <li class="next"> Convert to a different <b>format</b>: <br>
+            <div class="codebox">
+              <code>rose date DATE-TIME --parse-format='%m-%d-%Y' --format='DD-MM-CCYY'</code>
+            </div>
+            <br>&zwnj;
+      <li class="next"> Convert <b>timezone to UTC</b>: <br>
+            <div class="codebox">
+              <code>rose date DATE-TIME --utc</code><br>
+            </div>
+            <br>&zwnj;
+     <li class="next"> Convert to a different <b>calendar mode</b>: <br>
+            <div class="codebox">
+              <code>rose date --calendar=360day</code><br>
+            </div>
+      </ul>
+</section>
+
+
+<section>
+  <blockquote>
+    While we're on the topic of working with date-times...
+  </blockquote>
+</section>
+
+
+
+<section>
+    <h3>Relative initial cycle points</h3>
+    <ul>
+      <li class="next"> <code>rose date</code> provides handy date-time functionality
+      <li class="next"> <b>new feature</b> for Cylc 7.8.1 (site default)
+        also does... <br>&zwnj;
+
+      <li class="next"> introducing <mark>relative initial cycle points</mark>: specify ICPs relative to the current date-time (<code>now</code>) using <code>next()</code> & <code>previous()</code>
+      <li class="next"> Illustrative examples where set ICP to be:
+        <ul>
+          <li class="next"> on the start of the coming hour:
+            <div class="codebox">
+              <code>initial cycle point = next(T-00)</code><br>
+            </div>
+          <li class="next"> the last time it was 11 am:
+            <div class="codebox">
+              <code>initial cycle point = previous(T11:00)</code><br>
+            </div>
+        </ul>
+      <li class="next"> Detail in section <i>15.1.4.3</i> of the Cylc documentation
+      </ul>
+</section>
+
+
+<section>
+    <h1>Any (quick) questions?</h1>
+</section>
+
+
+<div id="progress-bar"></div>
+
+<script type="text/javascript" src="suites-guild-commands-pt4.js"></script>
+</body>
+</html>
