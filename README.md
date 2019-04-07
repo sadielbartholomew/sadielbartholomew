@@ -16,5 +16,5 @@
 * Met Office Design Patterns Group:
   * 01.10.18, ~1 hour including group discussion, **The State Pattern** [web files in *design-patterns-state* dir]
 * Met Office "Tech Connect" Seminar Series:
-  * 02.04.19, ~20 minutes (half of the full seminar, 1 hour with questions), **Rose & Cylc: User Update 2019** [slides as in *rose-cylc-user-update-2019-my-slides.pdf*]
+  * 02.04.19, ~20 minutes (first half of the full seminar of 1 hour including questions), **Rose & Cylc: User Update 2019** [slides as in *rose-cylc-user-update-2019-my-slides.pdf* file, note these are only the slides (which I created & used) for the first half, as I presented; slides for the second half which I did not are omitted.]
 
