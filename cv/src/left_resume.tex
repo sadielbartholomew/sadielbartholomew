@@ -1,0 +1,83 @@
+\documentclass[10pt,a4paper]{protocol}
+
+\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1cm,bottom=1cm}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
+
+% COLOURS
+\definecolor{Bright}{HTML}{621E2B}
+\definecolor{Green}{HTML}{9A8365}
+\definecolor{Black}{HTML}{0F1F38}
+\definecolor{LightGrey}{HTML}{515C50}
+\definecolor{TempCol}{HTML}{B6B5AD}
+\colorlet{heading}{Green}
+\colorlet{accent}{Bright}
+\colorlet{emphasis}{Black}
+\colorlet{body}{Black}
+
+
+\begin{document}
+
+\name{Sadie L. Bartholomew}
+\tagline{Scientific Software Engineer seeking new challenges}
+\made{\today}
+\logo{5.0cm}{"cv_photo"}
+
+
+\docinfo{
+ {\large{Explore: \enspace \color{heading}\faGithub} \enspace sadielbartholomew}{ \enspace \newline \hspace*{10.2ex} {\color{heading}\faBook} \enspace \textit{www.researchgate.net/profile/Sadie\_Bartholomew}}
+ 
+ % Make sure re-add email and phone number for non-public CV!
+ {Contact: \hspace{2.0ex} \color{heading}\faEnvelope} \enspace {\color{TempCol}<redacted for public CV>} \quad {\color{heading}\faPhone} \enspace +44 (0) {\color{TempCol}<... redacted for public CV>}
+}
+
+
+\begin{fullwidth}
+\makeheader
+\end{fullwidth}
+
+\need[right_resume]{Software experience}
+
+\steptwo{Foundation}{Scientific Software Engineer}{October 2017 +}{Met Office, Modelling Infrastructure Support Systems team}
+\begin{itemize}
+	\item \textbf{Developing \& maintaining the open-source infrastructure systems  \textit{Rose} \& \textit{Cylc}} (see \textit{metomi/} \& \textit{cylc/} {\color{body}\faGithub} organisations) used to configure \& run scientific software for both operational forecasting \& research.
+	\item \textbf{Notable development}: wrote a software-checking utility for \textit{Cylc}; migrated the \textit{Rose Bush} service into \textit{Cylc}; added logic for host selection to \textit{Cylc}; converted the \textit{Cylc} documentation from \textit{LaTeX} to \textit{Sphinx}; re-wrote a \textit{Cylc} syntax lexer; \& ported \textit{Rose} logic from \textit{Python 2} to \textit{Python 3} \& a utility's web framework from \textit{CherryPy} to \textit{Tornado}.
+	\item Co-delivered training, \& the \textit{User Update 2019} seminar to \char`\~ 100 people, \& engaged in the \textit{Cylc Development Workshop} in Melbourne.
+\end{itemize}
+\divider
+\steptwo{}{Independent Development Contributions}{2016+}{Open-Source via GitHub plus Personal Projects (see my {\color{accent}\faGithub} account)}{}
+\begin{itemize}
+	\item Notably \textbf{completed \textit{Hacktoberfest 2018}} by contributing to three new projects, \& improved the documentation for web framework \textit{Tornado}.
+\end{itemize}
+
+\need[right_resume]{Research \& writing experience}
+
+\steptwo{Student}{Research Assistant}{December 2015 - March 2017}{Coltraco Ultrasonics Ltd}
+\begin{itemize}
+	\item \textbf{Conducting scientific \& technical research} (usually) independently on a remote, part-time basis \& assimilating into written reports, for example making recommendations for product purchases \& solutions.
+\end{itemize}
+\divider
+
+\steptwo{}{Science and Technology Editor}{2013 - 2014; 2014 - 2015}{The Bubble Magazine; Palatinate Newspaper}
+\begin{itemize}
+	\item \textbf{Sourcing \& writing articles to deadlines} for two separate student publications, receiving the \textit{Hunter Davies Prize for Journalism} in 2014.
+\end{itemize}
+
+\need[right_resume]{Education}
+
+\steptwo{MPhys (Hons)}{Integrated Masters in Physics (\uppercase\expandafter{\romannumeral2\relax}:\romannumeral1\relax)}{October 2012 - June 2017}{Durham University}
+\begin{itemize}
+	\item \textbf{Final-year computational project} entitled \textit{`Searches for
+boosted top quarks'}, evaluating \& refining top-tagging algorithms, implemented in C++, as applied to simulated LHC proton-proton scattering events.
+	\item \textbf{Undergraduate physics syllabus} plus elective masters-level modules on Advanced Quantum (Field) Theory, Particle Theory \& Cosmology.
+\end{itemize}
+\divider
+
+\steptwo{}{Secondary Education}{2007 - 2012}{Ponteland Community High School}
+\begin{itemize}
+	\item \textbf{A levels}: Physics (A*), Chemistry (A*), Mathematics (A*), Further Mathematics (A), Critical Thinking (A), Extended Project (A*)
+\end{itemize}
+
+\end{document}
