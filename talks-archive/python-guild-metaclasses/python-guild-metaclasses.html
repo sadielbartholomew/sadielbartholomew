@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="python-guild-metaclasses.css"/>
+<link href='http://fonts.googleapis.com/css?family=Gudea' rel='stylesheet'>
+
+<meta charset="utf-8">
+<title>Metaclasses in Python</title>
+
+<header>
+    <b>&nbsp; Metaclasses in Python</b> &nbsp; &nbsp; ... what are they & what are they used for? &nbsp;
+</header>
+
+</head>
+
+<body>
+<!-- one slide per section -->
+<section>
+    <h1>Metaclasses in Python</h1>
+    <h2>What are they...</h2><br>
+        <h2>...& what are they used for?</h2><br>
+    <footer>Sadie Bartholomew &nbsp; &bull; &nbsp; Python Guild, July 2019</footer>
+</section>
+
+
+
+<section>
+  <blockquote>
+    Pre-warning! We'll end with a <i>debate</i>. Consider if:
+    <ul>
+      <li> they are useful</li>
+      <li> custom ones should be used <i>freely</i> or <i>only sparingly</i></li>
+    </ul>
+  </blockquote>
+</section>
+
+
+<section>
+    <h3>"Literature Review" on a new topic</h3>
+
+    <ul>
+      <li class="next"><b>Official Python Documentation section</b> is: &zwnj;
+      <ul>
+        <li class="next">overly factual &zwnj;
+        <li class="next">missing any context &zwnj;
+        <li class="next"><a href="https://docs.python.org/3/reference/datamodel.html#uses-for-metaclasses">vague about use cases</a> &zwnj;
+        <li class="next">&rarr; overall <mark>not that useful</mark> &zwnj;
+      </ul>
+
+      <li class="next">Step in the community!
+      <mark>Informal resources</mark>: &zwnj;
+      <ul>
+        <li class="next">blog posts  &zwnj;
+        <li class="next"> podcasts &zwnj;
+        <li class="next">online lessons... &zwnj;
+        <li class="next">&rarr; generally (I think) <mark>better</mark> &zwnj;
+      </ul>
+
+    </ul>
+</section>
+
+<section>
+    <h3>"Literature Review" on a new topic</h3>
+      <ul>
+      <li class="next">The <mark>canonical resource</mark>:<br>
+      <br><b class="next">Stack Overflow Question <a href="https://stackoverflow.com/questions/100003/what-are-metaclasses-in-python">100003</a></b><br> &zwnj;
+
+      <br><img  class="next" src="img/scr_metaclasses_1.png" alt="so_question_upvotes" width="500" align="left"><br> &zwnj;
+
+      <br> &zwnj; <div class="next"> &rarr; top answer:
+      <img src="img/scr_metaclasses_2.png" alt="so_answer_upvotes" align="right"><div>
+      </ul>
+    </ul>
+</section>
+
+
+<section>
+    <h3>SO Q100003 on the essence of Py metaclasses</h3>
+    <ul>
+      <li class="next"> Classes (describe how to) <b>create objects</b>
+      <li class="next">... but in Python <i>classes themselves</i>
+	<b>are objects</b>!
+      <li class="next"> What, then, describes how to <b>(dynamically) create
+	classes</b>? <mark>Metaclasses!</mark>
+      <ul>
+        <li class="next" style="color:Silver"><b>objects</b> are instances of <b>classes</b> &zwnj;
+        <li class="next" style="color:Gray"><b>classes</b> are instances of <b>metaclasses</b> &zwnj;
+        <li class="next" style="color:#505050">(& <b>metaclasses</b> are instances of <b>metaclasses</b>...) <br>
+      </ul>
+      <li class="next">Metaclass code runs <i>before</i> a class is
+	generated, so they are <b>much more powerful than class decorators</b>,
+	which are executed <i>afterwards</i>.
+    </ul>
+</section>
+
+<section>
+    <h3>Let's see some code! (Python 3 only)</h3>
+    <ul>
+      <li class="next"> Distinguish <i>a class instance</i> from
+      <i>the object</i>:
+
+        <div class="codebox">
+          <code> &gt;&gt;&gt; type(RunOfTheMillClass()) </code><br>
+          <code> &lt;class '__main__.RunOfTheMillClass'&gt; </code><br><br>
+          <code> &gt;&gt;&gt; type(RunOfTheMillClass) </code><br>
+          <code> &lt;class 'type'&gt; </code><br>
+        </div>
+
+      <li class="next"> Any class is an instance of <b>the built-in
+      '<mark>type</mark>'</b>,
+      which is a <i>metaclass</i> (I see it as the "root" one)
+
+        <div class="codebox"><br>
+          <code> &gt;&gt;&gt; type(type) </code><br>
+          <code> &lt;class 'type'&gt; </code>
+        </div>
+        <br>&zwnj;
+
+      </ul>
+</section>
+
+
+<section>
+    <h3>Let's see some code! (Python 3 only)</h3>
+    <ul>
+      <li class="next"> <b>'type' is sub-classed</b> to create custom
+        "base" metaclasses, which can inherit from each other</b>:<br>
+
+        <div class="codebox">
+          <code> class BasicMetaclass(type):  </code><br>
+          <code> &zwnj; &zwnj; &zwnj; pass &zwnj; # define your metaclass</code><br><br>
+          <code> class InheritedMetaclass(metaclass=BasicMetaclass): </code><br>
+          <code> &zwnj; &zwnj; &zwnj; pass &zwnj; # add to the metaclass</code><br>
+        </div>
+
+      <li class="next"> Note any metaclass inheritance tree must
+        have a <b>single "base" only</b>
+        <div class="codebox">
+          <code> TypeError: metaclass conflict: the metaclass of a derived class must be a (non-strict) subclass of the metaclasses of all its bases</code>
+        </div>
+        <br>&zwnj;
+      </ul>
+</section>
+
+
+<section>
+    <h3>Usage: general cases</h3>
+    <ul>
+      <li class="next"> Generally as a <b>class "factory"</b>, c.f. Factory
+     Method Design Pattern; <mark>blueprints</mark> for many classes<br>
+       <li class="next"> "Mutating" classes: <b>modifying their behaviour</b>
+       <i>before</i> instantiation <br>
+      <ul>
+       <li class="next"> e.g. modifying third-party libraries to your use <br>
+      </ul>
+       <li class="next"> Tracking generated classes<br>
+      <ul>
+       <li class="next"> e.g. registering, profiling or logging them... <br>
+      </ul>
+      <li class="next"> <i>Note</i>: class decorators are much simpler so
+      probably (?) a better choice if they can be used...<br>
+      </ul>
+</section>
+
+
+<section>
+    <h3>Usage: a concrete example</h3>
+    <ul>
+      <li class="next"> A <b>mutation example</b>, from the <i>Pygments</i>
+      module
+      <li class="next"> The base class of lexers in <i>Pygments</i> forces a
+      method to be static with a float-type return value<br>
+       <li class="next"> Then further metaclasses inherit from this base (note
+       class decorators can't do inheritance!)<br>
+      </ul>
+        <div class="codebox, next">
+          <code> class LexerMeta(type):  </code><br>
+          <code> """ [omitting the actual docstring] """</code><br><br>
+          <code> &zwnj; &zwnj; &zwnj; def __new__(cls, name, bases, d): </code><br>
+          <code>  &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; if 'analyse_text' in d:</code><br>
+          <code> &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj;  &zwnj; &zwnj; &zwnj; d['analyse_text'] = make_analysator(d['analyse_text'])</code><br>
+          <code> &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; return type.__new__(cls, name, bases, d) </code>
+        </div>
+
+</section>
+
+
+<section>
+  <h1>Thanks for listening.<br> Now over to you!</h1>
+   <ul>
+     Tim Peters, author of the Zen of Python, ~
+     2002:<br> “<i> Metaclasses are deeper
+       magic than 99% of users should ever worry about.<br>
+       &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj;
+       &zwnj; &zwnj; If you wonder whether
+       you need them, you don’t (the people who actually need them know with
+       certainty that they need them, & don’t need an explanation about why).
+     </i>”
+   </ul>
+</section>
+
+<section>
+  <blockquote>
+    From your own experience & knowledge, else this talk, do you think that
+    metaclasses <i>in Python</i>:
+    <ul>
+      <li> are <i>useful</i>?</li>
+      <li> should be used <i>freely</i> or <i>only sparingly</i>?</li>
+    </ul>
+  </blockquote>
+</section>
+
+
+<div id="progress-bar"></div>
+
+<script type="text/javascript" src="python-guild-metaclasses.js"></script>
+</body>
+</html>

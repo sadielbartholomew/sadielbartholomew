@@ -18,6 +18,9 @@
   * 29.11.18, ~15 minutes, **Lessons from a Python-based Hacktober** [web files
     in *python-guild-hacktober* directory]
 
+  * 31.07.19, ~15 minutes, **Metaclasses in Python: what are they & what are
+    they used for?** [web files in *python-guild-metaclasses* directory]
+
 * Met Office Suites Guild:
 
   * 05.11.18, 5 minute ("lighting"), **Useful commands when developing your
