@@ -46,3 +46,10 @@
 
   * 17.07.19, ~10 minutes, **The Software Development Community** [web files in
     *tech-connect-software-dev-comm* directory]
+
+* The Fourth Conference of Research Software Engineering ("RSEConUK 2019"):
+
+  * 18.09.19, ~10 minutes (second half of the full talk of 25 minutes, minus 5
+    for questions), **Pursuing and supporting reproducible workflows for all
+    with Cylc** [links to slides & dedicated conference page for the talk with
+    abstract etc. as in *rseconuk2019-workflows-with-cylc.md* file]
