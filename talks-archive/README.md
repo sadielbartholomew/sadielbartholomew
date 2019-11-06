@@ -9,8 +9,8 @@
 * Met Office Python Guild:
 
   * 23.07.18, 5 minute ("lighting"), **Mutable arguments in Python: a
-    cautionary tale** (for the "Bug of the Month" slot) [*notebook to be
-    uploaded*]
+    cautionary tale** (for the "Bug of the Month" slot) [Jupyter Notebook to
+    be uploaded]
 
   * 20.08.18, ~15 minutes, **Collection choice by context** [slides as in
     *python-collections.pdf* file]
@@ -20,6 +20,9 @@
 
   * 31.07.19, ~15 minutes, **Metaclasses in Python: what are they & what are
     they used for?** [web files in *python-guild-metaclasses* directory]
+
+  * 30.10.19, ~10 minutes, **pathlib for managing filesystem paths**
+    [Jupyter Notebook *python-pathlib-outline.ipynb*]
 
 * Met Office Suites Guild:
 
