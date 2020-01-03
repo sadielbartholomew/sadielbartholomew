@@ -8,9 +8,9 @@
 
 * Met Office Python Guild:
 
-  * 23.07.18, 5 minute ("lighting"), **Mutable arguments in Python: a
-    cautionary tale** (for the "Bug of the Month" slot) [Jupyter Notebook to
-    be uploaded]
+  * 23.07.18, ~10 minutes, **Mutable arguments in Python: a
+    cautionary tale** (for the "Bug of the Month" slot) [Jupyter Notebook
+    *python-mutable-arguments.ipynb*]
 
   * 20.08.18, ~15 minutes, **Collection choice by context** [slides as in
     *python-collections.pdf* file]
