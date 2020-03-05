@@ -1,4 +1,4 @@
-\documentclass[10pt,a4paper,hidelinks]{protocol}
+\documentclass[10pt,a4paper]{protocol}
 
 \geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1cm,bottom=1cm}
 
@@ -7,7 +7,7 @@
 \usepackage[default]{lato}
 
 % For hyperlinks:
-\usepackage{hyperref}
+\usepackage{hyperref} %% see colour set for links below
 
 % COLOURS
 \definecolor{Bright}{HTML}{621E2B}
@@ -15,16 +15,22 @@
 \definecolor{Black}{HTML}{0F1F38}
 \definecolor{LightGrey}{HTML}{515C50}
 \definecolor{TempCol}{HTML}{B6B5AD}
+\definecolor{LinkCol}{HTML}{d2e4f9}
 \colorlet{heading}{Green}
 \colorlet{accent}{Bright}
 \colorlet{emphasis}{Black}
 \colorlet{body}{Black}
+\colorlet{linkscol}{LinkCol}
 
+\hypersetup{
+  colorlinks=false,
+  urlbordercolor=linkscol
+}
 
 \begin{document}
 
 \name{Sadie L. Bartholomew}
-\tagline{Scientific Software Engineer seeking new challenges}
+\tagline{Computational scientist \& open-source contributor}
 \made{\today}
 \logo{5.0cm}{"cv_photo"}
 
@@ -33,9 +39,8 @@
  {\large{Explore: \enspace \color{heading}\faGithub} \enspace \href{https://github.com/sadielbartholomew}{\textit{sadielbartholomew} on GitHub}}{ \enspace \newline \hspace*{10.0ex} {\color{heading}\faBook} \enspace \href{https://www.researchgate.net/profile/Sadie_Bartholomew}{\textit{Sadie\_Bartholomew} on ResearchGate}}
  
  % Make sure re-add email and phone number for non-public CV!
- {Contact: \hspace{2.0ex} \color{heading}\faEnvelope} \enspace sadielbartholomew@gmail.com \quad {\color{heading}\faPhone} \enspace {\color{TempCol}<redacted for public CV>} %+44 (0)7926 662272
+ {Contact: \hspace{2.0ex} \color{heading}\faEnvelope} \enspace sadielbartholomew@gmail.com \quad {\color{heading}\faPhone} \enspace {\color{TempCol}<redacted for public CV>}
 
- {\vspace{0.4em}\textit{Note: text is hyperlinked throughout this PDF to direct to relevant resources.}}
 }
 
 
@@ -43,34 +48,45 @@
 \makeheader
 \end{fullwidth}
 
-\vspace{-1em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% NEGATIVE SPACE HERE CAN MOVE UP MAIN SECTIONS!
+\vspace{-3em}
 
-\need[right_resume]{Software experience}
+\need[right_resume]{Experience}
 
-\steptwo{Foundation}{Scientific Software Engineer}{2}{October 2017 - present}{Met Office, \href{https://www.metoffice.gov.uk/research/weather/weather-science-it/modelling-support}{Modelling Infrastructure Support Systems team}}
+
+\steptwo{}{Computational Scientist}{11}{Jan 2020 - present}{National Centre for Atmospheric Science,
+Computational Modelling Services (based at University of Reading, Department of Meteorology)}{}
 \begin{itemize}
-	\item \textbf{Developing \& maintaining the Python-based open-source infrastructure systems \href{https://github.com/cylc}{\textit{Cylc}} \& \href{https://github.com/metomi/rose}{\textit{Rose}}} used to configure \& run scientific software for both operational forecasting \& research. For example:
-	\begin{itemize}
-	  \itemsep0em
-	  \item added logic for host selection to the \textit{Cylc} core scheduling code;
-	  \item converted the entire \textit{Cylc} documentation from \textit{LaTeX} to \textit{Sphinx};
-	  \item ported a \textit{Rose} utility from \textit{Python 2} to \textit{3}, \& \textit{CherryPy} to \textit{Tornado};
-	  \item packaged the core \textit{Cylc} repository for \textit{conda} via \textit{conda-forge};
-	  \item registered numerous bug reports, bug fixes, user requests, \& ideas.
-	\end{itemize}
-	\item \textbf{Supporting users of \textit{Cylc}, \textit{Rose} \& other systems}: answered queries verbally, on relevant forums, \& by email; co-delivered internal training courses; \& co-presented an internal update seminar \& \href{https://rseconuk2019.sched.com/event/QSSI/5d2-hpc-pursuing-and-supporting-reproducible-workflows-for-all-with-cylc}{externally at the \textit{Fourth Conference of Research Software Engineering}}.
+\item \textbf{Creating infrastructure software \& standards for} \href{https://github.com/ES-DOC/}{\textit{\textbf{ES-DOC}} (the
+Earth System Documentation project)}, notably leading on development of documents characterising machine \& performance (i.e. model run).
+\item \textbf{Developing \& optimising the earth science data analysis library
+    \href{https://github.com/NCAS-CMS/cf-python}{\textit{cf-python}}}
+    \& training users including leading the course on regridding.
 \end{itemize}
 \divider
-\steptwo{}{Independent Development Contributions}{6}{2016+}{Open-source projects \& personal mini-projects, mostly via GitHub}{}
+
+\steptwo{Foundation}{Scientific Software Engineer}{2}{Oct 2017 - Nov 2019}{Met Office, \href{https://www.metoffice.gov.uk/research/weather/weather-science-it/modelling-support}{Modelling Infrastructure Support Systems team}}
+	\textbf{Developing, maintaining \& providing user support for the Python infrastructure systems \href{https://github.com/cylc}{\textit{Cylc}} \& \href{https://github.com/metomi/rose}{\textit{Rose}}} used to configure \& run scientific software for both operational forecasting \& research. Notably I:
+	\begin{itemize}
+	  \itemsep0em
+	  \item implemented suite host selection \& asymmetric cryptography in \textit{Cylc};
+	  \item converted the entire \textit{Cylc} documentation from \textit{LaTeX} to \textit{Sphinx};
+	  \item ported a \textit{Rose} utility from \textit{Python 2} to \textit{3}, \& \textit{CherryPy} to \textit{Tornado};
+	  \item registered numerous bug reports, bug fixes, user requests, \& ideas;
+	  \item co-delivered internal training courses \& an internal update seminar;
+	  \item \href{https://rseconuk2019.sched.com/event/QSSI/5d2-hpc-pursuing-and-supporting-reproducible-workflows-for-all-with-cylc}{co-presented at \textit{Fourth Conference of Research Software Engineering}}.
+	\end{itemize}
+\divider
+\stepthree{}{Independent open-source \& personal development}{1}{2016+}{}{}
 \begin{itemize}
-	\item Notably \href{https://github.com/sadielbartholomew?tab=overview&from=2018-10-01&to=2018-10-31}{\textbf{completed \textit{Hacktoberfest 2018}} by contributing to three new Python projects}, \& \href{https://github.com/sadielbartholomew/creative-mini-projects}{\textbf{built scripts for creative designs} using \textit{matplotlib}}.
+	\item Notably \textbf{completed \textit{Hacktoberfest} in \href{https://github.com/sadielbartholomew?tab=overview&from=2018-10-01&to=2018-10-31}{2018} \& \href{https://github.com/sadielbartholomew?tab=overview&from=2019-10-01&to=2019-10-31}{2019}} by contributing to often unfamiliar projects, \& \href{https://github.com/sadielbartholomew/creative-matplotlib}{\textbf{built creative designs using \textit{matplotlib}}}.
 \end{itemize}
 
-\need[right_resume]{Research \& writing experience}
+\divider
 
-\steptwo{Student}{Research Assistant}{6}{December 2015 - March 2017}{\href{https://coltraco.com/}{Coltraco Ultrasonics Ltd}}
+\steptwo{Student}{Research Assistant}{8}{Dec 2015 - March 2017}{\href{https://coltraco.com/}{Coltraco Ultrasonics Ltd}}
 \begin{itemize}
-	\item \textbf{Conducting scientific \& technical research} (usually) independently on a remote, part-time basis \& assimilating into written reports, for example making recommendations for product purchases \& solutions.
+	\item \textbf{Conducting scientific \& technical research} relating to ultrasonic measurement on a remote, part-time basis \& assimilating into reports.
 \end{itemize}
 \divider
 
@@ -81,7 +97,7 @@
 
 \need[right_resume]{Education}
 
-\steptwo{MPhys (Hons)}{Integrated Masters in Physics (\uppercase\expandafter{\romannumeral2\relax}:\romannumeral1\relax)}{5}{October 2012 - June 2017}{Durham University}
+\steptwo{MPhys (Hons)}{Integrated Masters in Physics (\uppercase\expandafter{\romannumeral2\relax}:\romannumeral1\relax)}{0}{2012 - June 2017}{Durham University}
 \begin{itemize}
 	\item \textbf{Final-year computational project} entitled \textit{`Searches for
 boosted top quarks'}, evaluating \& refining top-tagging algorithms, implemented in C++, as applied to simulated LHC proton-proton scattering events.

@@ -1,10 +1,10 @@
 %%%%%%%%%%%%%%%%%
-% Adapted from the original template described below in April 2019 by
+%  Adapted from the original template described below in April 2019 by
 % Sadie Bartholomew (github.com/sadielbartholomew).
 %%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%
-% Template: altacv.cls (v1.1.3, 30 April 2017) written by
+%  Template: altacv.cls (v1.1.3, 30 April 2017) written by
 % LianTze Lim (liantze@gmail.com).
 %%%%%%%%%%%%%%%%
 
@@ -128,6 +128,14 @@
   \hspace{#3em}
   \color{emphasis}{\footnotesize  [#4]\par}
   \textbf{\color{accent}{#5} }\par
+  \smallskip
+}
+
+\newcommand{\stepthree}[4]{%
+  \color{emphasis}{#1}
+  {\large\color{emphasis}#2}
+  \hspace{#3em}
+    \color{emphasis}{\footnotesize  [#4]\par}
   \smallskip
 }
 

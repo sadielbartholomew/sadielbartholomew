@@ -1,6 +1,6 @@
 # CV
 
-## My current CV, up-to-date as of October 2019.
+## My current CV, up-to-date as of March 2020.
 
 Note:
 
