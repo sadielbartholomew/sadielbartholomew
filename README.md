@@ -1,13 +1,5 @@
-# sadielbartholomew
+![Warming Stripes for Berkshire](profile-media/berkshire_warming_stripes_attr_ed_hawkins.png)
 
-## Centralised personal resources: some of my useful personal files (configuration, scripts, etc.) & documents relating to myself
+#### Warming Stripes for my location, Berkshire (UK), from 1863-2019 [*#ShowYourStripes*](https://showyourstripes.info/)
 
-
-#### Breakdown (see ``README.md`` descriptions within each directory for further information):
-
-
-* **talks-archive**: materials from presented talks & seminars;
-* **cv**: source code & built PDF file for my current CV;
-* **help-and-workflow-files**: personal files  for streamlining my daily workflow;
-* **customisation-files**: personal files for customising my environment to my preference;
-* **scripts**: personal scripts for automation etc. purposes.
+Infographic designed by Professor Ed Hawkins (University of Reading)
