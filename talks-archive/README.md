@@ -3,7 +3,7 @@
 ## Archive of materials &amp; notebooks from presented talks &amp; tutorials (etc.)
 
 
-#### Talks given (date, length, title [location & type of resources within *talks* repository]):
+#### Talks given, chronologically by section (date, length, title [location & type of resources, within *talks* repository or external link]):
 
 
 * Met Office Python Guild:
@@ -56,3 +56,33 @@
     for questions), **Pursuing and supporting reproducible workflows for all
     with Cylc** [links to slides & dedicated conference page for the talk with
     abstract etc. as in *rseconuk2019-workflows-with-cylc.md* file]
+
+* NCAS-CMS group weekly meetings:
+
+  * ~30 minutes, **Initial experiences with GitHub Actions** [slides in
+    *github-actions-intro-slides.pdf* file]
+
+* Summer School on Effective HPC for Climate and Weather 2020:
+
+  * 25.08.20, Storage (Input/Output and Middleware) session (both presented
+    virtually) [see the
+    [dedicated summer school page](https://hps.vi4io.org/events/2020/esiwace-school)
+    for materials and recordings]:
+    * ~45 minutes, **cfdm, cf-python & cf-plot: Python data tools for
+      CF-netCDF** (talk)
+    * ~2 hours, **Lab tutorial: CF-NetCDF with cfdm, cf-python and cf-plot**
+      (practical session)
+
+* NCAS@Reading Science Meetings (e.g. see
+  [here](https://www.ncas.ac.uk/en/7-science-programmes/climate/305-ncas-climate-science-meetings)):
+
+  * [POSTPONED from 22.05.20, due to give in future] ~40 minutes,
+    **The Further Info URL & ES-DOC site as portals for exploring CMIP6**
+    [slides to be uploaded]
+
+* SORSE (A Series of Online Research Software Events):
+
+  * [DUE/UPCOMING] ~30 minutes (to be presented virtually),
+    **Configuring Sphinx from scratch: making
+    your own documentation and making your documentation your own** [see
+    [this page on the SORSE website](https://sorse.github.io/programme/software-demos/event-011/)]
