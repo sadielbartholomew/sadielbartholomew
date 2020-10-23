@@ -59,8 +59,11 @@
 
 * NCAS-CMS group weekly meetings:
 
-  * ~30 minutes, **Initial experiences with GitHub Actions** [slides in
-    *github-actions-intro-slides.pdf* file]
+  * 05.06.20, ~30 minutes, **Initial experiences with GitHub Actions**
+    [slides in *github-actions-intro-slides.pdf* file]
+
+  * 23.10.20, ~30 minutes, **The ES-DOC (Earth System Documentation) project:
+    a whistle-stop tour** [slides in *es-doc-whistle-stop-tour.pdf* file]
 
 * Summer School on Effective HPC for Climate and Weather 2020:
 
