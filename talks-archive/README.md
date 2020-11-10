@@ -85,7 +85,8 @@
 
 * SORSE (A Series of Online Research Software Events):
 
-  * [DUE/UPCOMING] ~30 minutes (to be presented virtually),
-    **Configuring Sphinx from scratch: making
-    your own documentation and making your documentation your own** [see
-    [this page on the SORSE website](https://sorse.github.io/programme/software-demos/event-011/)]
+  * 03.11.20, ~45 minutes (presented virtually), **Configuring Sphinx from
+    scratch: making your own documentation and making your documentation your
+    own** [source material contained in a separate dedicated repository,
+    [sadielbartholomew/sphinx-from-scratch](https://github.com/sadielbartholomew/sphinx-from-scratch) and further information is provided in a page on the
+    [SORSE website](https://sorse.github.io/programme/software-demos/event-011/)]
