@@ -1,0 +1,60 @@
+[user]
+    name = Sadie Louise Bartholomew
+    email = sadie.bartholomew@ncas.ac.uk
+
+[transfer]
+    fsckObjects = true
+
+[core]
+    editor = emacs
+    pager = delta
+
+    # Can't use env vars like $HOME in a gitconfig, sad times...
+    excludesfile = /home/sadie/.gitignore_global
+
+[delta]
+    line-numbers = true
+    syntax-theme = 1337
+    plus-style = '"#E5E5FF" "#004d39"'
+    minus-style = '"#E5E5FF" "#66001a"'
+    plus-emph-style = '"#E5E5FF" bold "#009970"'
+    minus-emph-style = '"#E5E5FF" bold "#cc0033"'
+    line-numbers-minus-style = "#8FBCB5"
+    line-numbers-zero-style = "#8FBCB5"
+    line-numbers-plus-style = "#8FBCB5"
+    line-numbers-left-format = "{nm:>4}:"
+    line-numbers-right-format = "{np:>4}│"
+    whitespace-error-style = '"#3980C6" reverse'
+
+[interactive]
+    diffFilter = delta --color-only
+
+[diff]
+    tool = ediff
+    guitool = ediff
+    prompt = false
+
+[difftool]
+    prompt = false
+
+[difftool "ediff"]
+    cmd = emacs --eval \"(ediff-files \\\"$LOCAL\\\" \\\"$REMOTE\\\")\"
+
+[merge]
+    tool = emerge
+    prompt = false
+
+[color "status"]
+    added = "#FFDF80"
+    changed = "#009970"
+    untracked = "#3980C6"
+
+[color "branch"]
+    current = '"#FFDF80" reverse'
+    local = "#FFDF80"
+    remote = "#009970"
+
+# colour and formatting for log is dealt with by pretty=format in aliases here:
+[alias]
+    clog = log --pretty=format:'%C(cyan)%h%Creset| %s %Cred(%ad) %C(blue)%an%Creset %C(auto)%d%Creset ' --abbrev-commit --date=short
+    glog = log --graph --pretty=format:'%C(cyan)%h%Creset %s %Cred(%ad) %C(blue)%an%Creset %C(auto)%d%Creset ' --abbrev-commit --date=short

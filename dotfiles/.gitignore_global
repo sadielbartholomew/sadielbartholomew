@@ -1,0 +1,13 @@
+# Note: choose not to globally 'git ignore' commonly-ignored files & dirs e.g:
+#   *.py[cdo]
+#   **/__pycache__/
+#   *.o
+#   *.so
+# in order to (essentially) fully monitor the git ignore properties on
+# individual repositories, on a per-repository basis, since it is best that
+# they have their own appropriate .gitignore files that may need creating or
+# updating. Instead only globally ignore my own dedicated directories and files
+# desgined e.g. to hold notes and stdout or stderr for debugging or dev plans:
+
+*.sadie
+**/sadie.d/
