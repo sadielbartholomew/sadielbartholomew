@@ -25,8 +25,9 @@
 ;;   * 'stickyfunc-enhance' for a header stating the current function;
 ;;   * 'todotxt-mode', a major mode for todo.txt (syntax highlighting etc.);
 ;;   * 'indent-guide' for indentation guidelines on certain modes.
-;;   * 'mood-line' for a clean and minimal mode line to replace the default one;
-;;   * 'git-gutter' to indicate line changes, additions and removals on branch.
+;;   * 'mood-line' for a clean, minimal mode line to replace the default one;
+;;   * 'git-gutter' to indicate line changes, additions and removals on branch;
+;;   * 'visible-mark' to highlight the current and former position of the mark.
 ;;
 ;; * indirect package requires:
 ;;   * 'vline', required by 'col-highlight';
@@ -363,6 +364,13 @@
                      (symbol-value 'sadie-colourscheme-darkteal)
 )
 
+(defface visible-mark-active
+  '((((type tty) (class mono)))
+    (t (:background "#00B386"))) "")
+(defface visible-mark-face1
+  '((((type tty) (class mono)))
+    (t (:background "#004d39"))) "")
+
 ;; ---------------------------------------------------------------------------
 ;; External package mode config. (any that must come after colour config.)
 ;; ---------------------------------------------------------------------------
@@ -370,6 +378,12 @@
 ;; mood line for improved, though minimalistic, mode line
 (require 'mood-line)
 (mood-line-mode)
+
+;; visible-mark to highlight the current and former position of the mark
+(require 'visible-mark)
+(global-visible-mark-mode 1)
+(setq visible-mark-max 1)
+(setq visible-mark-faces `(visible-mark-face1))
 
 ;; ---------------------------------------------------------------------------
 ;; New and amended key bindings

@@ -2,15 +2,23 @@
     name = Sadie Louise Bartholomew
     email = sadie.bartholomew@ncas.ac.uk
 
-[transfer]
-    fsckObjects = true
-
 [core]
     editor = emacs
     pager = delta
 
     # Can't use env vars like $HOME in a gitconfig, sad times...
     excludesfile = /home/sadie/.gitignore_global
+
+    # Turn on all whitespace detection and fixing. Note that 'blank-at-eol',
+    # 'blank-at-eof' and 'space-before-tab' are all enabled already by default
+    # and 'indent-with-non-tab' is disabled by default (as wanted).
+    whitespace = tab-in-indent, cr-at-eol, fix
+
+[transfer]
+    fsckObjects = true
+
+[web]
+    browser = google-chrome
 
 [delta]
     line-numbers = true
@@ -44,9 +52,12 @@
     tool = emerge
     prompt = false
 
+[color]
+    ui = auto
+
 [color "status"]
-    added = "#FFDF80"
-    changed = "#009970"
+    added = "#009970"
+    changed = "#FFDF80"
     untracked = "#3980C6"
 
 [color "branch"]
@@ -56,5 +67,5 @@
 
 # colour and formatting for log is dealt with by pretty=format in aliases here:
 [alias]
-    clog = log --pretty=format:'%C(cyan)%h%Creset| %s %Cred(%ad) %C(blue)%an%Creset %C(auto)%d%Creset ' --abbrev-commit --date=short
-    glog = log --graph --pretty=format:'%C(cyan)%h%Creset %s %Cred(%ad) %C(blue)%an%Creset %C(auto)%d%Creset ' --abbrev-commit --date=short
+  clog = log --pretty=format:'%C(cyan)%h%Creset| %s %Cred(%ad) %C(blue)%an%Creset %C(auto)%d%Creset ' --abbrev-commit --date=short
+  glog = log --graph --pretty=format:'%C(cyan)%h%Creset %s %Cred(%ad) %C(blue)%an%Creset %C(auto)%d%Creset ' --abbrev-commit --date=short
