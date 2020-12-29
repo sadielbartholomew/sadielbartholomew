@@ -194,20 +194,8 @@
 (custom-set-faces
  '(default ((t
              (
-              :inherit nil
-              :stipple nil
               :background "#0A0F14"
-              :foreground "#8fbcb5"
-              :inverse-video nil
-              :box nil
-              :strike-through nil
-              :overline nil
-              :underline nil
-              :slant normal
-              :weight normal
-              :width normal
-              :foundry "unknown"
-              :family "DejaVu Sans Mono-12"
+              :foreground "#8FBCB5"
              )
  )))
  '(font-lock-builtin-face (((
@@ -271,7 +259,7 @@
                                     (min-colors 88)
                                     (background dark)
                                    )
-                                   (:foreground "#e5e5ff")
+                                   (:foreground "#E5E5FF")
                                  ))
    )
  '(info-title-3 ((t (:inherit info-title-4 :foreground "#E5E5FF" :height 1.2))))
@@ -375,7 +363,7 @@
 ;; External package mode config. (any that must come after colour config.)
 ;; ---------------------------------------------------------------------------
 
-;; mood line for improved, though minimalistic, mode line
+;; mood-line for improved, though minimalistic, mode line
 (require 'mood-line)
 (mood-line-mode)
 

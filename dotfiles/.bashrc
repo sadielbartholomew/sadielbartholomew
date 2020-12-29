@@ -5,8 +5,6 @@
 export VISUAL=emacs
 export EDITOR=emacs
 
-export PAGER=less
-
 # Set emacs key-bindings for the command line
 set -o emacs
 
@@ -101,11 +99,17 @@ conda activate cf-env
 export PATH="$PATH:$HOME/julia-1.5.2/bin"
 
 # ---------------------------------------------------------------------------
-# Pagers
+# Output formatting (cat, pager, etc.)
 # ---------------------------------------------------------------------------
 
-# A bat is better than a cat
-alias cat='bat --theme=1337'
+# A bat is better than a cat: use bat to colour cat, pager and man outputs
+export BAT_THEME="1337"
+alias cat='bat --paging=never'
+
+export PAGER=less
+alias less='bat'  # uses ${PAGER} but colours it, so get a coloured 'less'
+
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # ----------------------------------------------------------------------
 # Project-specific: ES-DOC shell initialisation

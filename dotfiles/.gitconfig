@@ -61,9 +61,9 @@
     untracked = "#3980C6"
 
 [color "branch"]
-    current = '"#FFDF80" reverse'
+    current = "#009970"
     local = "#FFDF80"
-    remote = "#009970"
+    remote = "#3980C6"
 
 # colour and formatting for log is dealt with by pretty=format in aliases here:
 [alias]
