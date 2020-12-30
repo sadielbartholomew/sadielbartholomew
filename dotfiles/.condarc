@@ -1,0 +1,23 @@
+# ---------------------------------------------------------------------------
+# General conda settings
+# ---------------------------------------------------------------------------
+
+# See https://docs.conda.io/projects/conda/en/latest/user-guide/configuration/
+#     use-condarc.html#using-the-condarc-conda-configuration-file
+
+auto_activate_base: False
+auto_update_conda: False
+show_channel_urls: True
+
+
+# ---------------------------------------------------------------------------
+# Specifying channels and environments
+# ---------------------------------------------------------------------------
+
+channels:
+  - conda-forge
+  - defaults
+
+# Directories in which environments are located (add dir to override at top)
+envs_dirs:
+  - ~/anaconda3/envs/

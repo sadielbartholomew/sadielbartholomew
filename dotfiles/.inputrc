@@ -1,0 +1,25 @@
+# Give only previous commands matching the current input (not any in history)
+# Note: this is incredibly useful!
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+
+# Customise look of output of completion etc.
+set visible-stats on
+set mark-symlinked-directories on
+# (note the if statement below is to avoid an emacs python major mode bug, see:
+#  https://debbugs.gnu.org/cgi/bugreport.cgi?bug=24401)
+$if Bash
+set colored-stats on
+$endif
+
+# Case insensitive completion with all possibilities
+set completion-ignore-case on
+set show-all-if-ambiguous on
+
+# Only query if want to see all possibilities if >250 (higher than default)
+set completion-query-items 250
+
+# Note: can't set pager for completion:
+#   > Readline does not use `more', or any other external program; it uses its
+#     own internal pager.  There is no user-configurable hook to change that.
+# (from 'https://lists.gnu.org/archive/html/help-bash/2014-03/msg00018.html')
