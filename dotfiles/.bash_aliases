@@ -13,10 +13,11 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-# Core one/two letter
+# Core 1-3 letters
 alias e='emacs'
-alias py='python'
 alias g='git'
+alias py='python'
+alias ipy='ipython'
 
 # Dir navigation: up
 alias cdu='cd ..'
