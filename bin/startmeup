@@ -11,6 +11,19 @@ CORE_DIR=~/core/  # location of command reference and todo.txt file(s)
 SECURE_HTP_PRE="https://"
 GITHUB_ROOT="${SECURE_HTP_PRE}github.com/" # ${GITHUB_ROOT}
 
+# URLs to open, one array for each window to open
+admin_urls_array=(
+    "${SECURE_HTP_PRE}mail.google.com/mail/u/0/#inbox"
+    "${GITHUB_ROOT}"
+    "${GITHUB_ROOT}/notifications"
+    "${SECURE_HTP_PRE}www.githubstatus.com"
+)
+dev_urls_array=(
+    "${GITHUB_ROOT}/NCAS-CMS"
+    "${GITHUB_ROOT}/ES-DOC"
+    "${GITHUB_ROOT}/ES-DOC-INSTITUTIONAL"
+    "${GITHUB_ROOT}/cf-convention"
+)
 
 # ---------------- DEFINE FUNCTIONS FOR STARTUP TASKS -------------- #
 
@@ -27,29 +40,27 @@ open_new_terminal() {
         -- /bin/bash -c 'resize -s 75 80; clear; exec bash'
 }
 
-# Email, GH notifications, dashboard and site status
-open_admin_browser_window() {
-    ${BROWSER_CHOICE_COMMAND} --new-window \
-        "${SECURE_HTP_PRE}mail.google.com/mail/u/0/#inbox" \
-        "${GITHUB_ROOT}" \
-        "${GITHUB_ROOT}/notifications" \
-        "${SECURE_HTP_PRE}www.githubstatus.com" &  # check then close immediately
-}
-
 # Open admin apps e.g. Slack, email clients
 open_admin_apps() {
     # Slack set to open on startup outside of this script
     :  # do nothing for now
 }
 
+# Designed to accept array of URLs to open in new window as a parameter
+open_browser_window() {
+    #urls_array=("$@")
+    # TODO: add browser tab dividers to help organise tabs visually
+    "${BROWSER_CHOICE_COMMAND}" --new-window "${@}" &
+}
+
+# Email, GH notifications, dashboard and site status
+open_admin_browser_window() {
+    open_browser_window "${admin_urls_array[@]}"
+}
+
 # Relevant pages for GitHub organisations and projects working on
 open_dev_browser_window() {
-    # TODO: add browser tab dividers to help organise tabs visually
-    ${BROWSER_CHOICE_COMMAND} --new-window \
-        "${GITHUB_ROOT}/NCAS-CMS" \
-        "${GITHUB_ROOT}/ES-DOC" \
-        "${GITHUB_ROOT}/ES-DOC-INSTITUTIONAL" \
-        "${GITHUB_ROOT}/cf-convention" &
+    open_browser_window "${dev_urls_array[@]}"
 }
 
 # Open emacs with key organisation and helper files pre-loaded
