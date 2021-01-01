@@ -35,3 +35,12 @@ alias glog='git glog'
 cdl() {
     cd "$@" && ls -Fa;
 }
+
+# Start-up and shut-down scripts and lock screen command
+# Note: also have sup whcih is quicker to type than startmeup, but only alias
+# shutmedown as full long name since that script is potentially detructive of
+# processes so don't want to accidentally execute it.
+alias startmeup='~/bin/startmeup'
+alias sup='~/bin/startmeup'
+alias shutmedown='~/bin/shutmedown'
+alias lock='gnome-screensaver-command -l'

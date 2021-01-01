@@ -1,0 +1,69 @@
+#!/bin/bash
+
+# These scripts follow the Google styleguide for shell scripts, see:
+# https://google.github.io/styleguide/shellguide.html
+
+USERNAME=sadie  # SLB system $USER
+# Keep in sync with startmeup script $BROWSER_CHOICE_COMMAND var for main
+# browser used, though note here for pkill only 'chrome' works rather than
+# full 'google-chrome'.
+SPACE_DELIM_NAMES_OF_BROWSERS_USED="chrome firefox"
+
+# ---------------- DEFINE FUNCTIONS FOR SHUTDOWN TASKS -------------- #
+
+check_no_such_processes() {
+    ! pgrep $1
+}
+
+# TODO: this isn't clean, instead find a clean graceful way to exit each.
+kill_all_such_processes_if_running() {
+    pkill $1
+}
+
+close_all_browser_windows() {
+    browsers_open=0  # assume true at first, set as false if not at end
+    for browser_name in $SPACE_DELIM_NAMES_OF_BROWSERS_USED
+    do
+        if pgrep "${browser_name}"
+        then
+            kill_all_such_processes_if_running "${browser_name}"
+        fi
+        sleep 1  # give a little time so killed process not still listed
+        check_no_such_processes "${browser_name}" || browsers_open=1
+    done
+    return "${browsers_open}"
+}
+
+# TODO: add and run close_slack function to close Slack (via slack-cli?)
+
+check_emacs_already_stopped() {
+    # Manually close emacs frame with (close-emacs) elisp function. This
+    # just checks there are no emacs processes running that would be
+    # killed with the shutdown, potentially losing work.
+    check_no_such_processes emacs
+}
+
+close_all_terminals() {
+    term_name=gnome-terminal
+
+    # Obviously this is not clean so ensure all important processes are
+    # stopped before running this or they will die with the kill.
+    kill_all_such_processes_if_running "${term_name}"
+    check_no_such_processes "${term_name}"
+}
+
+shutdown_system() {
+    shutdown
+}
+
+# --------- EXECUTE FUNCTIONS UPON STANDARD STARTUP -------------- #
+
+if [ $(whoami) == ${USERNAME} ]
+then
+    # Gracefully and quickly close all applications
+    # Note: shutdown takes up to 1 minute to execute on next minute, so
+    # usually have sufficient time then to close other apps e.g. Slack that
+    # are not dealt with by this script.
+    close_all_browser_windows && check_emacs_already_stopped \
+        && close_all_terminals && shutdown_system
+fi
