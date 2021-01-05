@@ -1,5 +1,5 @@
 ;; *Sadie's custom emacs configuration*
-;; Updated 23.12.20
+;; Updated 05.01.21
 
 ;; ---------------------------------------------------------------------------
 ;; Basic setup
@@ -23,7 +23,8 @@
 ;;   * 'fill-column-indicator' for fixed reference lines e.g. at column 80;
 ;;   * 'col-highlight' for highlighting the column of the cursor's position;
 ;;   * 'stickyfunc-enhance' for a header stating the current function;
-;;   * 'todotxt-mode', a major mode for todo.txt (syntax highlighting etc.);
+;;   * 'org-mode', a major mode for organisation and so much more;
+;;   * 'org-bullets', for replacing org-mode bullets with UTF-8 characters;
 ;;   * 'indent-guide' for indentation guidelines on certain modes.
 ;;   * 'mood-line' for a clean, minimal mode line to replace the default one;
 ;;   * 'git-gutter' to indicate line changes, additions and removals on branch;
@@ -126,10 +127,6 @@
 ;; External package mode configuration
 ;; ---------------------------------------------------------------------------
 
-;; Add new todo.txt mode for todo.txt based organisation:
-(require 'todotxt-mode)
-(add-to-list 'auto-mode-alist '("\\todo.txt\\'" . todotxt-mode))
-
 ;; e2wm windowing management
 (require 'e2wm)
 
@@ -195,7 +192,7 @@
  '(default ((t
              (
               :background "#0A0F14"
-              :foreground "#8FBCB5"
+              :foreground "#8fbcb5"
              )
  )))
  '(font-lock-builtin-face (((
@@ -259,7 +256,7 @@
                                     (min-colors 88)
                                     (background dark)
                                    )
-                                   (:foreground "#E5E5FF")
+                                   (:foreground "#e5e5ff")
                                  ))
    )
  '(info-title-3 ((t (:inherit info-title-4 :foreground "#E5E5FF" :height 1.2))))
@@ -374,6 +371,42 @@
 (setq visible-mark-faces `(visible-mark-face1))
 
 ;; ---------------------------------------------------------------------------
+;; Org mode specific config and customisation
+;; ---------------------------------------------------------------------------
+
+(require 'org)
+(define-key global-map "\C-cl" 'org-store-link)
+(define-key global-map "\C-ca" 'org-agenda)
+(setq org-log-done t)
+
+;; Set the encoding system
+(set-language-environment 'utf-8)
+(setq locale-coding-system 'utf-8)
+(prefer-coding-system 'utf-8)
+(setq default-file-name-coding-system 'utf-8)
+(set-default-coding-systems 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(if (boundp buffer-file-coding-system)
+    (setq buffer-file-coding-system 'utf-8)
+  (setq default-buffer-file-coding-system 'utf-8))
+(setq x-select-request-type '(UTF8_STRING COMPOUND_TEXT TEXT STRING))
+
+;; Disable Chinese, Japanese and Korean characters
+(setq utf-translate-cjk-mode nil)
+
+;; Customise asterisks as bullet points for nested lists
+(require 'org-bullets)
+(setq org-bullets-face-name (quote org-bullet-face))
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+(setq org-bullets-bullet-list '(
+   "ᚏ" "ᚎ" "ᚍ" "ᚌ" "ᚋ"))
+(setq org-ellipsis " ➕")
+
+;; syntax highlighting for code snippets inside 'BEGIN_SRC ... END_SRC' blocks
+(setq org-src-fontify-natively t)
+
+;; ---------------------------------------------------------------------------
 ;; New and amended key bindings
 ;; ---------------------------------------------------------------------------
 
@@ -393,3 +426,13 @@
   (define-key map (kbd "C-c s C-a") 'hs-show-all)
   (define-key map (kbd "C-c h C-l") 'hs-hide-level)
 map))
+
+;; ---------------------------------------------------------------------------
+;; Custom functions
+;; ---------------------------------------------------------------------------
+
+(defun close-emacs ()
+  (interactive)
+  (mapc 'save-buffers-kill-emacs (frame-list))
+)
+(put 'downcase-region 'disabled nil)

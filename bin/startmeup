@@ -5,7 +5,8 @@
 
 USERNAME=sadie  # SLB system $USER
 BROWSER_CHOICE_COMMAND=google-chrome  # alternatively 'firefox', etc.
-CORE_DIR=~/core/  # location of command reference and todo.txt file(s)
+# Directory to hold (core) files under org mode
+ORG_DIR=~/org/
 
 # URL prefixes
 SECURE_HTP_PRE="https://"
@@ -65,7 +66,7 @@ open_dev_browser_window() {
 
 # Open emacs with key organisation and helper files pre-loaded
 open_emacs() {
-    emacs "${CORE_DIR}/core_commands" "${CORE_DIR}/todo.txt" &
+    emacs "${ORG_DIR}/commands.org" "${ORG_DIR}/todo-work.org" &
 }
 
 
