@@ -21,7 +21,7 @@ kill_all_such_processes_if_running() {
 }
 
 close_all_browser_windows() {
-    browsers_open=0  # assume true at first, set as false if not at end
+    browsers_all_closed=0  # assume as such at first, set to 1 if not by end
     for browser_name in $SPACE_DELIM_NAMES_OF_BROWSERS_USED
     do
         if pgrep "${browser_name}"
@@ -29,7 +29,7 @@ close_all_browser_windows() {
             kill_all_such_processes_if_running "${browser_name}"
         fi
         sleep 1  # give a little time so killed process not still listed
-        check_no_such_processes "${browser_name}" || browsers_open=1
+        check_no_such_processes "${browser_name}" || browsers_all_closed=1
     done
     return "${browsers_open}"
 }
@@ -43,7 +43,12 @@ check_emacs_already_stopped() {
     check_no_such_processes emacs
 }
 
-close_all_terminals() {
+# Note: distinguish terminal emulator as GNOME because use single other (MATE)
+# TE to run startmeup and shutdown scripts to open (start of day) and close
+# (end of day) relevant apps and processes, so the command does not affect
+# the MATE terminal which will remain open to oversee the shutdown process.
+# (This function with term_name=mate-terminal would shut that terminal down.)
+close_all_gnome_terminals() {
     term_name=gnome-terminal
 
     # Obviously this is not clean so ensure all important processes are
@@ -65,5 +70,5 @@ then
     # usually have sufficient time then to close other apps e.g. Slack that
     # are not dealt with by this script.
     close_all_browser_windows && check_emacs_already_stopped \
-        && close_all_terminals && shutdown_system
+        && close_all_gnome_terminals && shutdown_system
 fi

@@ -1,7 +1,22 @@
+# .sh or shebang not appropriate for bash init files, so set shell-script mode
+
 # ---------------------------------------------------------------------------
 # Aliases and custom functions for the .bashrc
 # ---------------------------------------------------------------------------
+ORG_DIR=~/org/
+TOKENS_FILE=~/tokens.sadie
+
 # TODO: add aliases from laptop
+
+# Core 1-3 letters
+alias e='emacs'
+alias g='git'
+alias py='python'
+alias ipy='ipython'
+alias jl='julia'
+alias c='clear'
+alias x='exit'
+alias org='cd ${ORG_DIR}'
 
 # Colour whenever colouring is available
 if [ -x /usr/bin/dircolors ]; then
@@ -12,12 +27,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
-
-# Core 1-3 letters
-alias e='emacs'
-alias g='git'
-alias py='python'
-alias ipy='ipython'
 
 # Dir navigation: up
 alias cdu='cd ..'
@@ -44,3 +53,23 @@ alias startmeup='~/bin/startmeup'
 alias sup='~/bin/startmeup'
 alias shutmedown='~/bin/shutmedown'
 alias lock='gnome-screensaver-command -l'
+
+# So I don't have to remember any of those pesky tar command options, though
+# echo them too so I don't forget what they should be...
+untar() {
+    tar -xvf $1 && rm -r $1;
+    echo "Successfully ran 'tar --extract --verbose --file ${1}' and" \
+    "cleaned up."
+}
+untargz() {
+    tar -zxvf $1 && rm -r $1 && echo \
+    "Successfully ran 'tar --gzip --extract --verbose --file ${1}' and" \
+    "cleaned up."
+}
+
+# Getting a security token from a local file when the cache has expired.
+# Designed so first arg is the line of tokens file to grab the token at, else
+# the token on the first line is returned by default.
+grabtoken() {
+    sed -n "${1:-1}"p "${TOKENS_FILE}"
+}
