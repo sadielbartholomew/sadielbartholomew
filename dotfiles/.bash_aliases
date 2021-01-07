@@ -32,6 +32,7 @@ fi
 alias cdu='cd ..'
 alias cduu='cd ..; cd ..'
 alias cduuu='cd ..; cd ..; cd ..'
+alias cduuuu='cd ..; cd ..; cd ..; cd ..'
 
 # Tweaked utilities
 alias greph='history | grep'
@@ -39,6 +40,7 @@ alias greph='history | grep'
 # NOTE git sub-aliases (i.e. git X = git Y) are set up separately in
 # .gitconfig file, so only define root alises (i.e. git X = Z).
 alias glog='git glog'
+alias ghist='history | cut -c 8- | grep git | sort | uniq -c | sort -n -r | head -n 15'
 
 # Change directory and then ls it
 cdl() {

@@ -67,5 +67,17 @@
 
 # colour and formatting for log is dealt with by pretty=format in aliases here:
 [alias]
+  # Remind me of my own alises!
+  aliases = "!git config -l | grep alias | cut -c 7-"
+
   clog = log --pretty=format:'%C(cyan)%h%Creset| %s %Cred(%ad) %C(blue)%an%Creset %C(auto)%d%Creset ' --abbrev-commit --date=short
   glog = log --graph --pretty=format:'%C(cyan)%h%Creset %s %Cred(%ad) %C(blue)%an%Creset %C(auto)%d%Creset ' --abbrev-commit --date=short
+
+  # Requires escape to shell (via '!') to grab current branch
+  br = "!git rev-parse --abbrev-ref HEAD"
+  pushup = "!git push upstream $(git br):master"
+  pusho = push origin HEAD
+
+  cm = commit -m
+
+  rebasic = rebase -i origin/master
