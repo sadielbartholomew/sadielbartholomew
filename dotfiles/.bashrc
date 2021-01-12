@@ -17,7 +17,6 @@ shopt -s checkwinsize
 # ---------------------------------------------------------------------------
 
 # Construction of the PS1 prompt by parts:
-
 # 0) Formatting components for construction of the PS1
 #    Separator
 sep="\[\e[m\]"
@@ -27,13 +26,10 @@ blue="\[\e[35;40m\]"
 white="\[\e[37;40m\]"
 
 # 1) Exit status indicator
-pass_int="92"  # green
-pass_par=")"   # results in smile
-fail_int="91"  # red
-fail_par="("   # results in frown
-int='$(if [[ $? == 0 ]]; then echo ${pass_int}; else echo ${fail_int}; fi)'
-par='$(if [[ $? == 0 ]]; then echo ${pass_par}; else echo ${fail_par}; fi)'
-exit_code_indicator="\[\e[01;${int}m\]:${par}"
+_pass_sig="92m:)"  # green smile
+_fail_sig="91m:("  # red frown
+_sig='$(if [[ $? == 0 ]]; then echo ${_pass_sig}; else echo ${_fail_sig}; fi)'
+exit_code_indicator="\[\e[01;${_sig}\]${sep}"
 
 # 2) Time
 # Note: \t is time command was run in '24-hour HH:MM:SS format' (preferred)
