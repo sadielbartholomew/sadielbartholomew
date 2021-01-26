@@ -25,11 +25,10 @@ red="\[\e[31;40m\]"
 blue="\[\e[35;40m\]"
 white="\[\e[37;40m\]"
 
-# 1) Exit status indicator
-_pass_sig="92m:)"  # green smile
-_fail_sig="91m:("  # red frown
-_sig='$(if [[ $? == 0 ]]; then echo ${_pass_sig}; else echo ${_fail_sig}; fi)'
-exit_code_indicator="\[\e[01;${_sig}\]${sep}"
+# 1) Exit status indicator: green smile for 0/pass, red frown for non-zero/fail
+exit_code_indicator='$(
+if [[ $? == 0 ]]; then echo "\[\e[01;92m\]:)"; else echo "\[\e[01;91m\]:("; fi
+)'
 
 # 2) Time
 # Note: \t is time command was run in '24-hour HH:MM:SS format' (preferred)
