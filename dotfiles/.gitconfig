@@ -67,6 +67,9 @@
 
 # colour and formatting for log is dealt with by pretty=format in aliases here:
 [alias]
+  # Note there are also several git top-level aliases and custom functions
+  # defined in .bash_aliases that can be used but are not printed by 'aliases'.
+
   # Remind me of my own alises!
   aliases = "!git config -l | grep alias | cut -c 7-"
 
@@ -81,3 +84,9 @@
   cm = commit -m
 
   rebasic = rebase -i origin/master
+
+  # Every appended 'x' increases the number of context lines for each match
+  grepx = grep -A 2 -B 2
+  grepxx = grep -A 5 -B 5
+  grepxxx = grep -A 10 -B 10
+  grepxxxx = grep -A 50 -B 50
