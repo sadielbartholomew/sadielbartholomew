@@ -1,0 +1,311 @@
+% Important: this CV must be compiled with compiler that recognises academicons
+% e.g. XeLaTeX.
+
+\documentclass[10pt,a4paper]{cv_template}
+
+\geometry{left=1cm,right=1cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1cm,bottom=1cm}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
+
+\usepackage{hyperref}
+
+% Define colours to use
+\definecolor{Bright}{HTML}{621E2B}
+\definecolor{Green}{HTML}{7185A9}
+\definecolor{Black}{HTML}{0F1F38}
+\definecolor{LightGrey}{HTML}{515C50}
+\definecolor{TempCol}{HTML}{B6B5AD}
+\definecolor{LinkCol}{HTML}{d2e4f9}
+\definecolor{DarkerBlue}{HTML}{435370}
+\colorlet{heading}{Green}
+\colorlet{headingdarker}{DarkerBlue}
+\colorlet{accent}{Bright}
+\colorlet{emphasis}{Black}
+\colorlet{body}{Black}
+\colorlet{linkscol}{LinkCol}
+
+\hypersetup{
+  colorlinks=false,
+  urlbordercolor=linkscol
+}
+
+\begin{document}
+
+\name{Sadie L. Bartholomew}
+\tagline{\Large Computational scientist {\color{TempCol}|} Open-source contributor}
+\made{\today}
+
+\logo{5.0cm}{"cv_photo"}
+
+\docinfo{
+  {\large{\color{heading}{\Large\faGithub} \enspace GitHub:} \enspace \href{https://github.com/sadielbartholomew}{\textit{sadielbartholomew}}} \newline
+  {\large{\color{heading}{\Large\aiResearchGateSquare} \enspace ResearchGate:} \enspace \href{https://www.researchgate.net/profile/Sadie_Bartholomew}{\textit{Sadie\_Bartholomew}}} \newline
+  {\large{\color{heading}{\Large\aiOrcid} \enspace ORCID iD:} \enspace \href{https://orcid.org/0000-0002-6180-3603}{0000-0002-6180-3603}} \newline
+  % Make sure re-add email and phone number for private CV!
+  {\large{\color{heading}{\Large\faEnvelope}\enspace} sadielbartholomew@gmail.com} \newline
+  {\large{\color{heading}{\Large\faPhone}\enspace} \color{TempCol}<redacted for public CV>} \newline
+  {\large{\color{heading}{\Large\faMapMarker}\enspace} \enspace Reading, Berkshire, UK}
+}
+
+\makeheader
+
+% Note these config items must go before the 'begin paracol' call
+% so it knows to adjust to them:
+\columnratio{0.62}
+\setlength{\columnsep}{1cm}
+
+\begin{paracol}{2}
+
+
+\need{Professional experience in computing}
+
+\steptwo{}{Computational Scientist}{11}{Jan. 2020 - present}{\href{https://ncas.ac.uk/}{National Centre for Atmospheric Science}, \href{http://cms.ncas.ac.uk/}{Computational Modelling Services group}, based at \href{https://www.reading.ac.uk/met/}{University of Reading Dept. of Meteorology}}{}
+\begin{itemize}
+  \item \textbf{Developing, optimising and providing user services for \href{https://github.com/NCAS-CMS/cf-python}{\texttt{cf-python}, an earth science data analysis library}, and \href{https://hps.vi4io.org/_media/events/2020/summer-school-cfnetcdf.pdf}{supporting packages}}, plus wider work promoting the \href{https://cfconventions.org/}{\textit{CF Conventions}} standard, for example as a member of the \href{https://cfconventions.org/governance.html}{official `Information Management and Support' team}.
+  \item \textbf{Engineering infrastructure and supporting workflows for} \href{https://github.com/ES-DOC/}{\textit{\textbf{ES-DOC}} (the Earth System Documentation project)}, with responsibility for the \href{https://es-doc.org/cmip6-machine-and-performance/}{\textit{CMIP6} simulation machine and performance end-to-end workflow}.
+  \item Further ad-hoc work in \textbf{HPC and climate modelling support}.
+\end{itemize}
+
+\divider
+
+\steptwo{}{Scientific Software Engineer}{7.5}{Oct. 2017 - Nov. 2019}{\href{https://www.metoffice.gov.uk/}{Met Office}, \href{https://www.metoffice.gov.uk/research/weather/weather-science-it/modelling-support}{Modelling Infrastructure Support Systems team}}
+\textbf{Developing, maintaining and supporting users of the infrastructure systems \href{https://github.com/cylc}{\texttt{cylc}}, \href{https://github.com/metomi/rose}{\texttt{rose}} and \href{https://github.com/metomi/fcm}{\texttt{fcm}} used to configure and run scientific software for both operational forecasting and research}. For example:
+\begin{itemize}
+  \itemsep0em 
+  \item implemented suite host selection and asymmetric cryptography in, and wrote a syntax lexer and software-checking utility for, \texttt{cylc};
+  \item converted the entire \texttt{cylc} documentation from raw \LaTeX \hspace{0.1em} to Sphinx;
+  \item overhauled web applications, including porting a Python 2 \texttt{rose} utility utilising the \texttt{cherrypy} web framework to Python 3 and \texttt{tornado};
+  \item registered numerous bug reports, bug fixes, user requests, and ideas;
+  \item co-delivered internal training courses and an internal update seminar.
+\end{itemize}
+
+
+\need{Further Open-Source Contributions...}
+
+...to those made as part of core work for employed roles. Only notable items are listed; for a full record see the GitHub user \textit{sadielbartholomew}.
+
+\vspace{1em}
+
+\stepthree{}{Reviewer for Journal of Open Source Software}{2}{June 2020+}{}{}
+\begin{itemize}
+  \item \textbf{Selected as reviewer for a number of submissions to the \href{https://joss.theoj.org/}{journal JOSS}}, providing feedback to see these through to publication.
+\end{itemize}
+
+\divider
+
+\stepthree{}{Optimisation of the epidemiology model \texttt{JUNE}}{0.5}{Aug. - Oct. 2020}{}{}
+\begin{itemize}
+  \item With a small team from NCAS, \textbf{optimised the performance of a new epidemiology simulation, \texttt{JUNE}, as part of research into COVID-19}.
+  \item Collectively \textbf{produced an $\mathcal{O}(100)$ latency speedup} to the pre-alpha stage, \href{https://doi.org/10.1101/2020.12.15.20248246}{receiving formal acknowledgement in the official release paper}.
+\end{itemize}
+
+\divider
+
+\stepthree{}{Annual completion of \textit{Hacktoberfest} challenge}{2.5}{Oct. 2018+}{}{}
+\begin{itemize}
+  \item \textbf{Winner of prizes for three consecutive years} for completing the \href{https://hacktoberfest.digitalocean.com/}{DigitalOcean open-source initiative  \textit{Hacktoberfest}} each October.
+\end{itemize}
+
+\divider
+
+\stepthree{}{Open personal project: creativity with \texttt{matplotlib}}{1.5}{2016+}{}{}
+\begin{itemize}
+  \item \textbf{Evolving an independent project, \href{https://github.com/sadielbartholomew/creative-matplotlib}{\texttt{creative-matplotlib}}}, showcasing expressive application of the Python visualisation library \texttt{matplotlib}.
+\end{itemize}
+
+
+\need{Publications in refereed journals}
+
+\begin{itemize}
+  \item \href{https://joss.theoj.org/papers/10.21105/joss.02717}{Hassell, D. and Bartholomew, S. L., 2020, \textit{`\texttt{cfdm}: A Python reference implementation of the CF data model'}, published in \textbf{Journal of Open Source Software} [5(54), p.2717] ({\color{Bright}\textbf{DOI: 10.21105/joss.02717}})}
+  % Force a new line for the DOI else the opening parentheses gets stuck on the previous line
+  \item \href{https://ieeexplore.ieee.org/document/8675433}{H. Oliver \textit{et al.}, 2019, \textit{`Workflow Automation for Cycling Systems'}, published in \textbf{Computing in Science \& Engineering} [21(4), pp.7-21] \\({\color{Bright}\textbf{DOI: 10.1109/MCSE.2019.2906593}})}
+\end{itemize}
+
+
+\need{Selected delivered presentations}
+
+\begin{itemize}
+  \item Independently devised and presented a \href{https://sorse.github.io/programme/software-demos/event-011/}{software demonstration, \textit{`Configuring Sphinx from scratch'}}, as part of the \href{https://sorse.github.io/}{\textbf{Series of Online Research Software Events (SORSE)}} in November 2020.
+  \item \href{https://metomi.github.io/presentations/RSEConUK2019-Cylc-Talk/#/title-slide}{Co-presented a talk, \textit{`Pursuing and supporting reproducible workflows for all with Cylc'}}, \href{https://rseconuk2019.sched.com/event/QSSI/5d2-hpc-pursuing-and-supporting-reproducible-workflows-for-all-with-cylc}{at the \textbf{Fourth Conference of Research Software Engineering} ("RSEConUK 2019") in September 2019}.
+\end{itemize}
+
+
+\need{Significant teaching experience}
+
+\begin{itemize}
+  \item Led the second half of the \textbf{Input/Output and Middleware (Storage II) session} of the \href{https://hps.vi4io.org/events/2020/esiwace-school}{\textit{ESiWACE Summer School on Effective HPC for Climate and Weather}}, held August 2020 and due again for 2021.
+  \item Co-delivery of the \textbf{National Centre for Atmospheric Science's regularly-held day-long \href{https://ncas.ac.uk/study-with-us/data-analysis-tools/}{course on Python for atmospheric science}, \textit{Data Analysis Tools}}, including leading the section about regridding.
+\end{itemize}
+
+
+\need{Other notable work experience}
+
+\steptwo{Student}{Research Assistant}{8}{Dec. 2015 - March 2017}{\href{https://coltraco.com/}{Coltraco Ultrasonics Ltd}}
+\begin{itemize}
+  \item \textbf{Conducting scientific and technical research} relating to ultrasonic measurement on a remote, part-time basis, assimilating into reports.
+\end{itemize}
+\divider
+
+\steptwo{}{Science and Technology Editor}{5}{2014 - 2015; 2013 - 2014}{\href{https://www.palatinate.org.uk/?s=sadie+bartholomew}{Palatinate Newspaper};
+\href{https://www.thebubble.org.uk/?s=sadie+bartholomew}{The Bubble Magazine}}
+\begin{itemize}
+  \item \textbf{Sourcing and writing articles to deadlines} for two separate student publications, receiving the \textit{Hunter Davies Prize for Journalism} in 2014.
+\end{itemize}
+
+
+\need{Education}
+
+\steptwo{MPhys (Hons)}{Integrated Masters in Physics}{0.5}{Oct. 2012 - June 2017}{Durham University}
+\begin{itemize}
+  \item \textbf{Final-year computational project} entitled \textit{`Searches for
+boosted top quarks'}, evaluating and refining top-tagging algorithms implemented in C++, as applied to simulated LHC proton-proton scattering events.
+  \item \textbf{\href{https://www.dur.ac.uk/physics/modules/}{Undergraduate physics syllabus plus elective masters-level modules}} on Advanced Quantum Theory, Particle Theory and Cosmology.
+\end{itemize}
+\divider
+
+\steptwo{}{Secondary Education}{14.5}{2007 - 2012}{Ponteland Community High School}
+\begin{itemize}
+  \item \textbf{A levels}: Physics (A*), Chemistry (A*), Mathematics (A*), Further Mathematics (A), Critical Thinking (A)
+  \item \textbf{Other}: \href{https://qips.ucas.com/qip/extended-project-qualification-epq}{Extended Project Qualification} (A*), \href{https://www.crestawards.org/crest-gold}{CREST Gold Award}
+  \item \textbf{GCSE}: 11 A* qualifications including French and self-taught History
+\end{itemize}
+
+\switchcolumn
+
+
+\need{Technical Skills}
+
+\textbf{Key}: \LEFTcircle \enspace ability self-assessment | $\bigstar$ preferred
+
+\divider
+
+\makesubtitle{PROGRAMMING LANGUAGES:}
+\vspace{0.5ex}
+
+\begin{itemize}
+  \item Professional and/or academic use of:
+  \vspace{0.5ex}
+    \itemtag{Python} \grade{4.5}(see also below $\boldsymbol{\rightarrow}$) \newline
+    \itemtag{Unix shell} \Big(\itemtag{Bash $\bigstar$}\Big) \grade{4.5} \newline
+    \itemtag{C++} \grade{3} \newline
+    \itemtag{Emacs Lisp} \grade{3} \newline
+    \itemtag{JavaScript} \grade{2} \newline
+  \item Recreational use of, as well as the above:
+  \vspace{0.5ex}
+    \itemtag{Common Lisp} \grade{2} \newline
+    \itemtag{Haskell} \grade{2} \newline
+\end{itemize}
+
+\makesubtitle{$\boldsymbol{\rightarrow}$ notable Python ecosystem competence:}
+\vspace{0.5ex}
+
+\itemtag{NumPy} \itemtag{SciPy} \itemtag{Dask} \itemtag{\texttt{matplotlib}}
+\itemtag{Jupyter} \itemtag{Sphinx} \itemtag{\texttt{mpi4py}} \itemtag{Numba}
+\itemtag{Airflow} \itemtag{Tornado} \itemtag{\texttt{netcdf4-python}}
+
+\divider
+
+\makesubtitle{MARKUP LANGUAGES:}
+\vspace{0.5ex}
+
+\begin{itemize}
+  \item Intermediate to advanced ability with: \newline
+    \itemtag{Markdown}
+    \itemtag{reStructuredText}
+    \itemtag{HTML}
+    \itemtag{YAML}
+    \itemtag{\LaTeX}
+    \itemtag{INI}
+  \item Basic proficiency with: \newline
+    \itemtag{XML}
+    \itemtag{TOML}
+    \itemtag{Emacs Org-mode}
+\end{itemize}
+
+\divider
+
+\makesubtitle{INFRASTRUCTURE AND SYSTEMS:}
+\vspace{1.5ex}
+
+\begin{itemize}
+  \item OS: \itemtag{Linux $\bigstar$} \itemtag{Windows}
+  \item Version control: \itemtag{git $\bigstar$} \itemtag{SVN}
+  \item Development environment: \itemtag{emacs $\bigstar$}
+  \item Scheduling: \itemtag{slurm} \itemtag{PBS} \itemtag{cron} \itemtag{at}
+  \item Host: \itemtag{GitHub $\bigstar$} \itemtag{GitLab} \itemtag{Bitbucket}
+  \item Web technologies: \itemtag{CSS} \itemtag{Vue.js}
+  \item Other notable: \itemtag{conda} \itemtag{MPI} \itemtag{SQL}
+\end{itemize}
+
+
+\need{Soft Skills}
+
+Five soft skills to highlight:
+\vspace{0.5ex}
+
+\itemtag{Collaboration spanning time zones}
+\itemtag{End-user empathy}
+\itemtag{Creativity}
+\itemtag{Curiosity}
+\itemtag{Continuous learning}
+
+
+\need{Engineering experience}
+
+Practiced in software engineering processes:
+\vspace{-1.0ex}
+% Why does the above value need to be different to the soft skills
+% section to give same gap (note it has nothing to do with this comment)
+
+\itemtag{Software development life cycle stages}
+\itemtag{Use of Tier-1, -2 and -3 HPC facilities}
+\itemtag{Design patterns}
+\itemtag{User support}
+\itemtag{Peer review of code and written proposals}
+\itemtag{Documentation writing and infrastructure}
+\itemtag{Continuous integration}
+\itemtag{DevOps}
+
+
+\need{Professional Interests}
+
+\itemtag{High-performance computing}
+\itemtag{Big data}
+\itemtag{Infrastructure relating to earth simulation}
+\itemtag{Metadata}
+\itemtag{Workflows}
+\itemtag{Open source}
+\itemtag{Data models}
+\itemtag{Performant Python}
+
+
+\need{Other Interests}
+
+\itemtag{Art}
+\itemtag{Reading}
+\itemtag{Guitar}
+\itemtag{Live music}
+\itemtag{Chess}
+\itemtag{Walking}
+\itemtag{Cycling}
+\itemtag{Cookery}
+
+
+\need{References}
+
+Available on request.
+
+
+\need{R\'{e}sum\'{e} metadata}
+
+\begin{itemize}
+  \item Last update: \today
+  \item Adapted from the \href{https://github.com/liantze/AltaCV}{\LaTeX \hspace{0.1em} template 'AltaCV'}
+\end{itemize}
+
+\end{paracol}
+
+\end{document}
