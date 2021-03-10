@@ -65,28 +65,31 @@
   * 23.10.20, ~30 minutes, **The ES-DOC (Earth System Documentation) project:
     a whistle-stop tour** [slides in *es-doc-whistle-stop-tour.pdf* file]
 
-* Summer School on Effective HPC for Climate and Weather 2020:
+* [Summer School on Effective HPC for Climate and Weather 2020](https://hps.vi4io.org/events/2020/esiwace-school):
 
   * 25.08.20, Storage (Input/Output and Middleware) session (both presented
-    virtually) [see the
-    [dedicated summer school page](https://hps.vi4io.org/events/2020/esiwace-school)
-    for materials and recordings]:
+    virtually):
     * ~45 minutes, **cfdm, cf-python & cf-plot: Python data tools for
       CF-netCDF** (talk)
     * ~2 hours, **Lab tutorial: CF-NetCDF with cfdm, cf-python and cf-plot**
       (practical session)
 
-* NCAS@Reading Science Meetings (e.g. see
-  [here](https://www.ncas.ac.uk/en/7-science-programmes/climate/305-ncas-climate-science-meetings)):
+* NCAS@Reading Science Meetings:
 
   * [POSTPONED from 22.05.20, due to give in future] ~40 minutes,
     **The Further Info URL & ES-DOC site as portals for exploring CMIP6**
     [slides to be uploaded]
 
-* SORSE (A Series of Online Research Software Events):
+* [SORSE (A Series of Online Research Software Events)](https://sorse.github.io/):
 
   * 03.11.20, ~45 minutes (presented virtually), **Configuring Sphinx from
     scratch: making your own documentation and making your documentation your
     own** [source material contained in a separate dedicated repository,
     [sadielbartholomew/sphinx-from-scratch](https://github.com/sadielbartholomew/sphinx-from-scratch) and further information is provided in a page on the
     [SORSE website](https://sorse.github.io/programme/software-demos/event-011/)]
+
+* [NICEST2 hackathon on FAIR climate data](https://nordicesmhub.github.io/nicest2-fair-hackathon/):
+
+  * 11.03.21, ~15 minutes (presented virtually), **Introducing the
+    Earth System Documentation (ES-DOC) project for CMIP6** [slides in
+    *es-doc-for-cmip6-intro.pdf* file]
