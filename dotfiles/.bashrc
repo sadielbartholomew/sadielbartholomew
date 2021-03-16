@@ -12,6 +12,9 @@ set -o emacs
 # values of LINES and COLUMNS.
 shopt -s checkwinsize
 
+# "**" will match all files and any directories in a pathname expansion context
+shopt -s globstar
+
 # ---------------------------------------------------------------------------
 # Customised prompt
 # ---------------------------------------------------------------------------
