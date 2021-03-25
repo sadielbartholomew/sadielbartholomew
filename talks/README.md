@@ -93,3 +93,8 @@
   * 11.03.21, ~15 minutes (presented virtually), **Introducing the
     Earth System Documentation (ES-DOC) project for CMIP6** [slides in
     *es-doc-for-cmip6-intro.pdf* file]
+
+* NCAS Python Technical Group meetings:
+
+  * 26.03.21, ~1 hour, **Python as of March 2021** [content as in Jupyter
+    Notebook *python-as-of-march-2021.ipynb*]
