@@ -17,6 +17,9 @@
 ;; THEY MUST ALL BE PLACED AS APPROPRIATELY-NAMED .el FILES UNDER THE ABOVE:
 ;;
 ;; * direct package requires:
+;;   * 'nlinum' for line numbering since in-built linum is laggy on big files;
+;;     -> assuming may not have access to Emacs 26 on some machines therefore
+;;        can't use 'display-line-numbers-mode' introduced in v.26 instead.
 ;;   * 'e2wm' for an (optional, press F6) windowing solution;
 ;;   * 'awesome-tab' for a buffer tabbing system;
 ;;   * 'hideshowvis' for foldable regions in applicable major modes;
@@ -97,12 +100,33 @@
 ;; need to keep state of no final line on a file (for diffs etc.)
 (setq require-final-newline 'query)
 
+;; Manage poor performance of line numbering (slows emacs for large files)
+(defun disablelinenumbering ()
+  (interactive)
+  (message "Turned off line numbering")
+  (global-linum-mode 0)
+  (nlinum-mode -1)
+  (linum-mode 0)
+)
+
+; Disable line numbering via either linum or nlinum when...
+(add-hook 'org-mode-hook 'disablelinenumbering)  ; ...always for org mode
+(global-set-key (kbd "<f6>") 'disablelinenumbering)  ; ...use F6 shortcut
+;; ... if file exceeds 3000 lines, when it starts to seriously slow emacs
+(add-hook
+ 'prog-mode-hook
+ (lambda () (if (or (> (buffer-size) (* 3000 80))
+                    (> (line-number-at-pos (point-max)) 3000))
+                (disablelinenumbering))))
+
 ;; ---------------------------------------------------------------------------
-;; Customise look excluding colour customisation
+;; Customise look further to colour customisation by theme
 ;; ---------------------------------------------------------------------------
 
-;; Display line numbers in the editor on the LHS.
-(global-linum-mode t)
+;; Display line numbers in the editor on the LHS: this applies to Emacs 26+,
+;; see 'nlinum' config below to handle line numbering on earlier versions.
+(when (version<= "26.0.50" emacs-version)
+  (global-display-line-numbers-mode))
 
 ;; Change default font and size of text.
 ;; NOTE: this uses a custom font which must be installed on the system.
@@ -120,6 +144,11 @@
 ;; ---------------------------------------------------------------------------
 ;; External package mode configuration
 ;; ---------------------------------------------------------------------------
+
+;; Use nlinum instead of built-in linum as former uses jit-lock so is more
+;; perfomant which will reduce lag for files with several thousand lines.
+(require 'nlinum)
+(global-nlinum-mode t)
 
 ;; e2wm windowing management
 (require 'e2wm)
