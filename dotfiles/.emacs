@@ -35,21 +35,6 @@
 ;;   * 'window-layout' required by 'e2wm'.
 
 ;; ---------------------------------------------------------------------------
-;; Define a colour scheme (sadie-colourscheme) used throughout
-;; ---------------------------------------------------------------------------
-(setq sadie-colourscheme-offblack "#0A0F14")
-(setq sadie-colourscheme-offwhite "#E5E5FF")
-(setq sadie-colourscheme-duckegg "#8FBCB5")
-(setq sadie-colourscheme-midblue "#3980C6")
-(setq sadie-colourscheme-darkblue "#00264D")
-(setq sadie-colourscheme-otherteal "#004B66")
-(setq sadie-colourscheme-darkteal "#00384D")
-(setq sadie-colourscheme-maroon "#33000D")
-(setq sadie-colourscheme-red "#D22D2D")
-(setq sadie-colourscheme-yellow "#FFDF80")
-(setq sadie-colourscheme-green "#00B386")
-
-;; ---------------------------------------------------------------------------
 ;; Customise basic properties of frames, windows and buffers
 ;; ---------------------------------------------------------------------------
 
@@ -70,6 +55,15 @@
 ;; Amend window frame titles to give full path of file opened
 (setq frame-title-format
       `((:eval buffer-file-name "%f" "%b")))
+
+;; ---------------------------------------------------------------------------
+;; Set the colour scheme (ocean-chroma, my own creation!)
+;; ---------------------------------------------------------------------------
+;; Global colour customisation. Note 'ocean-chroma-theme.el', available from:
+;;   https://github.com/sadielbartholomew/ocean-chroma-theme
+;; must be added to the directory below for successful loading of the theme.
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+(load-theme 'ocean-chroma t)
 
 ;; ---------------------------------------------------------------------------
 ;; Backups, diffs and the clipboard
@@ -182,179 +176,6 @@
  '(git-gutter:update-interval 2))
 (custom-set-variables
  '(git-gutter:unchanged-sign "."))
-
-;; ---------------------------------------------------------------------------
-;; Customise colours
-;; ---------------------------------------------------------------------------
-
-;; Global face customisation, notably of colours
-(custom-set-faces
- '(default ((t
-             (
-              :background "#0A0F14"
-              :foreground "#8fbcb5"
-             )
- )))
- '(font-lock-builtin-face (((
-                             (class color)
-                             (min-colors 88)
-                             (background dark)
-                            )
-                            (:foreground "#00B386")
-                          ))
-  )
- '(font-lock-comment-face (((
-                             (class color)
-                             (min-colors 88)
-                             (background dark)
-                            )
-                            (:foreground "#004B66")
-                          ))
-  )
- '(font-lock-constant-face (((
-                              (class color)
-                              (min-colors 88)
-                              (background dark)
-                             )
-                             (:foreground "#FFDF80")
-                           ))
-  )
- '(font-lock-function-name-face (((
-                                   (class color)
-                                   (min-colors 88)
-                                   (background dark)
-                                  )
-                                  (:foreground "#33859D")
-                                ))
-  )
- '(font-lock-keyword-face (((
-                             (class color)
-                             (min-colors 88)
-                             (background dark)
-                            )
-                            (:foreground "#D22D2D")
-                          ))
-  )
- '(font-lock-string-face (((
-                            (class color)
-                            (min-colors 88)
-                            (background dark)
-                           )
-                           (:foreground "#3980C6")
-                         ))
-  )
- '(font-lock-type-face (((
-                          (class color)
-                          (min-colors 88)
-                          (background dark)
-                         )
-                         (:foreground "#33859D")
-                       ))
-  )
-  '(font-lock-variable-name-face (((
-                                    (class color)
-                                    (min-colors 88)
-                                    (background dark)
-                                   )
-                                   (:foreground "#e5e5ff")
-                                 ))
-   )
- '(info-title-3 ((t (:inherit info-title-4 :foreground "#E5E5FF" :height 1.2))))
- '(info-title-4 ((t (:inherit info-title-4 :foreground "#00384D"))))
- '(mode-line ((t
-               (:background "#00384D"
-                :foreground "#8FBCB5"
-                :box (:line-width 2 :color "#3980C6")
-                :weight ultra-bold
-                :family "Iosevka SS02 Medium 12"
-               )
-             ))
-  )
-)
-
-;; Mode line customisation including of colours
-(setq-default mode-line-format
-  (list
-    mode-line-front-space
-    '(:eval (propertize (concat "\t[" mode-name "] %l:%i\t")
-             'face
-             '(:foreground "#0A0F14" :height 0.8 :weight normal)
-             'help-echo (buffer-file-name)
-            )
-     )
-    '(:eval (propertize (file-name-directory buffer-file-name)
-             'face
-             'info-title-4
-             'help-echo (buffer-file-name)
-            )
-     )
-    '(:eval (propertize (file-name-nondirectory buffer-file-name)
-             'face
-             'info-title-3
-             'help-echo (buffer-file-name)
-            )
-     )
-  )
-)
-
-;; Cursor colour
-(set-cursor-color (symbol-value 'sadie-colourscheme-offwhite))
-
-;; Current row and column (see col-highlight package) highlighted colour
-(set-face-background 'hl-line (symbol-value 'sadie-colourscheme-darkblue))
-(set-face-background 'col-highlight (symbol-value 'sadie-colourscheme-maroon))
-
-
-;; Line numbering colours
-(set-face-foreground 'linum (symbol-value 'sadie-colourscheme-duckegg))
-(set-face-background 'linum (symbol-value 'sadie-colourscheme-darkteal))
-
-;; Minibuffer colours
-(set-face-foreground 'minibuffer-prompt
-                     (symbol-value 'sadie-colourscheme-yellow))
-(set-face-background 'minibuffer-prompt (symbol-value 'sadie-colourscheme-red))
-(add-hook 'minibuffer-setup-hook
-  (lambda ()
-    (make-local-variable 'face-remapping-alist)
-    (add-to-list 'face-remapping-alist
-                 '(default (:background "#D22D2D" :foreground "#FFDF80")))
-  )
-)
-
-;; Highlight region colour:
-(set-face-attribute 'region nil :background
-  (symbol-value 'sadie-colourscheme-offwhite)
-)
-
-;; Git VCS changeset colours (see git-gutter)
-(set-face-background 'git-gutter:unchanged
-                     (symbol-value 'sadie-colourscheme-offblack))
-(set-face-foreground 'git-gutter:unchanged
-                     (symbol-value 'sadie-colourscheme-darkteal))
-(set-face-foreground 'git-gutter:modified
-                     (symbol-value 'sadie-colourscheme-yellow))
-(set-face-foreground 'git-gutter:added
-                     (symbol-value 'sadie-colourscheme-green))
-(set-face-foreground 'git-gutter:deleted
-                     (symbol-value 'sadie-colourscheme-red))
-
-;; Colour of column mark at line 79 (see fill-column-indicator)
-(setq fci-rule-color (symbol-value 'sadie-colourscheme-darkteal))
-
-;; indent-guide colours
-(set-face-background 'highlight-indentation-face
-                     "#001B25"
-)
-(set-face-background 'highlight-indentation-current-column-face
-                     (symbol-value 'sadie-colourscheme-darkteal)
-)
-
-(defface visible-mark-active
-  '((((type tty) (class mono)))
-    (t (:background "#00B386"))) "")
-(defface visible-mark-face1
-  '((((type tty) (class mono)))
-    (t (:background "#004d39"))) "")
 
 ;; ---------------------------------------------------------------------------
 ;; External package mode config. (any that must come after colour config.)
