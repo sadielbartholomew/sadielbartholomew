@@ -1,5 +1,5 @@
 ;; *Sadie's custom emacs configuration*
-;; Updated 05.01.21
+;; Updated 06.04.21
 
 ;; ---------------------------------------------------------------------------
 ;; Basic setup
@@ -26,12 +26,11 @@
 ;;   * 'fill-column-indicator' for fixed reference lines e.g. at column 80;
 ;;   * 'col-highlight' for highlighting the column of the cursor's position;
 ;;   * 'stickyfunc-enhance' for a header stating the current function;
-;;   * 'org-mode', a major mode for organisation and so much more;
-;;   * 'org-bullets', for replacing org-mode bullets with UTF-8 characters;
-;;   * 'indent-guide' for indentation guidelines on certain modes.
+;;   * 'indent-guide' for indentation guidelines on certain modes;
 ;;   * 'mood-line' for a clean, minimal mode line to replace the default one;
-;;   * 'git-gutter' to indicate line changes, additions and removals on branch;
-;;   * 'visible-mark' to highlight the current and former position of the mark.
+;;   * 'visible-mark' to highlight the current and former position of the mark;
+;;   * 'org-bullets', for replacing org-mode bullets with UTF-8 characters;
+;;   * 'yaml-mode', a mode for YAML.
 ;;
 ;; * indirect package requires:
 ;;   * 'vline', required by 'col-highlight';
@@ -50,7 +49,7 @@
 
 ;; Default window frame dimensions
 ;; * want width size slightly over 79 general max, but need to account for line
-;;   numbering (up to 5 digits) and git gutter (up to 1) spaces, so use 86
+;;   numbers (<=5 digits) and other fringe elements (1) spaces, so use 86.
 ;; * height size, about half a standard screen height
 (add-to-list 'default-frame-alist '(width . 86))
 (add-to-list 'default-frame-alist '(height . 35))
@@ -58,6 +57,9 @@
 ;; Amend window frame titles to give full path of file opened
 (setq frame-title-format
       `((:eval buffer-file-name "%f" "%b")))
+
+;; Update buffers to state of file on disk when there are no unsaved changes
+(global-auto-revert-mode t)
 
 ;; ---------------------------------------------------------------------------
 ;; Set the colour scheme (ocean-chroma, my own creation!)
@@ -119,8 +121,29 @@
                     (> (line-number-at-pos (point-max)) 3000))
                 (disablelinenumbering))))
 
+;; Don't disable commands to convert text to upper and lower case
+(put 'upcase-region 'disabled nil)
+(put 'downcase-region 'disabled nil)
+
 ;; ---------------------------------------------------------------------------
-;; Customise look further to colour customisation by theme
+;; Customise fonts
+;; ---------------------------------------------------------------------------
+
+;; Change default font and size of text.
+;; NOTE: this relies on custom fonts which must be installed on the system.
+;; TTFs for the given fonts available via: https://github.com/be5invis/Iosevka
+;; (fixed-) and https://www.ctan.org/tex-archive/fonts/cm/ (variable-pitch)
+(set-frame-font "Iosevka SS02 Medium 12" nil t)
+;; Use different fonts for code (fixed-) and for freehand text (variable-pitch)
+(add-to-list 'bdf-directory-list "~/.local/share/fonts")
+  (custom-theme-set-faces
+   'user
+   '(fixed-pitch ((t (:family "Iosevka SS02 Medium" :weight normal))))
+   '(variable-pitch ((t (:family "CMU Sans Serif" :weight bold))))
+ )
+
+;; ---------------------------------------------------------------------------
+;; Customise look further to colour customisation by theme and fonts
 ;; ---------------------------------------------------------------------------
 
 ;; Display line numbers in the editor on the LHS: this applies to Emacs 26+,
@@ -128,18 +151,15 @@
 (when (version<= "26.0.50" emacs-version)
   (global-display-line-numbers-mode))
 
-;; Change default font and size of text.
-;; NOTE: this uses a custom font which must be installed on the system.
-;; TTF for the given font available via: https://github.com/be5invis/Iosevka
-(add-to-list 'bdf-directory-list "~/.local/share/fonts")
-(set-frame-font "Iosevka SS02 Medium 12" nil t)
-
 ;; Cursor type
 (setq-default cursor-type 'box)
 
 ;; Highlight the (cursor's) current row i.e. line:
 (global-hl-line-mode 1)
-(set-face-foreground 'highlight nil)
+
+(setq custom-raised-buttons nil)  ; flat buttons
+
+(setq-default show-trailing-whitespace t)  ; even outside of whitespace mode
 
 ;; ---------------------------------------------------------------------------
 ;; External package mode configuration
@@ -198,14 +218,6 @@
 (add-hook 'python-mode-hook 'highlight-indentation-mode)
 (add-hook 'python-mode-hook 'highlight-indentation-current-column-mode)
 
-;; git gutter for git chagesets
-(require 'git-gutter)
-(global-git-gutter-mode t)
-(custom-set-variables
- '(git-gutter:update-interval 2))
-(custom-set-variables
- '(git-gutter:unchanged-sign "."))
-
 ;; ---------------------------------------------------------------------------
 ;; External package mode config. (any that must come after colour config.)
 ;; ---------------------------------------------------------------------------
@@ -219,6 +231,15 @@
 (global-visible-mark-mode 1)
 (setq visible-mark-max 1)
 (setq visible-mark-faces `(visible-mark-face1))
+
+;; ---------------------------------------------------------------------------
+;; Additional major modes
+;; ---------------------------------------------------------------------------
+
+;; For YAML config.
+(require 'yaml-mode)
+;; Enable mode for .yml as well as .yaml extensions (both commonly used)
+(add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
 
 ;; ---------------------------------------------------------------------------
 ;; Org mode specific config and customisation
@@ -249,11 +270,23 @@
 (require 'org-bullets)
 (setq org-bullets-face-name (quote org-bullet-face))
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
-(setq org-bullets-bullet-list '(
-   "ᚏ" "ᚎ" "ᚍ" "ᚌ" "ᚋ"))
+(setq org-bullets-bullet-list '("◓" "◑" "◒" "◐" "◴" "◷" "◶" "◵"))
 (setq org-ellipsis " ➕")
 
-;; syntax highlighting for code snippets inside 'BEGIN_SRC ... END_SRC' blocks
+;; Use variable-pitch font for nicer freehand text look, but not on code etc.
+(defun set-buffer-variable-pitch ()
+  (interactive)
+  (variable-pitch-mode t)
+  (set-face-attribute 'org-block nil :inherit 'fixed-pitch)
+  (set-face-attribute 'org-block-background nil :inherit 'fixed-pitch)
+  (set-face-attribute 'org-code nil :inherit 'fixed-pitch)
+  (set-face-attribute 'org-table nil :inherit 'fixed-pitch)
+  )
+
+(add-hook 'org-mode-hook 'set-buffer-variable-pitch)
+(add-hook 'markdown-mode-hook 'set-buffer-variable-pitch)  ; also for md mode
+
+;; Syntax highlighting for code snippets inside 'BEGIN_SRC ... END_SRC' blocks
 (setq org-src-fontify-natively t)
 
 ;; ---------------------------------------------------------------------------
@@ -285,4 +318,3 @@ map))
   (interactive)
   (mapc 'save-buffers-kill-emacs (frame-list))
 )
-(put 'downcase-region 'disabled nil)
