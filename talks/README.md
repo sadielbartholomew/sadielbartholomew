@@ -74,12 +74,6 @@
     * ~2 hours, **Lab tutorial: CF-NetCDF with cfdm, cf-python and cf-plot**
       (practical session)
 
-* NCAS@Reading Science Meetings:
-
-  * [POSTPONED from 22.05.20, due to give in future] ~40 minutes,
-    **The Further Info URL & ES-DOC site as portals for exploring CMIP6**
-    [slides to be uploaded]
-
 * [SORSE (A Series of Online Research Software Events)](https://sorse.github.io/):
 
   * 03.11.20, ~45 minutes (presented virtually), **Configuring Sphinx from
@@ -98,3 +92,10 @@
 
   * 26.03.21, ~1 hour, **Python as of March 2021** [content as in Jupyter
     Notebook *python-as-of-march-2021.ipynb*]
+
+* Reading Meteorology Departmental (+ MOAP) Tuesday Lunchtime Seminar
+  Programme:
+
+  * 27.04.21, ~1 hour inclusive of questions, **The ES-DOC website and Further
+    Info URL as portals for exploring CMIP6**, [slides in
+    *es-doc-portals-for-cmip6.pdf* file]
