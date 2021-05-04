@@ -218,6 +218,10 @@
 (add-hook 'python-mode-hook 'highlight-indentation-mode)
 (add-hook 'python-mode-hook 'highlight-indentation-current-column-mode)
 
+;; rainbow delimiters for colours indicating paired parentheses, brackets, etc.
+(require 'rainbow-delimiters)
+(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+
 ;; ---------------------------------------------------------------------------
 ;; External package mode config. (any that must come after colour config.)
 ;; ---------------------------------------------------------------------------
