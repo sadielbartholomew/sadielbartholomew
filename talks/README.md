@@ -99,3 +99,9 @@
   * 27.04.21, ~1 hour inclusive of questions, **The ES-DOC website and Further
     Info URL as portals for exploring CMIP6**, [slides in
     *es-doc-portals-for-cmip6.pdf* file]
+
+* [M-x Research](https://m-x-research.github.io/) weekly talks:
+
+  * 18.06.21, ~1 hour inclusive of discussion, **Exploring and
+    creating custom Emacs themes**, [`org-mode` presentation
+    content in *emacs-themes-talk.org* file]

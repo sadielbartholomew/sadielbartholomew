@@ -1,0 +1,348 @@
+#+TITLE: Exploring and creating custom Emacs themes
+#+EMAIL: sadielbartholomew@gmail.com
+#+DATE: 18.06.21
+#+DESCRIPTION: A short (~45 minute) presentation about Emacs themes
+#+KEYWORDS: themes, theming, style, color scheme, colours, colors, fonts
+#+LANGUAGE: en
+
+
+---------
+
+* What is a theme?
+** My own intuitive definition
+
+A *theme* is a set of customisations of faces that is configurable, and
+perhaps packaged, as one unit.
+
+For me, **face customisation** is the key aspect.
+
+/Colour/ is often considered the core element that is customised by a theme,
+but note it is also other markup aspects e.g. bold, italics and underlining of
+text in each face.
+
+To see what I mean, run and explore (hover over space to see all faces rather
+than be told about a single specific face):
+#+BEGIN_SRC elisp
+M-x customize-face
+#+END_SRC elisp
+
+A theme is usually defined as a single Elisp file with name of
+form: ~themename-theme.el~, and is quite simple fundamentally in terms of
+Elisp code.
+
+** /Custom/ Themes vs. /Color/ Themes
+
+Note that 'Custom Themes' and 'Color Themes' are similar but slightly
+different. See: https://www.emacswiki.org/emacs/CustomThemes#ComparedToColorThemes
+
+Here we concern ourselves with *custom themes*.
+
+** A formal definition 
+
+From https://www.gnu.org/software/emacs/manual/html_node/emacs/Custom-Themes.html:
+ #+BEGIN_QUOTE
+Custom themes are collections of settings that can be enabled or disabled
+as a unit. -- the Emacs manual
+ #+END_QUOTE
+
+** Definition by comparison to absense of a theme
+
+*** The default theme!
+
+Note the default in itself is quite interesting: it is not uniform for everyone,
+depending on your environment, specifically the so-called 'Xresources'
+(see https://www.gnu.org/software/emacs/manual/html_node/emacs/X-Resources.html).
+
+To see emacs without theming in your environment, disable any loading
+of themes.
+
+#+BEGIN_SRC elisp
+;; M-x describe-variable -> custom-enabled-themes
+;; e.g. get: "custom-enabled-themes’s value is nil" if none applied
+#+END_SRC elisp
+
+But note it might not resemble the true default theme you might know!
+
+To see emacs without any theme, i.e. the 'true' default theme, run it without
+any custom lisp config via:
+#+BEGIN_SRC bash
+emacs -- quick  # or -Q option
+#+END_SRC bash
+
+and indeed if you run it without any x-resources, you can see that they are
+the cause in any discrepancies to the actual default which you might be
+familiar with (quite bright reds, blues, purples etc. on a plain white
+background):
+#+BEGIN_SRC bash
+emacs --no-x-resources &
+#+END_SRC bash
+
+* How to customise your Emacs theme
+
+To load a theme in your config so it is applied for all windows and
+buffers:
+
+#+BEGIN_SRC elisp
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+(load-theme 'ocean-chroma t)
+#+END_SRC elisp
+
+To g to a helpful menu to view and apply, if desired, available themes:
+#+BEGIN_SRC elisp
+;; M-x customize-themes
+#+END_SRC elisp
+
+Note if you save your customisations, Emacs will edit your ~.emacs~ file,
+e.g. like this, an example I have copied from my own ~.emacs~ after messing
+around and saving some theming amendments:
+
+#+BEGIN_SRC elisp
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ansi-color-faces-vector
+   [default bold shadow italic underline bold bold-italic bold])
+ '(ansi-color-names-vector
+   ["#ffffff" "#183691" "#969896" "#a71d5d" "#969896" "#969896" "#795da3" "#969896"])
+ '(custom-enabled-themes (quote (ocean-chroma)))
+ '(custom-safe-themes
+   (quote
+    ("c2482906009878a7f53249837c54c6c678a9f144f05529620d0e411c2daed93c" "c85514b33ffedb58963da19bedac23e370a52822f548f9c8a18f34afd33f8c63" "72c0b420a8a2929fba9bff7e2e6d57e9e957d4a1a5ffdeca32c1c48c370bc7b6" "89885317e7136d4e86fb842605d47d8329320f0326b62efa236e63ed4be23c58" "bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" "84106b6b1ea9fe100a88ca60ee0a334fa20b8f80f6e81c362a0c0f709b01f2c2" "5e5771e6ea0c9500aa87e987ace1d9f401585e22a976777b6090a1554f3771c6" default)))
+ '(fci-rule-character-color "#002533")
+ '(fci-rule-color "#969896")
+ '(hl-sexp-background-color "#efebe9"))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(fixed-pitch ((t (:family "Iosevka SS02 Medium" :weight normal))))
+ '(variable-pitch ((t (:family "CMU Sans Serif" :weight bold)))))
+#+END_SRC elisp
+
+* Exploring existing themes
+
+_Examples of built-in themes_ and their descriptions:
+
+- ~whiteboard~ ("Face colors similar to markers on a whiteboard.")
+- ~adwaita~ ("Face colors similar to the default theme of Gnome 3
+  (Adwaita).")
+- ~dichromacy~ ("Face colors suitable for red/green color-blind users.")
+- emphaise light and dark variants:
+  - ~tango-dark~ ("Face colors using the Tango palette (dark
+    background).")
+  - ~tango~ ("Face colors using the Tango palette (light background).")
+
+_Examples of custom themes_:
+
+Some notable examples I have picked out: (the best way to demonstrate is
+to try them out!):
+
+- GitHub-like theme, ~GitHub-Theme-for-Emacs~:
+  https://github.com/philiparvidsson/GitHub-Theme-for-Emacs
+- TRON (sci-fi film) based theme: ~tron-legacy-theme~:
+  https://github.com/ianyepan/tron-legacy-emacs-theme
+- minimal (one of many out there) style light theme: ~basic-theme~:
+  https://github.com/fgeller/basic-theme.el
+- Google Material Design based themes (dark and light):
+  ~emacs-material-theme~: https://github.com/cpaulik/emacs-material-theme
+- Spacemacs-based themes (dark and light): ~spacemacs-theme~:
+  https://github.com/nashamri/spacemacs-theme
+
+_Listings of themes to explore_:
+
+- https://pawelbx.github.io/emacs-theme-gallery/
+- https://emacsthemes.com/
+- https://peach-melpa.org/
+- GitHub global search  ('All GitHub') for "emacs theme" or a similar set
+  of keywords or "emacs", "theme" and/or "emacs-theme(s)" tags.
+- individual repos housing multiple themes, e.g.
+  https://github.com/owainlewis/emacs-color-themes
+
+
+* Changing theme
+** Why change theme?
+
+Prominent reasons you might want to customise the Emacs theme from
+the default:
+
+- enhanced readability
+- certain themes (e.g. light-on-dark ones) and clear fonts can reduce eye
+  strain etc.
+- accessibility, e.g. themes designed for those who are colour blind in
+  certain ways
+- general preference of colour schemes to pick ones that are pleasing to you
+
+
+* Creating your own theme
+
+_Reduce, reuse, recycle!_
+
+Firstly, note it is often simpler, easier and more efficient to tweak an
+existing theme than create one from scratch, especially since there are
+so many out there to pick from...
+
+_Projects to help you create your own theme in a simple way_:
+
+Also there are templates and cookie-cutter style projects to allow
+you to make one with minimal coding, e.g
+https://github.com/mswift42/themecreator.
+
+Saying that...
+
+** Why create your own theme?
+
+Reasons I found creating my own theme worthwhile:
+
+- obvious one: can have end product whereby theming is exactly as you
+  want it!
+  esp. if very different to other themes you can find.
+- great starter project for programming and developing Elisp skills, given
+  other themes can provide the template to help you along
+- really great natural way to learn about external emacs libraries and the
+  capability they can provide and the means of configring them.
+
+Of course, you could argue:
+
+- there are so many themes out there already, what is the point in making
+  another?
+- it is not a very ambitious Elisp project...
+
+** Roughly how to "roll your own"
+
+The basic code is similar to this, lifted then shortened and simplified from
+the definition Elisp theme file of my own theme:
+
+#+BEGIN_SRC elisp
+(deftheme ocean-chroma "Fresh dark colour theme for Emacs 24+")
+
+(let*
+
+    ;;; DEFINE COLOUS TO USE, E.G:
+    (
+     (light-teal         "#33859D")
+     (mid-teal           "#004B66")
+     (chroma-red         "#D22D2D")
+     (chroma-blue        "#3980C6")
+     (chroma-yellow      "#FFDF80")
+     (chroma-green       "#00B386")
+     (dark-chroma-red    "#9C1626")
+     (off-white          "#E5E5FF")
+    )
+
+  ;;; Apply the above scheme to define and set the theme...
+
+  ;;; SET FACES:
+  (custom-theme-set-faces
+   `ocean-chroma
+
+   ;;; EXAMPLE OF BUILT-IN FACES:
+   ;; Font lock faces
+   `(font-lock-builtin-face ((t (:foreground ,chroma-green))))
+   `(font-lock-comment-face ((t (:foreground ,mid-teal :slant italic))))
+   `(font-lock-constant-face ((t (:foreground ,chroma-yellow))))
+   `(font-lock-function-name-face ((t (:foreground ,light-teal))))
+   `(font-lock-keyword-face ((t (:foreground ,chroma-red))))
+   `(font-lock-negation-char-face ((t (:foreground ,dark-chroma-red))))
+   `(font-lock-preprocessor-face ((t (:foreground ,chroma-green :slant italic))))
+   `(font-lock-string-face ((t (:foreground ,chroma-blue))))
+   `(font-lock-type-face ((t (:foreground ,light-teal))))
+   `(font-lock-variable-name-face ((t (:foreground ,off-white))))
+
+   ;; CAN MAKE GOOD USE OF INHERITANCE, E.G:
+   `(font-lock-comment-delimiter-face ((t (:inherit font-lock-comment-face))))
+   `(font-lock-warning-face ((t (:inherit warning))))
+   `(font-lock-doc-face ((t (:inherit font-lock-string-face :slant italic))))
+
+   ;;; EXAMPLE OF TWEAKS TO INHERITANCE OF THIRD-PARTY EXTENSION OR MODE FACES:
+   ;; *rainbow-delimiters*
+   `(rainbow-delimiters-depth-1-face ((t (:foreground ,off-white))))
+   `(rainbow-delimiters-depth-2-face ((t (:foreground ,chroma-yellow))))
+   `(rainbow-delimiters-depth-3-face ((t (:foreground ,chroma-green))))
+   `(rainbow-delimiters-depth-4-face ((t (:foreground ,chroma-blue))))
+   `(rainbow-delimiters-depth-5-face ((t (:foreground ,chroma-red))))
+   `(rainbow-delimiters-depth-6-face ((t (:foreground ,chroma-yellow))))
+   `(rainbow-delimiters-depth-7-face ((t (:foreground ,chroma-green))))
+   `(rainbow-delimiters-depth-8-face ((t (:foreground ,chroma-blue))))
+   `(rainbow-delimiters-depth-9-face ((t (:foreground ,chroma-red))))
+  )
+
+  ;;; SET VARIABLES, E.G:
+  (custom-theme-set-variables
+   `ocean-chroma
+
+   ;; *fill-column-indicator*
+   `(fci-rule-color ,dark-teal)
+   `(fci-rule-character-color ,dark-teal)
+  )
+)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; Provision of theme
+
+;;;###autoload
+(and load-file-name
+     (boundp 'custom-theme-load-path)
+     (add-to-list 'custom-theme-load-path
+                  (file-name-as-directory (file-name-directory load-file-name))))
+
+(provide-theme 'ocean-chroma)
+
+;;; ocean-chroma-theme.el ends here
+#+END_SRC elisp
+
+Note variables may be involved, implying a /custom/ rather than a
+/colo(u)r/ theme (see above section covering the difference)!
+
+
+** The theme I created
+
+I created a theme called ~ocean-chroma~, lives at:
+  https://github.com/sadielbartholomew/ocean-chroma-theme
+- See screenshots and colour scheme image
+- Let's do a quick walkthrough of the code there as an example...
+
+I am yet to submit the theme to MELPA or any theme listings sites etc.,
+but plan to do so soon when I have finalised the ~magit~ theming.
+
+* Potential discussion points
+
+** What theme or themes do people use or have they used?
+** What do people look for in a theme?
+** Where do people look to find them?
+** Has anyone else created their own theme?
+
+* Summary of actual discussionfrom the talk
+
+- There was a question about a way to determine the faces that are
+  applied to the text at the cursor. These are:
+
+#+BEGIN_SRC elisp
+M-x describe-face  ;; or 'C-u C-x =' key binding
+#+END_SRC elisp
+
+or
+
+#+BEGIN_SRC elisp
+M-x display-text-properties
+#+END_SRC elisp
+
+- We talked about reasons why people might like to change theme on a
+  regular basis, and noted that these may be:
+  - e.g. Mark would like a way to change it when his battery level is running
+    low
+  - might also wish to change based on when it is day(light) and night, like
+    I and others have set to change screen temperature and brightness with
+    the `redshift` CLI tool
+  - novelty might come into play, so even if you love a theme or even have
+    created you own to your own taste, eventually you might want to
+    "change it up"
+- Which led onto discussion about the unfortunate difficulty in Emacs of
+  "undo-ing" the setting of a theme, hence the switching to one or more
+  new themes after one has already been set, and
+  how that is a major disadvantage to theming (at least at present).
+
+---------
