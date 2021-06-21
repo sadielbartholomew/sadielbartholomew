@@ -30,7 +30,8 @@
 ;;   * 'mood-line' for a clean, minimal mode line to replace the default one;
 ;;   * 'visible-mark' to highlight the current and former position of the mark;
 ;;   * 'org-bullets', for replacing org-mode bullets with UTF-8 characters;
-;;   * 'yaml-mode', a mode for YAML.
+;;   * 'yaml-mode', a mode for YAML;
+;;   * 'hlinum', highlights current line number for Emacs <26.
 ;;
 ;; * indirect package requires:
 ;;   * 'vline', required by 'col-highlight';
@@ -164,6 +165,11 @@
 ;; ---------------------------------------------------------------------------
 ;; External package mode configuration
 ;; ---------------------------------------------------------------------------
+
+;; hlinum-mode: https://github.com/tom-tan/hlinum-mode
+(setq nlinum-highlight-current-line t)  ; we use nlinum not linum so set this
+(require 'hlinum)
+(hlinum-activate)
 
 ;; Use nlinum instead of built-in linum as former uses jit-lock so is more
 ;; perfomant which will reduce lag for files with several thousand lines.

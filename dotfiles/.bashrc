@@ -105,7 +105,8 @@ export BAT_THEME="1337"
 alias cat='bat --paging=never'
 
 export PAGER=less
-alias less='bat'  # uses ${PAGER} but colours it, so get a coloured 'less'
+# Uses ${PAGER} but colours it, so get a coloured 'less':
+alias less='bat -p' # -p for no line numbers
 
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
