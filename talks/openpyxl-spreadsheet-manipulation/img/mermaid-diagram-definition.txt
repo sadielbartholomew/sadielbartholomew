@@ -1,0 +1,21 @@
+# Code:
+
+"""
+graph LR
+    A{{Template spreadsheet including some placeholders}}
+    A ==>|Input| D{Python code using openpyxl}
+    D ==>|Group 1 parameters injected| E(Spreadsheet customised for group 1)
+    D ==>|Group 2 parameters injected| F(Spreadsheet customised for group 2)
+    D ==>|...| G(...)
+    D ==>|Group N parameters injected| H(Spreadsheet customised for group N)
+"""
+
+# Config:
+
+"""
+{
+  "theme": "default",
+  "themeVariables": {
+    "fontSize": "30px"
+ }
+}
