@@ -1,1 +1,3 @@
-## Placeholder until material added, so ``git`` recognises the directory.
+## `bin` directory utility (etc.) scripts
+
+Some of my custom executables, generally written in Bash.
