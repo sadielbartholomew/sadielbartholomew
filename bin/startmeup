@@ -10,12 +10,13 @@ ORG_DIR=~/org/
 
 # URL prefixes
 SECURE_HTP_PRE="https://"
-GITHUB_ROOT="${SECURE_HTP_PRE}github.com/" # ${GITHUB_ROOT}
+GITHUB_ROOT="${SECURE_HTP_PRE}github.com/"
 
 # URLs to open, one array for each window to open
 admin_urls_array=(
     "${SECURE_HTP_PRE}mail.google.com/mail/u/0/#inbox"
-    "${GITHUB_ROOT}"
+    "${SECURE_HTP_PRE}calendar.google.com/calendar"
+    "${GITHUB_ROOT}"  # GH dashboard at root URL
     "${GITHUB_ROOT}/notifications"
     "${SECURE_HTP_PRE}www.githubstatus.com"
 )
