@@ -65,14 +65,29 @@
   * 23.10.20, ~30 minutes, **The ES-DOC (Earth System Documentation) project:
     a whistle-stop tour** [slides in *es-doc-whistle-stop-tour.pdf* file]
 
-* [Summer School on Effective HPC for Climate and Weather 2020](https://hps.vi4io.org/events/2020/esiwace-school):
+* ESiWACE Summer School on Effective HPC for Climate and Weather:
 
-  * 25.08.20, Storage (Input/Output and Middleware) session (both presented
+  * 25.08.20, Storage (Input/Output and Middleware) session (presented
     virtually):
     * ~45 minutes, **cfdm, cf-python & cf-plot: Python data tools for
-      CF-netCDF** (talk)
-    * ~2 hours, **Lab tutorial: CF-NetCDF with cfdm, cf-python and cf-plot**
-      (practical session)
+      CF-netCDF (lecture-style talk)** [slides superseded by those for
+      the subsequent summer school, so see the resources referenced below]
+    * ~2 hours, **CF-NetCDF with cfdm, cf-python and cf-plot
+      (practical 'lab' tutorial session)** [material superseded by those
+      for the subsequent summer school, so see the resources referenced below]
+
+  * 24.08.21, Storage (Input/Output and Middleware) session (presented
+    virtually):
+    * ~45 minutes, **cfdm, cf-python & cf-plot: Python data tools for
+      CF-netCDF (lecture-style talk)**
+      [slides in 'NCAS-tools-for-CF-netCDF-2021.pdf', and/or see the school's
+      [official webpage](https://hps.vi4io.org/events/2021/esiwace-school)
+      for a link to a video recording of the lecture]
+    * ~45 minutes, **CF-NetCDF with cfdm, cf-python and cf-plot
+      (practical 'lab' tutorial session)** [[notebook resource stored
+      permanently in the NCAS-CMS/cf-training repository](https://github.com/NCAS-CMS/cf-training/blob/master/short_course/demo_in_under_an_hour.ipynb)
+      and a video recording of the tutorial is also available on the school's
+      [official webpage](https://hps.vi4io.org/events/2021/esiwace-school)]
 
 * [SORSE (A Series of Online Research Software Events)](https://sorse.github.io/):
 
