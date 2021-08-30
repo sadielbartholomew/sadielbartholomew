@@ -50,7 +50,6 @@ open_admin_apps() {
 
 # Designed to accept array of URLs to open in new window as a parameter
 open_browser_window() {
-    #urls_array=("$@")
     # TODO: add browser tab dividers to help organise tabs visually
     "${BROWSER_CHOICE_COMMAND}" --new-window "${@}" &
 }
@@ -67,16 +66,25 @@ open_dev_browser_window() {
 
 # Open emacs with key organisation and helper files pre-loaded
 open_emacs() {
-    emacs "${ORG_DIR}/commands.org" "${ORG_DIR}/todo-work.org" &
+    emacs "${ORG_DIR}/commands.txt" "${ORG_DIR}/todo-work.org" &
 }
 
 
 # --------- EXECUTE FUNCTIONS UPON STANDARD STARTUP -------------- #
 
-if [ $(whoami) == ${USERNAME} ]
-then
-    set_screen_visibility
+nonwork=false
+while getopts "n" option; do
+    # Non-workday dev. env. requested, so run alternative function call set
+    nonwork=true
+done
 
+set_screen_visibility
+
+# Start apps specific to a workday or non-work day/eve
+if [ ${nonwork} == "true" ] && [ $(whoami) == ${USERNAME} ]
+then
+    open_new_terminal
+else
     # ADMIN ITEMS
     open_admin_apps
     open_admin_browser_window
@@ -88,8 +96,8 @@ then
     open_new_terminal
     open_emacs
     open_dev_browser_window
-
-    # Clear the terminals from STDOUT output from the previous commands
-    cd
-    clear
 fi
+
+# Clear the terminals from STDOUT output from the previous commands
+cd
+clear
