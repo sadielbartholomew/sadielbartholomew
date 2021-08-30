@@ -31,7 +31,10 @@
 ;;   * 'visible-mark' to highlight the current and former position of the mark;
 ;;   * 'org-bullets', for replacing org-mode bullets with UTF-8 characters;
 ;;   * 'yaml-mode', a mode for YAML;
-;;   * 'hlinum', highlights current line number for Emacs <26.
+;;   * 'hlinum', highlights current line number for Emacs <26;
+;;   * 'exec-path-from-shell', so env. vars resemble those in the shell;
+;;   * 'latex-preview-pane' to compile and view rendered LaTeX;
+;;   * 'magit' to interface with the Git VCS.
 ;;
 ;; * indirect package requires:
 ;;   * 'vline', required by 'col-highlight';
@@ -227,6 +230,25 @@
 ;; rainbow delimiters for colours indicating paired parentheses, brackets, etc.
 (require 'rainbow-delimiters)
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+
+;; So that env. variables appear the same as in the shell
+(require 'exec-path-from-shell)
+
+;; LaTeX Preview Pane for previewing LaTeX via emacs
+(add-to-list 'load-path "~/.emacs.d/lisp/latex-preview-pane")  ; add sub-dir
+(require 'latex-preview-pane)
+
+;; magit dependencies
+(add-to-list 'load-path "~/.emacs.d/lisp/dash")
+(add-to-list 'load-path "~/.emacs.d/lisp/transient/lisp")
+(add-to-list 'load-path "~/.emacs.d/lisp/with-editor")
+
+;; magit setup
+(add-to-list 'load-path "~/.emacs.d/lisp/magit/lisp")
+(require 'magit)
+(with-eval-after-load 'info
+  (info-initialize)
+  (add-to-list 'Info-directory-list "~/.emacs.d/lisp/magit/Documentation/"))
 
 ;; ---------------------------------------------------------------------------
 ;; External package mode config. (any that must come after colour config.)
