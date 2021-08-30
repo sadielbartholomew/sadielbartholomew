@@ -3,10 +3,17 @@
 # These scripts follow the Google styleguide for shell scripts, see:
 # https://google.github.io/styleguide/shellguide.html
 
+
+# -------------- START-UP APP. CHOICES AND ENVIRONMENT ------------- #
+
 USERNAME=sadie  # SLB system $USER
 BROWSER_CHOICE_COMMAND=google-chrome  # alternatively 'firefox', etc.
-# Directory to hold (core) files under org mode
+
+# Core organisational files under org mode in a dedicated directory
 ORG_DIR=~/org/
+WORK_TODO_LIST="${ORG_DIR}/todo-work.org"
+PERSONAL_TECH_TODO_LIST="${ORG_DIR}/todo-personal.org"
+COMMANDS_HELPER_FILE="${ORG_DIR}/commands.txt"
 
 # URL prefixes
 SECURE_HTP_PRE="https://"
@@ -26,6 +33,11 @@ dev_urls_array=(
     "${GITHUB_ROOT}/ES-DOC-INSTITUTIONAL"
     "${GITHUB_ROOT}/cf-convention"
 )
+non_work_dev_urls_array=(
+    "${GITHUB_ROOT}"
+    "${GITHUB_ROOT}/sadielbartholomew?tab=repositories"  # my repos
+)
+
 
 # ---------------- DEFINE FUNCTIONS FOR STARTUP TASKS -------------- #
 
@@ -54,23 +66,13 @@ open_browser_window() {
     "${BROWSER_CHOICE_COMMAND}" --new-window "${@}" &
 }
 
-# Email, GH notifications, dashboard and site status
-open_admin_browser_window() {
-    open_browser_window "${admin_urls_array[@]}"
-}
-
-# Relevant pages for GitHub organisations and projects working on
-open_dev_browser_window() {
-    open_browser_window "${dev_urls_array[@]}"
-}
-
 # Open emacs with key organisation and helper files pre-loaded
 open_emacs() {
-    emacs "${ORG_DIR}/commands.txt" "${ORG_DIR}/todo-work.org" &
+    emacs "${COMMANDS_HELPER_FILE}" "${1}" &
 }
 
 
-# --------- EXECUTE FUNCTIONS UPON STANDARD STARTUP -------------- #
+# ---------- EXECUTE FUNCTIONS UPON STANDARD STARTUP --------------- #
 
 nonwork=false
 while getopts "n" option; do
@@ -83,19 +85,22 @@ set_screen_visibility
 # Start apps specific to a workday or non-work day/eve
 if [ ${nonwork} == "true" ] && [ $(whoami) == ${USERNAME} ]
 then
+    open_browser_window "${non_work_dev_urls_array[@]}"
     open_new_terminal
-else
-    # ADMIN ITEMS
+    open_emacs "${PERSONAL_TECH_TODO_LIST}"
+elif [ $(whoami) == ${USERNAME} ]
+then
+    # ADMIN ITEMS: Email, GH notifications, dashboard and site status, etc.
     open_admin_apps
-    open_admin_browser_window
+    open_browser_window "${admin_urls_array[@]}"
 
     # Sleep for a little bit so have time to move into correct workspace
     sleep 5
 
-    # DEV ITEMS
+    # DEV ITEMS: relevant pages for GitHub projects working on, orgs, etc.
     open_new_terminal
-    open_emacs
-    open_dev_browser_window
+    open_emacs "${WORK_TODO_LIST}"
+    open_browser_window "${dev_urls_array[@]}"
 fi
 
 # Clear the terminals from STDOUT output from the previous commands
