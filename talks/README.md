@@ -118,5 +118,11 @@
 * [M-x Research](https://m-x-research.github.io/) weekly talks:
 
   * 18.06.21, ~1 hour inclusive of discussion, **Exploring and
-    creating custom Emacs themes**, [`org-mode` presentation
+    creating custom Emacs themes** [`org-mode` presentation
     content in *emacs-themes-talk.org* file]
+
+* Annual CF (Metadata) Conventions Workshops:
+
+  * [2021 CF Workshop](http://cfconventions.org/Meetings/2021-Workshop.html);
+    21.09.21, ~20 minutes, **Standard names analyses and tooling: aims and
+    preliminary work** [slides in *cf-workshop-21-standard-names.pdf* file]
