@@ -23,7 +23,7 @@
 </p>
 
 <p align="center">
-  Warming Stripes* for my location, Berkshire (UK), from 1863-2019<br>
+  Warming Stripes* for my location, Berkshire (UK), from 1863-2020<br>
   <small>*infographic designed by Prof. Ed Hawkins (University of Reading)</small><br>
-  <img src="https://github.com/sadielbartholomew/sadielbartholomew/blob/master/profile-media/berkshire_warming_stripes_attr_ed_hawkins.png?raw=true">
+  <img src="https://github.com/sadielbartholomew/sadielbartholomew/blob/master/profile-media/berkshire_warming_stripes_attr_ed_hawkins_cropped.png?raw=true">
 </p>
