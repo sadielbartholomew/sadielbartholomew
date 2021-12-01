@@ -1,5 +1,4 @@
 ;; *Sadie's custom emacs configuration*
-;; Updated 06.04.21
 
 ;; ---------------------------------------------------------------------------
 ;; Basic setup
@@ -34,12 +33,18 @@
 ;;   * 'hlinum', highlights current line number for Emacs <26;
 ;;   * 'exec-path-from-shell', so env. vars resemble those in the shell;
 ;;   * 'latex-preview-pane' to compile and view rendered LaTeX;
-;;   * 'magit' to interface with the Git VCS.
+;;   * 'magit' to interface with the Git VCS;
+;;   * 'vue-mode' for Vue.js-related functionality.
 ;;
 ;; * indirect package requires:
 ;;   * 'vline', required by 'col-highlight';
-;;   * 'window-layout' required by 'e2wm'.
-
+;;   * 'window-layout' required by 'e2wm';
+;;   * the following, all required as dependencies to 'vue-mode':
+;;     * 'mmm-mode';
+;;     * 'mmm-cmds';
+;;     * 'ssass-mode';
+;;     * 'vue-html-mode'.
+;;
 ;; ---------------------------------------------------------------------------
 ;; Customise basic properties of frames, windows and buffers
 ;; ---------------------------------------------------------------------------
@@ -272,6 +277,14 @@
 (require 'yaml-mode)
 ;; Enable mode for .yml as well as .yaml extensions (both commonly used)
 (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
+
+;; Vue.JS, requires various others incl. mmm-mode
+(add-to-list 'load-path "~/.emacs.d/lisp/mmm-mode")
+(require 'mmm-mode)
+(require 'mmm-cmds)
+(require 'ssass-mode)
+(require 'vue-html-mode)
+(require 'vue-mode)
 
 ;; ---------------------------------------------------------------------------
 ;; Org mode specific config and customisation
