@@ -34,7 +34,8 @@
 ;;   * 'exec-path-from-shell', so env. vars resemble those in the shell;
 ;;   * 'latex-preview-pane' to compile and view rendered LaTeX;
 ;;   * 'magit' to interface with the Git VCS;
-;;   * 'vue-mode' for Vue.js-related functionality.
+;;   * 'vue-mode' for Vue.js-related functionality;
+;;   * 'org-re-reveal' for exporting org-mode notes to reveal.js presentations.
 ;;
 ;; * indirect package requires:
 ;;   * 'vline', required by 'col-highlight';
@@ -333,6 +334,10 @@
 
 ;; Syntax highlighting for code snippets inside 'BEGIN_SRC ... END_SRC' blocks
 (setq org-src-fontify-natively t)
+
+;; org-re-reveal setup (a fork of org-reveal that is still maintained)
+(add-to-list 'load-path "~/.emacs.d/lisp/org-re-reveal")
+(require 'org-re-reveal)
 
 ;; ---------------------------------------------------------------------------
 ;; New and amended key bindings
