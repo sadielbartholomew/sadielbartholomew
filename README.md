@@ -1,8 +1,10 @@
 <p align="center">
   <b>
-    Computational Scientist (she/her) in Earth System Science for
-    <a href="https://github.com/NCAS-CMS">@NCAS-CMS</a>. I develop
-    and maintain open-source software chiefly using the following systems and tools:
+    Computational Scientist in Earth System Science for
+    <a href="https://github.com/NCAS-CMS">@NCAS-CMS</a> and Fellow for
+    <a href="https://github.com/softwaresaved">@softwaresaved</a> (she/her).
+    I develop and maintain open-source software chiefly using the following
+    systems and tools:
   </b>
   <br>
   <a href="https://www.gnu.org/software/bash/" title="bash"><img src="https://bashlogo.com/img/symbol/svg/full_colored_dark.svg" width="65"/></a>
@@ -16,9 +18,10 @@
 <p align="center">
   Official related websites:
   <a href="https://sadielbartholomew.github.io/">Personal</a> |
-  <a href="https://ncas.ac.uk/">NCAS</a> |
-  <a href="http://cms.ncas.ac.uk/">NCAS-CMS</a> |
-  <a href="https://www.reading.ac.uk/met/">Uni. of Reading Dept. of Meteorology</a>
+  <a href="https://ncas.ac.uk/">NCAS (National Centre for Atmospheric Science)</a> |
+  <a href="http://cms.ncas.ac.uk/">NCAS-CMS (Computational and Modelling Services)</a> |
+  <a href="https://www.reading.ac.uk/met/">University of Reading Dept. of Meteorology</a> |
+  <a href="https://www.software.ac.uk/">Software Sustainability Institute</a>
   <br><br>
 </p>
 
