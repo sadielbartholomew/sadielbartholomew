@@ -132,3 +132,10 @@
   * [IS-ENES3 Second General Assembly](https://is.enes.org/events/workshops/is-enes3-virtual-2nd-general-assembly);
     05.10.21, ~10 minutes, **Status of ES-DOC** (presented virtually)
     [slides in *is-enes3-ga2-es-doc-status.pdf* file]
+
+* Software Sustainability Institute Collaborations Workshops:
+
+  * [Collaborations Workshop 2022 (CW22)](https://www.software.ac.uk/cw22)
+    04.04.21, 2 minutes, **Pear Programming: a cheat sheet on generic good
+    software development practice** (presented virtually)
+    [single slide, *CW22_pear_programming_slide.pdf* file]
