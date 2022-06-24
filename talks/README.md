@@ -65,6 +65,11 @@
   * 23.10.20, ~30 minutes, **The ES-DOC (Earth System Documentation) project:
     a whistle-stop tour** [slides in *es-doc-whistle-stop-tour.pdf* file]
 
+* NCAS-CMS group away days:
+
+  * 24.06.22, ~6 minutes, **NCAS-CMS: my role and perspective**
+    [slides in *CMS_away_day_6_mins_talk.pdf* file]
+
 * ESiWACE Summer School on Effective HPC for Climate and Weather:
 
   * 25.08.20, Storage (Input/Output and Middleware) session (presented
