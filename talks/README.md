@@ -132,6 +132,10 @@
     21.09.21, ~20 minutes, **Standard names analyses and tooling: aims and
     preliminary work** [slides in *cf-workshop-21-standard-names.pdf* file]
 
+  * [2022 CF Workshop](https://cfconventions.org/Meetings/2022-Workshop.html);
+    13.09.22, ~30 minutes, **CF training: overview and discussion**
+    [slides in *cf-workshop-22-RE-training.pdf* file]
+
 * IS-ENES3 General Assemblies:
 
   * [IS-ENES3 Second General Assembly](https://is.enes.org/events/workshops/is-enes3-virtual-2nd-general-assembly);
