@@ -138,7 +138,7 @@
 
 * IS-ENES3 General Assemblies:
 
-  * [IS-ENES3 Second General Assembly](https://is.enes.org/events/workshops/is-enes3-virtual-2nd-general-assembly);
+  * [IS-ENES3 Second General Assembly](https://is.enes.org/workshops-detailed/#isenes3ga2);
     05.10.21, ~10 minutes, **Status of ES-DOC** (presented virtually)
     [slides in *is-enes3-ga2-es-doc-status.pdf* file]
 
