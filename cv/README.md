@@ -1,6 +1,6 @@
 # CV
 
-## My current CV, up-to-date as of January 2021.
+## My CV, last updated in October 2022.
 
 Note:
 
