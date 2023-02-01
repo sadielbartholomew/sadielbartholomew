@@ -26,7 +26,11 @@
 </p>
 
 <p align="center">
-  Warming Stripes* for my location, Berkshire (UK), from 1863-2020<br>
-  <small>*infographic designed by Prof. Ed Hawkins (University of Reading)</small><br>
+  <i>Warming Stripes</i>* indicating the average temperature of my location, Berkshire (UK), year-by-year from 1863-2020<br>
   <img src="https://github.com/sadielbartholomew/sadielbartholomew/blob/master/profile-media/berkshire_warming_stripes_attr_ed_hawkins_cropped.png?raw=true">
+  <i>Biodiversity stripes</i>** indicating the decline in UK Priority Species wildlife year-by-year from 1970-2019<br>
+  <img src="https://github.com/sadielbartholomew/sadielbartholomew/blob/master/profile-media/uk_ps_biodiversity_stripes_attr_miles_richardson_cropped.png?raw=true">
+  <sub>* infographic designed by Prof. Ed Hawkins (University of Reading), see <a href="https://showyourstripes.info/">showyourstripes.info</a></sub><br>
+  <sub>** created by Miles Richardson inspired by the above (contains public sector information from Defra, licenced under the Open Government Licence v3.0),
+       see <a href="https://www.biodiversitystripes.info/">biodiversitystripes.info</a> </sub><br>
 </p>
