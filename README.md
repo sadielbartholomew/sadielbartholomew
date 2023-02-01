@@ -12,7 +12,7 @@
   <a href="https://www.python.org/" title="python"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" width="55"/></a>
   <a href="https://www.gnu.org/software/emacs/" title="emacs"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/EmacsIcon.svg/1200px-EmacsIcon.svg.png" width="60"/></a>
   <a href="https://git-scm.com/" title="git"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Git_icon.svg" width="60"/></a>
-  <br><br>
+  <br>
 </p>
 
 <p align="center">
@@ -31,6 +31,6 @@
   <i>Biodiversity stripes</i>** indicating the decline in UK Priority Species wildlife year-by-year from 1970-2019<br>
   <img src="https://github.com/sadielbartholomew/sadielbartholomew/blob/master/profile-media/uk_ps_biodiversity_stripes_attr_miles_richardson_cropped.png?raw=true">
   <sub>* infographic designed by Prof. Ed Hawkins (University of Reading), see <a href="https://showyourstripes.info/">showyourstripes.info</a></sub><br>
-  <sub>** created by Miles Richardson inspired by the above (contains public sector information from Defra, licenced under the Open Government Licence v3.0),
+  <sub>** created by Miles Richardson (contains public sector information from Defra, licenced under the Open Government Licence v3.0),
        see <a href="https://www.biodiversitystripes.info/">biodiversitystripes.info</a> </sub><br>
 </p>
