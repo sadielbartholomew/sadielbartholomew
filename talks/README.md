@@ -148,3 +148,11 @@
     04.04.21, 2 minutes, **Pear Programming: a cheat sheet on generic good
     software development practice** (presented virtually)
     [single slide, *CW22_pear_programming_slide.pdf* file]
+
+* SIAM Conferences on Computational Science and Engineering:
+
+  * [2023 Conference, CSE23](https://www.siam.org/conferences/cm/conference/cse23),
+    'MS389 Advances in High Performance Computing for Earth Science (Part II
+    of II)' session; 03.03.23, ~11 minutes,
+    **On Machines and CPMIP Metrics Underlying CMIP Simulations**
+    [slides and content store in *siam-cse-23-es-doc-cmip-platform* directory]
