@@ -1,11 +1,11 @@
 [user]
-    name = Sadie Louise Bartholomew
+    name = Sadie L. Bartholomew
     email = sadie.bartholomew@ncas.ac.uk
 
 [core]
     editor = emacs
     # Comment this out to get standard 'git diff' format to quote in GH Issues:
-    pager = delta
+    #pager = delta
 
     # Can't use env vars like $HOME in a gitconfig, sad times...
     excludesfile = /home/sadie/.gitignore_global
@@ -14,6 +14,9 @@
     # 'blank-at-eof' and 'space-before-tab' are all enabled already by default
     # and 'indent-with-non-tab' is disabled by default (as wanted).
     whitespace = tab-in-indent, cr-at-eol, fix
+
+[init]
+    defaultBranch = main
 
 [transfer]
     fsckObjects = true
@@ -71,26 +74,27 @@
 
 # colour and formatting for log is dealt with by pretty=format in aliases here:
 [alias]
-  # Note there are also several git top-level aliases and custom functions
-  # defined in .bash_aliases that can be used but are not printed by 'aliases'.
+    # Note there are also several git top-level aliases and custom functions
+    # defined in .bash_aliases that can be used but are not printed by 'aliases'.
 
-  # Remind me of my own alises!
-  aliases = "!git config -l | grep alias | cut -c 7-"
+    # Remind me of my own alises!
+    aliases = "!git config -l | grep alias | cut -c 7-"
 
-  clog = log --pretty=format:'%C(cyan)%h%Creset| %s %Cred(%ad) %C(blue)%an%Creset %C(auto)%d%Creset ' --abbrev-commit --date=short
-  glog = log --graph --pretty=format:'%C(cyan)%h%Creset %s %Cred(%ad) %C(blue)%an%Creset %C(auto)%d%Creset ' --abbrev-commit --date=short
+    clog = log --pretty=format:'%C(cyan)%h%Creset| %s %Cred(%ad) %C(blue)%an%Creset %C(auto)%d%Creset ' --abbrev-commit --date=short
+    glog = log --graph --pretty=format:'%C(cyan)%h%Creset %s %Cred(%ad) %C(blue)%an%Creset %C(auto)%d%Creset ' --abbrev-commit --date=short
 
-  # Requires escape to shell (via '!') to grab current branch
-  br = "!git rev-parse --abbrev-ref HEAD"
-  pushup = "!git push upstream $(git br):master"
-  pusho = push origin HEAD
+    # Requires escape to shell (via '!') to grab current branch
+    br = "!git rev-parse --abbrev-ref HEAD"
+    pushup = "!git push upstream $(git br):main"
+    pusho = push origin HEAD
 
-  cm = commit -m
+    cm = commit -m
 
-  rebasic = rebase -i origin/master
+    rebasic = rebase -i origin/main
 
-  # Every appended 'x' increases the number of context lines for each match
-  grepx = grep -A 2 -B 2
-  grepxx = grep -A 5 -B 5
-  grepxxx = grep -A 10 -B 10
-  grepxxxx = grep -A 50 -B 50
+    # Every appended 'x' increases the number of context lines for each match
+    grepx = grep -A 2 -B 2
+    grepxx = grep -A 5 -B 5
+    grepxxx = grep -A 10 -B 10
+    grepxxxx = grep -A 50 -B 50
+    grepxxxxx = grep -A 200 -B 200

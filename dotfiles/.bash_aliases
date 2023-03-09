@@ -106,7 +106,7 @@ git_sync_masters() {
 }
 
 # Create a new branch and change onto it
-git_new_br() {
+git_branchout() {
     git branch $1;
     git checkout $1;
     # git's branch-switch message is sufficient to imply success of function...
