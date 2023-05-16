@@ -156,3 +156,10 @@
     of II)' session; 03.03.23, ~11 minutes,
     **On Machines and CPMIP Metrics Underlying CMIP Simulations**
     [slides and content store in *siam-cse-23-es-doc-cmip-platform* directory]
+
+* [RSE South](https://rsesouth.github.io/) events:
+
+  * [2023 RSE South Workshop, on Sustainability and Reproducibility
+    of Research Software](https://rsesouth.github.io/workshop/), 16.05.23,
+    20 minutes, **The soft side of code review and why it matters**
+    [slides in *rse-south-soft-side-code-review.pdf* file]
