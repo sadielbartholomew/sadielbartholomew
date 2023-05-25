@@ -65,6 +65,9 @@
   * 23.10.20, ~30 minutes, **The ES-DOC (Earth System Documentation) project:
     a whistle-stop tour** [slides in *es-doc-whistle-stop-tour.pdf* file]
 
+  * 26.05.23, ~20 minutes, **Green job scheduling**,
+    [slides in *green-scheduler-cms-meeting.pdf* file]
+
 * NCAS-CMS group away days:
 
   * 24.06.22, ~6 minutes, **NCAS-CMS: my role and perspective**
