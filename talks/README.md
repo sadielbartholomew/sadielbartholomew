@@ -166,3 +166,9 @@
     of Research Software](https://rsesouth.github.io/workshop/), 16.05.23,
     20 minutes, **The soft side of code review and why it matters**
     [slides in *rse-south-soft-side-code-review.pdf* file]
+
+* NCAS Management Board visits to Reading:
+
+  * Contribution for joint talk about NCAS-CMS, 07.06.23, 5 minutes,
+  **Standards-centric software and support**,
+  [slides in *overview-for-ncas-management-board-23.md* file]
