@@ -4,8 +4,6 @@
 
 [core]
     editor = emacs
-    # Comment this out to get standard 'git diff' format to quote in GH Issues:
-    #pager = delta
 
     # Can't use env vars like $HOME in a gitconfig, sad times...
     excludesfile = /home/sadie/.gitignore_global
