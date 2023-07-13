@@ -172,3 +172,8 @@
   * Contribution for joint talk about NCAS-CMS, 07.06.23, 5 minutes,
   **Standards-centric software and support**,
   [slides in *overview-for-ncas-management-board-23.md* file]
+
+* NCAS Staff Meetings:
+
+  * 2023 meeting, 13.07.23, 1 hour, **Better Software, Better (Atmospheric)
+  Research** [slides in *ncas-agm-23-better-atmos-software.pdf* file]
