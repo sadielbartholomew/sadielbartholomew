@@ -177,3 +177,12 @@
 
   * 2023 meeting, 13.07.23, 1 hour, **Better Software, Better (Atmospheric)
   Research** [slides in *ncas-agm-23-better-atmos-software.pdf* file]
+
+* [Institute of Computing for Climate Science (ICCS)](https://iccs.cam.ac.uk/)
+  Summer Schools:
+
+  * [2023 School](https://iccs.cam.ac.uk/events/iccs-summer-school-2023),
+    11.07.23, 1.5 hours, **Panel on the importance of software engineering
+    good practices in climate science** (with other panel members of
+    Kirsty Pringle, Chris Edsall, Paul Richmond and Marion Weinzierl)
+    [no resources in repo]
