@@ -1,4 +1,4 @@
-<img src="https://github.com/sadielbartholomew/sadielbartholomew/blob/master/profile-media/me_in_front_of_globe_at_meteo_france.png?raw=true" alt="Photo of me in a lecture theatre at Météo-France HQ in Toulouse" align="right" width="150" height="auto"/>
+<img src="https://github.com/sadielbartholomew/sadielbartholomew/blob/master/profile-media/me_in_front_of_globe_at_meteo_france.png?raw=true" alt="Photo of me in a lecture theatre at Météo-France HQ in Toulouse" align="right" width="190" height="auto"/>
 <p align="center">
   <b>
     Computational Scientist in Earth System Science for
