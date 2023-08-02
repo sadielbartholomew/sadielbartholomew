@@ -3,7 +3,7 @@
   <b>
     Computational Scientist in Earth System Science for
     <a href="https://github.com/NCAS-CMS">@NCAS-CMS</a> and University of Reading and Fellow for
-    <a href="https://github.com/softwaresaved">@softwaresaved</a> (she/her).
+    <a href="https://github.com/softwaresaved">@softwaresaved</a>.
     I develop and maintain open-source software mainly using:
   </b>
   <br>
