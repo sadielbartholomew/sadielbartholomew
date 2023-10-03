@@ -139,6 +139,11 @@
     13.09.22, ~30 minutes, **CF training: overview and discussion**
     [slides in *cf-workshop-22-RE-training.pdf* file]
 
+  * [2023 CF Workshop](https://cfconventions.org/Meetings/2023-Workshop.html);
+    05.10.23, ~10 minutes, **CF Training: where to find existing resources
+    and how to request future topics**
+    [slides in *CF_training_lightning_talk_SLB.pdf* file]
+
 * IS-ENES3 General Assemblies:
 
   * [IS-ENES3 Second General Assembly](https://is.enes.org/workshops-detailed/#isenes3ga2);
