@@ -191,3 +191,19 @@
     good practices in climate science** (with other panel members of
     Kirsty Pringle, Chris Edsall, Paul Richmond and Marion Weinzierl)
     [no resources in repo]
+
+* [American Geophysical Union](https://www.agu.org/) Annual (Fall) Meetings:
+
+  * [AGU Annual Meeting 2023 (AGU23)](https://www.agu.org/fall-meeting/pages/about):
+
+    1. 13.12.23, poster (traditional-style poster presented in-person),
+       **Towards an explorer tool for visualisation of grammatical patterns
+       in the CF Standard Names through decomposition into *n*-grams**,
+       for the session 'IN31C: CF and NetCDF: 30 Years of Wide-Open
+       Science I Poster' [poster (designed for paper size A0) in
+       *agu23-cf-standard-names-poster.pdf* file]
+
+    2. 13.12.23, ~7 minute (lightning) talk, **Training By and For the
+       CF Community: An Example of Community Engagement**, for the session
+       'IN34A: CF and NetCDF: 30 Years of Wide-Open Science II Oral'
+       [slides to be added shortly].
