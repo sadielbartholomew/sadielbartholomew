@@ -206,4 +206,4 @@
     2. 13.12.23, ~7 minute (lightning) talk, **Training By and For the
        CF Community: An Example of Community Engagement**, for the session
        'IN34A: CF and NetCDF: 30 Years of Wide-Open Science II Oral'
-       [slides to be added shortly].
+       [slides in *agu23-cf-training-talk-slides.pdf* file].
