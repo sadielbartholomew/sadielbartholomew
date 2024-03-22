@@ -207,3 +207,17 @@
        CF Community: An Example of Community Engagement**, for the session
        'IN34A: CF and NetCDF: 30 Years of Wide-Open Science II Oral'
        [slides in *agu23-cf-training-talk-slides.pdf* file].
+
+* NCAS ['Harmony in the Skies: Bridging Horizons in Atmospheric
+  Science'](https://sites.google.com/ncas.ac.uk/ncasharmonyintheskies/home)
+  event, 21.03.24:
+
+  * ~45 minute workshop co-organised and co-led with others (see slide for
+    details), **Building a software and computing community** [slides in the
+    *ncas-ec-symposium-community.pdf* file]
+
+  * ~10 minutes within a 45 minute workshop,
+  **Best practices in data and software: 1. Communities and standards**,
+  [resources in the *ncas-ec-symposium-software-data.pdf* file, my slides were
+  from 2 to 11, the rest were by other speakers];
+
