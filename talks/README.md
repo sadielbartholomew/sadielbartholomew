@@ -68,6 +68,10 @@
   * 26.05.23, ~20 minutes, **Green job scheduling**,
     [slides in *green-scheduler-cms-meeting.pdf* file]
 
+  * 07.06.24, ~20 minutes, **Status Report on our CF Data Visualisation
+    Tools, cf-plot & cf-view**, [slides in
+    *cf-plot-cf-view-status-report.pdf* file]
+
 * NCAS-CMS group away days:
 
   * 24.06.22, ~6 minutes, **NCAS-CMS: my role and perspective**
