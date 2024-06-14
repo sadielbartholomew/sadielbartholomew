@@ -229,3 +229,14 @@
   **Best practices in data and software: 1. Communities and standards**,
   [resources in the *ncas-ec-symposium-software-data.pdf* file, my slides were
   from 2 to 11, the rest were by other speakers].
+
+* University of Reading Department of Meteorology Research Away-Days:
+
+  * 2024 Away Day, 13.06.24:
+
+    * 4 minute 'short talk', **Recommendations for software tools and
+      best practice**, [slides in *met_away_day_24_tools_best_prac.pdf* file].
+
+    * 1 hour 'breakout session' workshop, co-organised and co-hosted/facilitated
+      with Bryan Lawrence, Patrick McGuire and Steven George,
+      **New tools in weather and climate research** [no resources shared].
