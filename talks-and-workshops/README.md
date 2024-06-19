@@ -239,4 +239,5 @@
 
     * 1 hour 'breakout session' workshop, co-organised and co-hosted/facilitated
       with Bryan Lawrence, Patrick McGuire and Steven George,
-      **New tools in weather and climate research** [no resources shared].
+      **New tools in weather and climate research** [notes from group
+      facilitation in *met_away_day_24_workshop_notes.md*].
