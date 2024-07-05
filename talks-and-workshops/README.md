@@ -192,6 +192,12 @@
   * 2023 meeting, 13.07.23, 1 hour, **Better Software, Better (Atmospheric)
   Research** [slides in *ncas-agm-23-better-atmos-software.pdf* file]
 
+  * 2024 meeting, 02.07.24, ~3 minutes (my part, out of 12 minutes total
+    for whole talk), **VISION: towards seamless integration of Model,
+    Satellite and In-Situ Observation data** (with Maria Russo and
+    Alex Roberts) [slides in *ncas-agm-24-vision-team-talk.pdf* file, my
+    contribution was creating slides 16-23 and presenting slides 16-24]
+
 * [Institute of Computing for Climate Science (ICCS)](https://iccs.cam.ac.uk/)
   Summer Schools:
 
