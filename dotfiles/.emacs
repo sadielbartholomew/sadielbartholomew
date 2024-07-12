@@ -35,7 +35,8 @@
 ;;   * 'latex-preview-pane' to compile and view rendered LaTeX;
 ;;   * 'magit' to interface with the Git VCS;
 ;;   * 'vue-mode' for Vue.js-related functionality;
-;;   * 'org-re-reveal' for exporting org-mode notes to reveal.js presentations.
+;;   * 'org-re-reveal' for exporting org-mode notes to reveal.js presentations;
+;;   * 'markdown-mode' for Markdown formatting.
 ;;
 ;; * indirect package requires:
 ;;   * 'vline', required by 'col-highlight';
@@ -286,6 +287,18 @@
 (require 'ssass-mode)
 (require 'vue-html-mode)
 (require 'vue-mode)
+
+;; For Markdown formatting
+(require 'markdown-mode)
+(autoload 'markdown-mode "markdown-mode"
+   "Major mode for editing Markdown files" t)
+(add-to-list 'auto-mode-alist
+             '("\\.\\(?:md\\|markdown\\|mkd\\|mdown\\|mkdn\\|mdwn\\)\\'" . markdown-mode))
+
+(autoload 'gfm-mode "markdown-mode"
+   "Major mode for editing GitHub Flavored Markdown files" t)
+(add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
+
 
 ;; ---------------------------------------------------------------------------
 ;; Org mode specific config and customisation
