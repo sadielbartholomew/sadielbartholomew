@@ -26,11 +26,14 @@
 </p>
 
 <p align="center">
-  <i>Warming Stripes</i>* indicating the average temperature of my location, Berkshire (UK), year-by-year from 1863-2020<br>
+  <i>Warming stripes</i>* indicating the average temperature of my location, Berkshire (UK), year-by-year from 1863-2020<br>
   <img src="https://github.com/sadielbartholomew/sadielbartholomew/blob/master/profile-media/berkshire_warming_stripes_attr_ed_hawkins_cropped.png?raw=true">
   <i>Biodiversity stripes</i>** indicating the decline in UK Priority Species wildlife year-by-year from 1970-2019<br>
   <img src="https://github.com/sadielbartholomew/sadielbartholomew/blob/master/profile-media/uk_ps_biodiversity_stripes_attr_miles_richardson_cropped.png?raw=true">
+  <i>Air Quality stripes</i>*** indicating the concentration of particulate matter air pollution (PM2.5) in London from 1850-2021<br>
+  <img src="https://github.com/sadielbartholomew/sadielbartholomew/blob/master/profile-media/london_air_stripes_attr_kirsty_pringle_et_al?raw=true">
   <sub>* infographic designed by Prof. Ed Hawkins (University of Reading), see <a href="https://showyourstripes.info/">showyourstripes.info</a></sub><br>
   <sub>** created by Miles Richardson (contains public sector information from Defra, licenced under the Open Government Licence v3.0),
        see <a href="https://www.biodiversitystripes.info/">biodiversitystripes.info</a> </sub><br>
+  <sub>*** produced by Kirsty Pringle and collaboration, see <a href="https://airqualitystripes.info/">airqualitystripes.info</a></sub><br>
 </p>
