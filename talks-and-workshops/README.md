@@ -50,12 +50,32 @@
   * 17.07.19, ~10 minutes, **The Software Development Community** [web files in
     *tech-connect-software-dev-comm* directory]
 
-* The Fourth Conference of Research Software Engineering ("RSEConUK 2019"):
+* Research Software Engineering Conferences (UK national Society of RSE  annual 'RSECon'):
 
-  * 18.09.19, ~10 minutes (second half of the full talk of 25 minutes, minus 5
-    for questions), **Pursuing and supporting reproducible workflows for all
-    with Cylc** [links to slides & dedicated conference page for the talk with
-    abstract etc. as in *rseconuk2019-workflows-with-cylc.md* file]
+  * The Fourth Conference of Research Software Engineering ('RSEConUK 2019'):
+    * 18.09.19, ~10 minutes (second half of the full talk of 25 minutes, minus 5
+      for questions), **Pursuing and supporting reproducible workflows for all
+      with Cylc** [links to slides & dedicated conference page for the talk with
+      abstract etc. as in *rseconuk2019-workflows-with-cylc.md* file]
+
+  * [SORSE (A Series of Online Research Software Events)](https://sorse.github.io/):
+    * 03.11.20, ~45 minutes (presented virtually), **Configuring Sphinx from
+      scratch: making your own documentation and making your documentation your
+      own** [source material contained in a separate dedicated repository,
+      [sadielbartholomew/sphinx-from-scratch](https://github.com/sadielbartholomew/sphinx-from-scratch)
+      and further information is provided in a page on the
+      [SORSE website](https://sorse.github.io/programme/software-demos/event-011/)]
+
+  * The Eighth Conference of Research Software Engineering ('RSECon24'):
+    * 05.09.24, ~3 minutes  for sub-talk and ~30 minutes for panel discussion of a 90
+      minute 'Birds of a Feather' session, **Finding the Weather and Climate RSE
+      Community - knowledge exchange and the next steps for the flock**, co-presenting with
+      others including Emma Hogan, Jack Atkinson, David Wilby, Mark Richardson and
+      Colin Sauze, each presenting our own few slides about the RSE work(force) at our
+      organisation, then sat on a panel answering questions related to the BoF theme.
+      BoF session organised by team including, as well as the above speakers, Marion Weinzierl,
+      Kirsty Pringle and Helen Burns. [slides in *WCBoF_RSECon24_NCASandpanelslidesonly.pdf*
+      file, where only the title slide and slides I presented from are included]
 
 * NCAS-CMS group weekly meetings:
 
@@ -100,14 +120,6 @@
       permanently in the NCAS-CMS/cf-training repository](https://github.com/NCAS-CMS/cf-training/blob/master/short_course/demo_in_under_an_hour.ipynb)
       and a video recording of the tutorial is also available on the school's
       [official webpage](https://hps.vi4io.org/events/2021/esiwace-school)]
-
-* [SORSE (A Series of Online Research Software Events)](https://sorse.github.io/):
-
-  * 03.11.20, ~45 minutes (presented virtually), **Configuring Sphinx from
-    scratch: making your own documentation and making your documentation your
-    own** [source material contained in a separate dedicated repository,
-    [sadielbartholomew/sphinx-from-scratch](https://github.com/sadielbartholomew/sphinx-from-scratch) and further information is provided in a page on the
-    [SORSE website](https://sorse.github.io/programme/software-demos/event-011/)]
 
 * [NICEST2 hackathon on FAIR climate data](https://nordicesmhub.github.io/nicest2-fair-hackathon/):
 
