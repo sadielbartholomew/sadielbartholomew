@@ -92,6 +92,9 @@
     Tools, cf-plot & cf-view**, [slides in
     *cf-plot-cf-view-status-report.pdf* file]
 
+  * 07.10.24, ~20 minutes, **Experience hosting (Nuffield) Research Placement students**,
+    [slides in *cms-weekly-pres-summer-students.pdf* file]
+
 * NCAS-CMS group away days:
 
   * 24.06.22, ~6 minutes, **NCAS-CMS: my role and perspective**
