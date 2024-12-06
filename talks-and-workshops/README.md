@@ -95,6 +95,10 @@
   * 07.10.24, ~20 minutes, **Experience hosting (Nuffield) Research Placement students**,
     [slides in *cms-weekly-pres-summer-students.pdf* file]
 
+  * 29.11.24, ~20 minutes, **Image comparison (and GUI functionality) testing**,
+    [slides in *cms-weekly-img-cmp-testing.pdf* file]
+
+
 * NCAS-CMS group away days:
 
   * 24.06.22, ~6 minutes, **NCAS-CMS: my role and perspective**
@@ -256,9 +260,15 @@
   * 2024 Away Day, 13.06.24:
 
     * 4 minute 'short talk', **Recommendations for software tools and
-      best practice**, [slides in *met_away_day_24_tools_best_prac.pdf* file].
+      best practice** [slides in *met_away_day_24_tools_best_prac.pdf* file].
 
     * 1 hour 'breakout session' workshop, co-organised and co-hosted/facilitated
       with Bryan Lawrence, Patrick McGuire and Steven George,
       **New tools in weather and climate research** [notes from group
       facilitation in *met_away_day_24_workshop_notes.md*].
+
+* Computing Insight UK (CIUK):
+
+  * CIUK 2024, 05.12.24, 30 minute talk,  **Reducing the impact of energy consumption
+    from computing with CATS, The Climate Aware Task Scheduler** [slides in
+    *ciuk24-reducing-carbon-impact-cats.pdf* file]
