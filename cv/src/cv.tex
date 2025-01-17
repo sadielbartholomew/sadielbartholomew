@@ -1,0 +1,82 @@
+% !TEX TS-program = luatex
+% Awesome Source CV LaTeX Template
+%
+% Author:
+% Christophe Roger (Darwiin)
+% 
+% Modified by:
+% Sebastin Santy
+% This template has been downloaded from:
+% https://github.com/SebastinSanty/Just-Another-Research-CV
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+% Modified to adapt template to own details for own CV by:
+% Sadie Bartholomew, 2025
+
+\documentclass[localFont,alternative]{yaac-another-awesome-cv}
+\usepackage[en-US]{datetime2}
+
+\name{Sadie L.}{Bartholomew}
+\tagline{\tiGlobeOutline \hspace{0.2em} Earth/Environmental Research Software Engineer}
+\photo{2cm}{uwseal}
+\socialinfo{
+\hspace{10mm} Academic (i.e. \textit{long}) résumé; traditional \textit{two-page} curriculum vitae also available upon request.
+\newline
+    \website{https://sadielbartholomew.github.io}
+	\github{sadielbartholomew}
+        % This needs setting manually for colours and links since need to ues academicons
+        \color{symbolcolor}\aiOrcid\color{black} \hspace{0.2em} \href{https://orcid.org/0000-0002-6180-3603}{orcid.org/0000-0002-6180-3603}
+        \newline
+        \email{sadielbartholomew@gmail.com}
+	\address{RG2 area, Reading, Berkshire, United Kingdom}
+    % This needs setting manually for colours and links since need not aliases, new for SLB adaption
+        \color{symbolcolor}\faUser \color{black} \hspace{0.2em} she/her 
+	\vspace{-3mm}
+}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage[normalem]{ulem}
+
+% SLB addition for skills rating! Idea and code taken from here: https://tex.stackexchange.com/questions/224624/knowledge-indicators
+\newcommand{\skillrating}[1][3]{[
+  \setlength{\unitlength}{1ex}%
+  \begin{picture}(1,1.8)
+    \linethickness{0.3ex}%
+    \textcolor{gray!15}{\multiput(0, 0.15)(0, 0.6){3}{\line(1,0){1}}}
+    \multiput(0, 0.15)(0, 0.6){#1}{\line(1,0){1}}
+  \end{picture}
+  ]}
+
+% SLB NEW TO ALLOW SOME SECTIONS TO BE ON MULTIPLE PAGES, ELSE THAT CAN'T HAPPEN
+% See: https://github.com/darwiin/yaac-another-awesome-cv/issues/75
+\usepackage{longtable,needspace}
+
+\begin{document}
+	\makecvheader
+    \DTMlangsetup{showdayofmonth=false}
+	\makecvfooter
+		{\textsc{Last update: \selectlanguage{english}\today}}
+		{\textsc{Academic/long résumé of Sadie L. Bartholomew}}
+		{\thepage}
+
+    \input{sections/headline.tex}
+    \\
+    \input{sections/experience}
+    \input{sections/education}
+    \input{sections/awards}
+    \input{sections/opensource}
+    \input{sections/publications}
+    \input{sections/techdocs}
+    %% \input{sections/projects} FOR NOW IGNORE THIS, EVENTUALLY ADD IN
+    \input{sections/trainingsupervision}
+    \input{sections/service}
+    \input{sections/talks}
+    \input{sections/engagement}
+    %% \input{sections/recruitmentfunding} eventually add such a section
+    \input{sections/computing}
+    \input{sections/languageskills}
+    \input{sections/conferences}
+    \input{sections/references} 
+
+\end{document}
