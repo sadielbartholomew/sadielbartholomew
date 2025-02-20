@@ -272,3 +272,8 @@
   * CIUK 2024, 05.12.24, 30 minute talk,  **Reducing the impact of energy consumption
     from computing with CATS, The Climate Aware Task Scheduler** [slides in
     *ciuk24-reducing-carbon-impact-cats.pdf* file]
+
+* [Advancing the Frontiers of Earth System Prediction (AFESP)](https://research.reading.ac.uk/earth-system-prediction/)
+  postdoc and PhD student group meetings, 20.02.25, 45 minute talk, **The NCAS CF Data tools:
+  cf-python and cf-plot and how (we hope) they can be of use to you** [slides in
+  *AFESP_NCAS_CF_Data_Tools.pdf* file]
