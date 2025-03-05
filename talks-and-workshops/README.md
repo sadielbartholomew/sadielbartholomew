@@ -242,18 +242,26 @@
        'IN34A: CF and NetCDF: 30 Years of Wide-Open Science II Oral'
        [slides in *agu23-cf-training-talk-slides.pdf* file].
 
-* NCAS ['Harmony in the Skies: Bridging Horizons in Atmospheric
-  Science'](https://sites.google.com/ncas.ac.uk/ncasharmonyintheskies/home)
-  event, 21.03.24:
+* NCAS Early Career Symposium 'Harmony in the Skies: Bridging Horizons in Atmospheric
+  Science' events:
 
-  * ~45 minute workshop co-organised and co-led with others (see slide for
-    details), **Building a software and computing community** [slides in the
-    *ncas-ec-symposium-community.pdf* file]
+  * [2024 event](https://sites.google.com/ncas.ac.uk/ncasharmonyintheskies/home),
+  20.03.2024 - 21.03.24:
 
-  * ~10 minutes within a 45 minute workshop,
-  **Best practices in data and software: 1. Communities and standards**,
-  [resources in the *ncas-ec-symposium-software-data.pdf* file, my slides were
-  from 2 to 11, the rest were by other speakers].
+    * ~45 minute workshop co-organised and co-led with others (see slide for
+      details), **Building a software and computing community** [slides in the
+      *ncas-ec-symposium-community.pdf* file]
+
+    * ~10 minutes within a 45 minute workshop,
+    **Best practices in data and software: 1. Communities and standards**,
+    [resources in the *ncas-ec-symposium-software-data.pdf* file, my slides were
+    from 2 to 11, the rest were by other speakers].
+
+  * [2025 event](https://sites.google.com/ncas.ac.uk/harmony-in-the-skies-2025/home),
+    06.03.2025-07.03.2025:
+
+    * ~ 10 minute talk, **Responsible computing: minimising the environmental impacts of
+       research**, [slides in *ncas-ec-symposium-greencomputing.pdf* file]
 
 * University of Reading Department of Meteorology Research Away-Days:
 
