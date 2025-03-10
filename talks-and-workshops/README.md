@@ -263,6 +263,9 @@
     * ~ 10 minute talk, **Responsible computing: minimising the environmental impacts of
        research**, [slides in *ncas-ec-symposium-greencomputing.pdf* file]
 
+    * ~ 40 minute workshop, **Open Data Day: environmental data sources for exploring
+      the polycrisis**, [slides in *ncas-ec-symposium-open-data-day.pdf* file]
+
 * University of Reading Department of Meteorology Research Away-Days:
 
   * 2024 Away Day, 13.06.24:
