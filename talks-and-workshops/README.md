@@ -85,19 +85,21 @@
   * 23.10.20, ~30 minutes, **The ES-DOC (Earth System Documentation) project:
     a whistle-stop tour** [slides in *es-doc-whistle-stop-tour.pdf* file]
 
-  * 26.05.23, ~20 minutes, **Green job scheduling**,
+  * 26.05.23, ~20 minutes, **Green job scheduling**
     [slides in *green-scheduler-cms-meeting.pdf* file]
 
   * 07.06.24, ~20 minutes, **Status Report on our CF Data Visualisation
-    Tools, cf-plot & cf-view**, [slides in
+    Tools, cf-plot & cf-view** [slides in
     *cf-plot-cf-view-status-report.pdf* file]
 
-  * 07.10.24, ~20 minutes, **Experience hosting (Nuffield) Research Placement students**,
+  * 07.10.24, ~20 minutes, **Experience hosting (Nuffield) Research Placement students**
     [slides in *cms-weekly-pres-summer-students.pdf* file]
 
-  * 29.11.24, ~20 minutes, **Image comparison (and GUI functionality) testing**,
+  * 29.11.24, ~20 minutes, **Image comparison (and GUI functionality) testing**
     [slides in *cms-weekly-img-cmp-testing.pdf* file]
 
+  * 14.03.25, ~20 minutes, **UPSCALE K-scale project: work so far towards an inter-scale
+    energy transfer tool** [slides in *upscale_kscale_tool_progress_cms_meet.pdf* file]
 
 * NCAS-CMS group away days:
 
