@@ -290,3 +290,9 @@
   postdoc and PhD student group meetings, 20.02.25, 45 minute talk, **The NCAS CF Data tools:
   cf-python and cf-plot and how (we hope) they can be of use to you** [slides in
   *AFESP_NCAS_CF_Data_Tools.pdf* file]
+  
+* [LESFMIP analysis sprint](https://lesfmip-sprint.github.io/LESFMIP-sprint/), 17.03.2025,
+   2 x 10 minute talks (catering for different timezones),
+   **The NCAS CF Data tools: cf-python and cf-plot** [slides in
+   *10_min_generic_CF_Tools_presentation_SLB_march25.pdf* file]
+
