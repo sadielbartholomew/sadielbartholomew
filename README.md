@@ -1,7 +1,7 @@
 <img src="https://github.com/sadielbartholomew/sadielbartholomew/blob/master/profile-media/me_in_front_of_globe_at_meteo_france.png?raw=true" alt="Photo of me in a lecture theatre at Météo-France HQ in Toulouse" align="right" width="175" height="auto"/>
 <p align="center">
   <b>
-    Computational Scientist in Earth System Science for
+    Senior Research Software Engineer in Earth System Science for
     <a href="https://github.com/NCAS-CMS">@NCAS-CMS</a> and University of Reading and Fellow for
     <a href="https://github.com/softwaresaved">@softwaresaved</a>.
     I develop and maintain OSS mainly using:
