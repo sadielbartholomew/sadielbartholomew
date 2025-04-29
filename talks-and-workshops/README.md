@@ -145,8 +145,12 @@
   Programme:
 
   * 27.04.21, ~1 hour inclusive of questions, **The ES-DOC website and Further
-    Info URL as portals for exploring CMIP6**, [slides in
+    Info URL as portals for exploring CMIP6** [slides in
     *es-doc-portals-for-cmip6.pdf* file]
+
+  * 29.04.25, ~45 minutes inclusive of questions, **VISION: towards seamless integration of
+    Model, Satellite, and In-Situ Observation data** [slides in
+    *VISION_UoR_Met_Dept_lunchtime_seminar.pdf* file]
 
 * [M-x Research](https://m-x-research.github.io/) weekly talks:
 
