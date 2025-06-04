@@ -300,3 +300,6 @@
    **The NCAS CF Data tools: cf-python and cf-plot** [slides in
    *10_min_generic_CF_Tools_presentation_SLB_march25.pdf* file]
 
+* [Durham HPC Days](https://durham.readthedocs.io/en/latest/hpcdays/index.html), 04.06.2025, 20
+  minute talk, **Advancing CATS, The Climate Aware Task Scheduler, for high performance- and
+  throughput-computing application** [slides in *CATS_Durham_HPC_Days.pdf* file]
