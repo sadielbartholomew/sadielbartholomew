@@ -1,4 +1,4 @@
-# talks
+# Talks and workshops
 
 ## Archive of materials &amp; notebooks from presented talks &amp; tutorials (etc.)
 
@@ -105,6 +105,10 @@
 
   * 24.06.22, ~6 minutes, **NCAS-CMS: my role and perspective**
     [slides in *CMS_away_day_6_mins_talk.pdf* file]
+
+  * 13.06.2025, 10 minutes, **JAX and its potential use to CMS**
+    [original Notebook in *jax-summary-for-cms-away-day-25.ipynb* file with PDF slide form exported
+    from that in *jax-summary-for-cms-away-day-25.pdf*]
 
 * ESiWACE Summer School on Effective HPC for Climate and Weather:
 
