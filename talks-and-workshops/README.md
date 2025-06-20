@@ -101,6 +101,9 @@
   * 14.03.25, ~20 minutes, **UPSCALE K-scale project: work so far towards an inter-scale
     energy transfer tool** [slides in *upscale_kscale_tool_progress_cms_meet.pdf* file]
 
+  * 20.06.25, ~20 minutes, **Being Green: Musings on sustainable computing & research**
+    [slides in *cms-weekly-being-green.pdf* file]
+
 * NCAS-CMS group away days:
 
   * 24.06.22, ~6 minutes, **NCAS-CMS: my role and perspective**
