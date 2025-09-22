@@ -67,7 +67,7 @@
       [SORSE website](https://sorse.github.io/programme/software-demos/event-011/)]
 
   * The Eighth Conference of Research Software Engineering ('RSECon24'):
-    * 05.09.24, ~3 minutes  for sub-talk and ~30 minutes for panel discussion of a 90
+    * 05.09.24, ~3 minutes for sub-talk and ~30 minutes for panel discussion of a 90
       minute 'Birds of a Feather' session, **Finding the Weather and Climate RSE
       Community - knowledge exchange and the next steps for the flock**, co-presenting with
       others including Emma Hogan, Jack Atkinson, David Wilby, Mark Richardson and
@@ -76,6 +76,13 @@
       BoF session organised by team including, as well as the above speakers, Marion Weinzierl,
       Kirsty Pringle and Helen Burns. [slides in *WCBoF_RSECon24_NCASandpanelslidesonly.pdf*
       file, where only the title slide and slides I presented from are included]
+
+  * [The Ninth Conference of Research Software Engineering ('RSECon25')](https://rsecon25.society-rse.org/):
+    * 09.09.25, poster with lightning talk, **CATS: Climate-Aware Task Scheduler for
+    environmentally conscious developers** Note: poster submitted, designed and
+    presented in collaboration with co-authors (namely other co-author attendees at the
+    conference, Abhishek Dasgupta, Loïc Lannelongue, Thibault Lestang and Colin Sauzé)
+    [slides in *rsecon25-poster.pdf* file]
 
 * NCAS-CMS group weekly meetings:
 
