@@ -180,6 +180,10 @@
     and how to request future topics**
     [slides in *CF_training_lightning_talk_SLB.pdf* file]
 
+  * [2025 CF Workshop](https://cfconventions.org/Meetings/2025-Workshop.html);
+    22.09.25, ~15 minutes, **What’s (deﬁnitely and possibly) going into CF 1.13**
+    [slides in *Summary_of_CF_releases_and_v1.13.pdf* file]
+
 * IS-ENES3 General Assemblies:
 
   * [IS-ENES3 Second General Assembly](https://is.enes.org/workshops-detailed/#isenes3ga2);
