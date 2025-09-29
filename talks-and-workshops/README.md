@@ -111,7 +111,7 @@
   * 20.06.25, ~20 minutes, **Being Green: Musings on sustainable computing & research**
     [slides in *cms-weekly-being-green.pdf* file]
 
-  * 20.06.25, ~20 minutes, **Reﬂections & learning from recent annual gatherings:
+  * 26.09.25, ~20 minutes, **Reﬂections & learning from recent annual gatherings:
     RSECon25 and CF Workshop 25**
     [slides in *Reflections_on_RSECon25_CFWorkshop.pdf* file]
 
