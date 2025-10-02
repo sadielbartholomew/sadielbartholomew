@@ -250,6 +250,11 @@
     Alex Roberts) [slides in *ncas-agm-24-vision-team-talk.pdf* file, my
     contribution was creating slides 16-23 and presenting slides 16-24]
 
+  * 2025 meeting, 02.07.2025, 1 hour (of which, ~10 minutes my part),
+     **Professional, Managerial and Academic Promotions Workshop**
+     (with Lisa Banton and Luke Abraham) [slides with confidential information
+     hence omitted here]
+
 * [Institute of Computing for Climate Science (ICCS)](https://iccs.cam.ac.uk/)
   Summer Schools:
 
