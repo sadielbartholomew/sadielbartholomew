@@ -255,6 +255,11 @@
      (with Lisa Banton and Luke Abraham) [slides with confidential information
      hence omitted here]
 
+* NCAS Introduction to Scientific Computing courses:
+
+  * 2025 course, 20.11.2025, ~30 minutes, **(CF-)NetCDF: conceptual
+     summary** [slides in *netCDF_conceptual_summary.pdf* file]
+
 * [Institute of Computing for Climate Science (ICCS)](https://iccs.cam.ac.uk/)
   Summer Schools:
 
