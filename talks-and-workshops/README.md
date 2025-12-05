@@ -114,6 +114,11 @@
   * 26.09.25, ~20 minutes, **Reﬂections & learning from recent annual gatherings:
     RSECon25 and CF Workshop 25**
     [slides in *Reflections_on_RSECon25_CFWorkshop.pdf* file]
+    
+  * 05.12.25, ~20 minutes, **A CF Conventions Checker for the future**
+    [slides in *cf_checker_cms_meet_dec25.pdf* file and diagram Mermaid code
+    in *schematics/cf_checker_cms_meet_dec25.md* file]
+
 
 * NCAS-CMS group away days:
 
