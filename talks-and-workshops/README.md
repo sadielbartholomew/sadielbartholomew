@@ -345,3 +345,7 @@
 * [Durham HPC Days](https://durham.readthedocs.io/en/latest/hpcdays/index.html), 04.06.2025, 20
   minute talk, **Advancing CATS, The Climate Aware Task Scheduler, for high performance- and
   throughput-computing application** [slides in *CATS_Durham_HPC_Days.pdf* file]
+
+* [NCAS 'Introduction to Unified Model' training](https://ncas.ac.uk/study-with-us/introduction-to-unified-model/):
+
+  * Winter 2026 course, 05.02.26, 45 minute demo, **Metadata-aware data analysis and visualisation with cf-python and cf-plot** [presented from Notebook available externally in the 'cf-tools-training' repository: see https://github.com/NCAS-CMS/cf-tools-training/blob/master/new_course/quick_summary/cf_data_tools_summary.ipynb ]
