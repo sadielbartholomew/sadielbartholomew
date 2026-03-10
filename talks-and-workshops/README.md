@@ -348,4 +348,11 @@
 
 * [NCAS 'Introduction to Unified Model' training](https://ncas.ac.uk/study-with-us/introduction-to-unified-model/):
 
-  * Winter 2026 course, 05.02.26, 45 minute demo, **Metadata-aware data analysis and visualisation with cf-python and cf-plot** [presented from Notebook available externally in the 'cf-tools-training' repository: see https://github.com/NCAS-CMS/cf-tools-training/blob/master/new_course/quick_summary/cf_data_tools_summary.ipynb ]
+  * Winter 2026 course, 05.02.26, 45 minute demo, **Metadata-aware data analysis and visualisation with cf-python and cf-plot** [presented from Notebook available externally in the 'cf-tools-training' repository: see https://github.com/NCAS-CMS/cf-tools-training/blob/master/new_course/quick_summary/cf_data_tools_summary.ipynb]
+
+* [CMIP Community Workshop 2026](https://cmip2026.org/), 10.03.26, poster with 2 minute
+  lightning talk to introduce (for the session 'POS1.1: Assessing Uncertainties in Key Earth System
+  Variables for Model Evaluation: Paleo-Evidence, Observations, and Climate Model Simulations'),
+  **Towards seamless integration of model, satellite and in-situ observation data with the VISION
+  Toolkit Version 2** [poster on Figshare with DOI `doi.org/10.6084/m9.figshare.31455598`,
+  slide used for lightning talk in *cmipworkshop26_visiontoolkit.pdf* file]
