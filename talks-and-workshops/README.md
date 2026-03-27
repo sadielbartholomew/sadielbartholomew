@@ -119,6 +119,8 @@
     [slides in *cf_checker_cms_meet_dec25.pdf* file and diagram Mermaid code
     in *schematics/cf_checker_cms_meet_dec25.md* file]
 
+  * 27.03.26, ~20 minutes, **Data catalogue support for cf-python**
+    [slides in *data_cataloging_cms_weekly.pdf* file]
 
 * NCAS-CMS group away days:
 
