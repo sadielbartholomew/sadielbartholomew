@@ -215,15 +215,21 @@
 
 * Software Sustainability Institute Collaborations Workshops:
 
-  * [Collaborations Workshop 2022 (CW22)](https://www.software.ac.uk/cw22)
-    04.04.22, 2 minutes, **Pear Programming: a cheat sheet on generic good
+  * [Collaborations Workshop 2022 (CW22)](https://www.software.ac.uk/cw22),
+    04.04.22, 2 minutes (lightning talk), **Pear Programming: a cheat sheet on generic good
     software development practice** (presented virtually)
     [single slide, *CW22_pear_programming_slide.pdf* file]
 
   * [Collaborations Workshop 2024 (CW24)](https://www.software.ac.uk/workshop/collaborations-workshop-2024-cw24)
-    01.05.24, 1 hour workshop in-person (co-led by Colin Sauze)
+    01.05.24, 1 hour workshop in-person (co-led by Colin Sauze),
     **Best Practices in Green Software: Principles, Patterns and Tools**
     [no resources in repo., link to slides to be added when hosted on SSI site]
+
+  * [Collaborations Workshop
+    2026 (CW26)](https://www.software.ac.uk/workshop/collaborations-workshop-2026-cw26),
+    28.04.26, 2 minutes (lightning talk),
+    **(ChatG)PlaceboT: do you need an AI chatbot or just a rubber duck?**
+    [single slide, *chatgplacebot_rubber_ducking_ssi_cw26.pdf* file]
 
 * SIAM Conferences on Computational Science and Engineering:
 
