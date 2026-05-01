@@ -364,3 +364,7 @@
   **Towards seamless integration of model, satellite and in-situ observation data with the VISION
   Toolkit Version 2** [poster on Figshare with DOI `doi.org/10.6084/m9.figshare.31455598`,
   slide used for lightning talk in *cmipworkshop26_visiontoolkit.pdf* file]
+
+* [Sustainability Conference for Responsible Research Computing (SC4RC 2026)](https://www.sc4rc.org//),
+  05.05.26, poster with lightning talk to introduce, **Scaling up CATS, The Climate Aware Task Scheduler, for
+  cluster computing and international reach ** [poster in *sc4rc_cats_poster_may26.pdf* file]
