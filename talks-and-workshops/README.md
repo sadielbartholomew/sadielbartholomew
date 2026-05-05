@@ -367,4 +367,5 @@
 
 * [Sustainability Conference for Responsible Research Computing (SC4RC 2026)](https://www.sc4rc.org//),
   05.05.26, poster with lightning talk to introduce, **Scaling up CATS, The Climate Aware Task Scheduler, for
-  cluster computing and international reach** [poster in *sc4rc_cats_poster_may26.pdf* file]
+  cluster computing and international reach** [poster in *sc4rc_cats_poster_may26.pdf* file
+  and lightning talk slide in *sc4rc_cats_lightning_talk_slide.pdf* file]
