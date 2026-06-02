@@ -14,5 +14,13 @@ done
 ```
 
 2. Convert a Jupyter Notebook to a Python script:
-`$ jupyter nbconvert --to script notebook.ipynb`
 
+```console
+$ jupyter nbconvert --to script <notebook>.ipynb
+```
+
+3. A non-git `diff` with the same style as `git diff`:
+
+```console
+diff --color -u
+```
