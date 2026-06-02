@@ -6,7 +6,8 @@ Organised into sections:
 1. [Python environments](#python-environments)
 2. [Jupyter](#jupyter)
 3. [Commands and utilities](#commands-and-utilities)
-
+4. [Git](#git)
+5. [Hardware](#hardware)
 
 ## Python environments
 
@@ -32,5 +33,30 @@ Organised into sections:
 * A non-git `diff` with the same style as `git diff`:
 
     ```console
-    diff --color -u
+    $ diff --color -u
+    ```
+
+* Find and replace all occurences of an expression in `.` (though needs care with certain
+   special characters if `<before>` or `<after>` contain them, two forms give more flexibility):
+
+    ```console
+    $ find . -type f | xargs sed -i 's/<before>/<after>/g'
+    $ # or e.g:
+    $ find . -type f | xargs sed -i 's~<before>~<after>~g'
+    ```
+
+## Git
+
+* To cherry-pick all the commits from commit A to commit B (where A is older than B):
+
+    ```console
+    $ git cherry-pick A^..B
+    ```
+
+## Hardware
+
+* Report Linux info. e.g. OS, machine name, architecture:
+
+    ```console
+    $ uname -m
     ```
