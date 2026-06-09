@@ -8,6 +8,8 @@ Organised into sections:
 3. [Commands and utilities](#commands-and-utilities)
 4. [Git](#git)
 5. [Hardware](#hardware)
+6. [Data](#data)
+7. [Online and in-browser](#online-and-in-browser)
 
 ## Python environments
 
@@ -51,6 +53,7 @@ Organised into sections:
 
     ```console
     $ git cherry-pick A^..B
+    $ git cherry-pick A..B  # or, ignoring A itself
     ```
 
 ## Hardware
@@ -59,4 +62,21 @@ Organised into sections:
 
     ```console
     $ uname -m
+    ```
+
+## Data
+
+ * Metadata-only view of a netCDF file, showing only the headers:
+
+    ```console
+    $ ncdump -h <filename>.nc
+    ```
+
+## Online and in-browser
+
+* Open all files (as a background process) in the current directory in one window of a given browser:
+
+    ```console
+    $ firefox * &
+    $ google-chrome * &
     ```
