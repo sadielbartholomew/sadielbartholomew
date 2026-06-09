@@ -3,15 +3,16 @@
 Useful commands and short code snippets to aid with software development/engineering.
 Organised into sections:
 
-1. [Python environments](#python-environments)
+1. [Environments](#environments)
 2. [Jupyter](#jupyter)
 3. [Commands and utilities](#commands-and-utilities)
 4. [Git](#git)
 5. [Hardware](#hardware)
 6. [Data](#data)
 7. [Online and in-browser](#online-and-in-browser)
+8. [Python](#python)
 
-## Python environments
+## Environments
 
 * Search all `conda` environments to find any with a specific library installed:
 
@@ -117,4 +118,28 @@ Organised into sections:
     ```console
     $ firefox * &
     $ google-chrome * &
+    ```
+
+## Python
+
+* Run Python code within the command line, especially useful for
+  short snippets or calculations:
+
+    ```console
+    $ python -c "<standalone runnable python snippet>"
+    ```
+
+* Basic debugging in Python:
+
+    ```python
+    import pdb
+    import traceback
+    traceback.print_stack()  # see stack trace from call
+    pdb.set_trace()  # start PDB
+    ```
+
+* Run a Python script in development mode, for extra runtime checks and warnings etc.:
+
+    ```console
+    $ python -X dev <script>
     ```
