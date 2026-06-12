@@ -122,6 +122,10 @@
   * 27.03.26, ~20 minutes, **Data catalogue support for cf-python**
     [slides in *data_cataloging_cms_weekly.pdf* file]
 
+  * 12.06.26, ~20 minutes, **cf-python vs. xarray**
+    [slides in *cf-python-vs-xarray-cms-weekly-jun26.pdf* file]
+
+
 * NCAS-CMS group away days:
 
   * 24.06.22, ~6 minutes, **NCAS-CMS: my role and perspective**
