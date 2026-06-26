@@ -272,6 +272,9 @@
      (with Lisa Banton and Luke Abraham) [slides with confidential information
      hence omitted here]
 
+   * 2026 meeting, 30.06.2026, ~4 minutes, **Data, Workﬂows and AI Panel Introduction**
+      [slides in *panel_data_ai_staff_meeting_26.pdf*]
+
 * NCAS Introduction to Scientific Computing courses:
 
   * 2025 course, 20.11.2025, ~30 minutes, **(CF-)NetCDF: conceptual
