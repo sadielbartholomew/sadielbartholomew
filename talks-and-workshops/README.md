@@ -275,6 +275,10 @@
    * 2026 meeting, 30.06.2026, ~4 minutes, **Data, Workﬂows and AI Panel Introduction**
       [slides in *panel_data_ai_staff_meeting_26.pdf*]
 
+   * 2026 meeting, 30.06.2026, 45 minute session, **The world of NCAS using only the
+     thousand (“ten hundred”) most common words** [slides in
+     *up_goer_five_ncas_staff_meeting_26*]
+
 * NCAS Introduction to Scientific Computing courses:
 
   * 2025 course, 20.11.2025, ~30 minutes, **(CF-)NetCDF: conceptual
