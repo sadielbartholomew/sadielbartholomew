@@ -42,7 +42,7 @@ Organised into sections:
 * See or summarise options for, and usage of, a given command:
 
     ```console
-    $ tldr <command>   # requires 'tldr' install, but summarises in colour!
+    $ tldr <command>   # requires 'tldr' install, but summarises concisely & in colour
     $ <command> --help
     $ man <command>  # only works if a manual is defined
 
@@ -83,8 +83,19 @@ Organised into sections:
     $ echo -n "<code line>" | wc -c
     ```
 
+* Kill a frozen program/GUI by running then pointing and clicking on the window:
+
+    ```console
+    $ xkill
+    ``
 
 ## Git
+
+* Fetch a branch without first having to add an organisation or user as a remote with `git remote add`:
+
+    ```console
+    $ git fetch git://github.com/<org/username here>/<repo here>.git branch_name
+    ```
 
 * To cherry-pick all the commits from commit A to commit B (where A is older than B):
 
