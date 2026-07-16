@@ -14,6 +14,12 @@ Organised into sections:
 
 ## Environments
 
+* Show what the current `conda` environment has by way of versions for given libraries:
+
+    ```console
+    $ conda list | grep -E "<lib 1>|<lib 2>|<lib3, etc.>"
+    ```
+
 * Search all `conda` environments to find any with a specific library installed:
 
     ```bash
@@ -100,7 +106,14 @@ Organised into sections:
 * Report Linux info. e.g. OS, machine name, architecture:
 
     ```console
-    $ uname -m
+    $ uname -a
+    ```
+
+* See info including MAC (and IP) addresses of network-related devices:
+
+    ```console
+    $ ip link
+    $ ip addr  # includes associated IP addresses
     ```
 
 ## Data
