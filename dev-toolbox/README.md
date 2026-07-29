@@ -88,7 +88,7 @@ Organised into sections:
 
     ```console
     $ xkill
-    ``
+    ```
 
 ## Git
 
