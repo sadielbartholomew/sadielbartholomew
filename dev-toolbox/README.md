@@ -11,6 +11,7 @@ Organised into sections:
 6. [Data](#data)
 7. [Online and in-browser](#online-and-in-browser)
 8. [Python](#python)
+9. [Networking and devices](#networking-and-devices)
 
 ## Environments
 
@@ -25,7 +26,7 @@ Organised into sections:
     ```bash
     for env in $(conda env list | awk '{print $1}' | grep -v '^#'); do
         echo "Checking $env..."
-        conda run -n "$env" which jupyter-book 2>/dev/null
+        conda run -n "$env" which <library> 2>/dev/null
     done
     ```
 
@@ -166,4 +167,32 @@ Organised into sections:
 
     ```console
     $ python -X dev <script>
+    ```
+
+
+## Networking and devices
+
+* Troubleshooting network hardware:
+
+    ```bash
+    lsusb  # is the hardware detected?
+    ip -br link  # has a network interface been created?
+    nmcli device  # is NetworkManager managing and connecting to it?
+    ethtool enp0s13f0u1u1c2  # is the Ethernet link physically up, and at what speed?
+    ```
+
+* Testing connectivity:
+
+    ```bash
+    ping <router-ip>        # can I reach my local network?
+    ping 1.1.1.1            # can I reach the Internet? (use globally available 1.1.1.1)
+    ping <reliable hostname e.g. google.com>        # is DNS working?
+    tracepath <reliable hostname e.g. google.com>    # what is the route packets take?
+    ```
+
+* Determine which process owns a port:
+
+    ```bash
+    ss -ltnp | grep :<port number>
+    fuser <port number>/tcp
     ```
