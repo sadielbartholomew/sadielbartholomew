@@ -13,6 +13,7 @@ Organised into sections:
 8. [Python](#python)
 9. [Networking and devices](#networking-and-devices)
 10. [Display and customisation](#display-and-customisation)
+10. [Emacs](#emacs)
 
 ## Environments
 
@@ -210,4 +211,37 @@ Organised into sections:
     fc-cache -fv  # 4. Refresh font cache, ignore warnings
     fc-match "<FontName>"  # 5. Verify font installed
     fc-scan <ttf path e.g. from fc-list> # 6. To see details about font
+    ```
+
+## Emacs
+
+* Evaluate command:
+
+    ```text
+    M-:
+    ```
+
+* Wrap all lines to window size without inserting any newlines etc.:
+
+    ```text
+    M-x visual-line-mode
+    ```
+
+* Detect any whitespace and/or delete any trailing whitespace:
+
+    ```text
+    M-x whitespace-mode
+    M-x delete-trailing-whitespace
+    ```
+
+* Sort lines alphabetically:
+
+    ```text
+    M-x sort-lines
+    ```
+
+* Delete duplicate lines:
+
+    ```text
+    M-x delete-duplicate-lines
     ```
