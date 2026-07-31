@@ -92,7 +92,21 @@ Organised into sections:
     $ xkill
     ```
 
+* `grep` for something (regular expressions supported) at the start or end of a line only:
+
+    ```console
+    $ grep '^<start of line RE>' <filename/path>
+    $ grep '<end of line RE>$' <filename/path>
+    ```
+
 ## Git
+
+* Save your own skin after a git blunder!
+
+    ```console
+    $ git reflog
+    $ git reset --hard HEAD@{<number of HEAD ref. from above to reset to>}
+    ```
 
 * Fetch a branch without first having to add an organisation or user as a remote with `git remote add`:
 
@@ -180,7 +194,7 @@ Organised into sections:
     lsusb  # is the hardware detected?
     ip -br link  # has a network interface been created?
     nmcli device  # is NetworkManager managing and connecting to it?
-    ethtool enp0s13f0u1u1c2  # is the Ethernet link physically up, and at what speed?
+    ethtool <identifier e.g. enp0...>  # is the Ethernet link up and at what speed?
     ```
 
 * Testing connectivity:
@@ -218,7 +232,7 @@ Organised into sections:
 * Evaluate command:
 
     ```text
-    M-:
+    M-: <command>
     ```
 
 * Wrap all lines to window size without inserting any newlines etc.:
@@ -227,11 +241,12 @@ Organised into sections:
     M-x visual-line-mode
     ```
 
-* Detect any whitespace and/or delete any trailing whitespace:
+* Detect any whitespace and/or delete any trailing whitespace and convert any tabs to whitespace:
 
     ```text
     M-x whitespace-mode
     M-x delete-trailing-whitespace
+    M-x untabify
     ```
 
 * Sort lines alphabetically:
