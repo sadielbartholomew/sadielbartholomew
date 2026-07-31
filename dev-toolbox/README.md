@@ -5,13 +5,14 @@ Organised into sections:
 
 1. [Environments](#environments)
 2. [Jupyter](#jupyter)
-3. [Commands and utilities](#commands-and-utilities)
+3. [Utility comamnds](#utility-commands)
 4. [Git](#git)
 5. [Hardware](#hardware)
 6. [Data](#data)
 7. [Online and in-browser](#online-and-in-browser)
 8. [Python](#python)
 9. [Networking and devices](#networking-and-devices)
+10. [Display and customisation](#display-and-customisation)
 
 ## Environments
 
@@ -38,7 +39,7 @@ Organised into sections:
     $ jupyter nbconvert --to script <notebook>.ipynb
     ```
 
-## Commands and utilities
+## Utility comamnds
 
 * See or summarise options for, and usage of, a given command:
 
@@ -195,4 +196,18 @@ Organised into sections:
     ```bash
     ss -ltnp | grep :<port number>
     fuser <port number>/tcp
+    ```
+
+## Display and customisation
+
+* Inspect fonts and/or install a new font:
+
+    ```bash
+    fc-list | grep -i "<FontName>"  # 0. Check if font installed already
+    # 1. Download font ZIP file and extract, or clone font GitHub repo
+    mkdir -p ~/.local/share/fonts/<FontName>  # 2. Make dir for font
+    cp <path to TFF>/*.ttf ~/.local/share/fonts/<FontName>/  # 3. Copy TFF into dir
+    fc-cache -fv  # 4. Refresh font cache, ignore warnings
+    fc-match "<FontName>"  # 5. Verify font installed
+    fc-scan <ttf path e.g. from fc-list> # 6. To see details about font
     ```
