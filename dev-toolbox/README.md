@@ -13,7 +13,8 @@ Organised into sections:
 8. [Python](#python)
 9. [Networking and devices](#networking-and-devices)
 10. [Display and customisation](#display-and-customisation)
-10. [Emacs](#emacs)
+11. [Emacs](#emacs)
+12. [Jobs and Processes](jobs-and-processes)
 
 ## Environments
 
@@ -260,3 +261,38 @@ Organised into sections:
     ```text
     M-x delete-duplicate-lines
     ```
+
+## Jobs and Processes
+
+* Monitoring and finding processes:
+
+    ```bash
+    top -c  # Live process monitor including full command lines
+    pgrep -a <NAME>  # Find processes by name
+    ps aux | grep <NAME>  # Universal fallback, or use 'ps -ef'
+    ```
+
+* See and inspect a tree of the process parent/child hierarccy including process IDs and the
+  commands used to initiate them:
+
+    ```console
+    $ pstree -ap
+    ```
+
+*  Monitoring local jobs:
+
+    ```bash
+    jobs -p   # List jobs in current shell including PIDs
+    fg %<JOB>  # Bring a job to the foreground
+    bg %<JOB>  # Resume a suspended job in the background
+    ```
+
+* Killing jobs in order of severity required, try (`SIGINT` ->) `SIGTERM`, -> `SIGKILL` if all else fails:
+
+    ```bash
+    # Ctrl+C                # Interrupt foreground process (SIGINT)
+    kill <PID>              # Graceful termination (SIGTERM)
+    pkill <NAME>            # SIGTERM by process name
+    kill -9 <PID>           # Force kill (SIGKILL)
+    ```
+
