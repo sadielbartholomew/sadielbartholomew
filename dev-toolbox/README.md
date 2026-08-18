@@ -129,6 +129,26 @@ Organised into sections:
     $ git push upstream $(git rev-parse --abbrev-ref HEAD):<feature branch name>
     ```
 
+* Rebase without having to refer to a commit has (`N` commits backward ):
+
+    ```console
+    $ git rebase -i HEAD~<N commits backward>
+    ```
+
+* Revert changes to one file only:
+
+    ```console
+    $ git checkout -- <file path>
+    $ # or if not yet tracked:
+    $ git restore --staged <file path>
+    ```
+
+* Rename a remote:
+
+    ```console
+    $ git remote rename origin upstream
+    ```
+
 
 ## Hardware
 
