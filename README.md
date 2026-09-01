@@ -21,7 +21,7 @@
   <a href="https://ncas.ac.uk/">NCAS (National Centre for Atmospheric Science)</a> |
   <a href="http://cms.ncas.ac.uk/">NCAS-CMS (Computational and Modelling Services)</a> |
   <a href="https://www.reading.ac.uk/met/">University of Reading Dept. of Meteorology</a> |
-  <a href="https://www.software.ac.uk/">Software Sustainability Institute</a>
+  <a href="https://www.software.ac.uk/">Institute for Research Software</a>
   <br><br>
 </p>
 
