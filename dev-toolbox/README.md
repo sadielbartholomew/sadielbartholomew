@@ -58,6 +58,14 @@ Organised into sections:
     $ diff --color -u
     ```
 
+* List directory contents one one-line each, useful e.g. for copying/pasting, or list them
+  with no newlines at all:
+
+    ```console
+    $ ls -1 <dir>  # a line each
+    $ ls --zero <dir>  # no newlines so all concatentaed
+    ```
+
 * Find and replace all occurences of an expression in `.` (though needs care with certain
    special characters if `<before>` or `<after>` contain them, two forms give more flexibility):
 
@@ -98,6 +106,14 @@ Organised into sections:
     ```console
     $ grep '^<start of line RE>' <filename/path>
     $ grep '<end of line RE>$' <filename/path>
+    ```
+
+* Directory hopping instead of manually specifying the location to move to:
+
+    ```console
+    $ cd -  # got to previous directory
+    $ pushd  # change dir and save current directory on a stack
+    $ popd  # return to the most recently saved and remove it from the stack
     ```
 
 ## Git
@@ -180,6 +196,21 @@ Organised into sections:
     ```console
     $ firefox * &
     $ google-chrome * &
+    ```
+
+* Debugging URL issues: See info. including status code from a URL, see if the IP address is reach,
+  or even track the full path the data packets take:
+
+    ```console
+    $ curl -i <URL>
+    $ ping <URL>
+    $ traceroute <hostname i.e. domain only of URL, no 'https://' etc.>
+    ```
+
+* Handle a URL that may be hanging by setting a timeout in seconds e.g. `10`:
+
+    ```console
+    $ curl --max-time 10 -v <URL>
     ```
 
 ## Python
