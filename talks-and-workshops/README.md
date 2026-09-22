@@ -211,6 +211,14 @@
         sessions & days, **Hackathon introductions**
         [slides in *CF_Workshop25_Hackathon_Intros_x2.pdf* file]
 
+  * [2026 CF Workshop](https://cfconventions.org/Meetings/2026-Workshop.html):
+
+     * 21.09.26, ~15 minutes, **What will be in the next release, CF 1.14**
+       [slides in *cf_v1.14_summary_cf_workshop_26.pdf* file]
+
+     * 22.09.26, ~5 minutes, **BCP 14 breakout session: adopting BCP 14 requirement
+       levels in CF** [slides in *bcp_14_breakout_cf_workshop_26.pdf* file]
+
 * IS-ENES3 General Assemblies:
 
   * [IS-ENES3 Second General Assembly](https://is.enes.org/workshops-detailed/#isenes3ga2);
