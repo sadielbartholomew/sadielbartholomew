@@ -219,6 +219,12 @@
      * 22.09.26, ~5 minutes, **BCP 14 breakout session: adopting BCP 14 requirement
        levels in CF** [slides in *bcp_14_breakout_cf_workshop_26.pdf* file]
 
+     * 23.09.26, ~5 minutes, **Housekeeping breakout session** [slides in
+       *housekeeping_cf_workshop_26.pdf* file]
+
+     * 23.09.26, ~15 minutes, **Towards CF Conventions conformance checking
+       on read with cfdm** [slides in *cf_checkers_cfdm_on_read_cf_workshop_26.pdf* file]
+
 * IS-ENES3 General Assemblies:
 
   * [IS-ENES3 Second General Assembly](https://is.enes.org/workshops-detailed/#isenes3ga2);
