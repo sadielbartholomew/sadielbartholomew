@@ -125,6 +125,8 @@
   * 12.06.26, ~20 minutes, **cf-python vs. xarray**
     [slides in *cf-python-vs-xarray-cms-weekly-jun26.pdf* file]
 
+  * 02.10.26, ~20 minutes, **Notes from the CF Workshop ‘26 in Bonn**
+    [slides in *notes_from_cf_workshop_26_for_cms.pdf* file]
 
 * NCAS-CMS group away days:
 
