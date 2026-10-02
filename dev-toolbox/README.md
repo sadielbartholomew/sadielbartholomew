@@ -18,6 +18,25 @@ Organised into sections:
 
 ## Environments
 
+*  Do an editable `pip` install inclusive of  extra dependencies (`project.optional-dependencies`)
+   e.g. libraries required for `dev` and `test`:
+
+    ```console
+    $ pip install -e ".[dev,test]"
+    ```
+
+*  Check the health of the currently loaded conda environment:
+
+    ```console
+    $ conda doctor -vvv
+    ```
+
+* Inspect available and installed versions of a library from PyPI:
+
+    ```console
+    $ pip index versions <lib>
+    ```
+
 * Show what the current `conda` environment has by way of versions for given libraries:
 
     ```console
