@@ -184,6 +184,13 @@ Organised into sections:
     $ git remote rename origin upstream
     ```
 
+* Concise view with branching indication for git commit log:
+
+    ```console
+    $ git log --oneline --graph --decorate
+    $ git log --oneline --graph --decorate --all  # all commits
+    ```
+
 
 ## Hardware
 
@@ -254,6 +261,12 @@ Organised into sections:
 
     ```console
     $ python -X dev <script>
+    ```
+
+* Run tests while promoting a specified warning to an error, printing the full traceback:
+
+    ```console
+    pytest <test module> -W '<warning/error regex/string>' --full-trace -x
     ```
 
 
