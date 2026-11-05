@@ -10,7 +10,7 @@
   <a href="https://www.gnu.org/software/bash/" title="bash"><img src="https://bashlogo.com/img/symbol/svg/full_colored_dark.svg" width="65"/></a>
   <a href="https://www.linuxfoundation.org/projects/linux/" title="linux"><img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" width="55"/></a>
   <a href="https://www.python.org/" title="python"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" width="55"/></a>
-  <a href="https://www.gnu.org/software/emacs/" title="emacs"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/EmacsIcon.svg/1200px-EmacsIcon.svg.png" width="60"/></a>
+  <a href="https://www.gnu.org/software/emacs/" title="emacs"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Emacs-logo.svg/330px-Emacs-logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail&_=20070725085907" width="60"/></a>
   <a href="https://git-scm.com/" title="git"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Git_icon.svg" width="60"/></a>
   <br>
 </p>
